@@ -1,0 +1,134 @@
+[
+ {
+  "n": 8,
+  "m": 15,
+  "b_prim": 19283643666,
+  "hodge_numbers_prim": [
+   2002,
+   9964955,
+   566373808,
+   4608326086,
+   8914309964,
+   4608326086,
+   566373808,
+   9964955,
+   2002
+  ],
+  "dim_hodge_classes": 1152334765,
+  "dim_decomposable": 1152334765,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.8
+ },
+ {
+  "n": 8,
+  "m": 16,
+  "b_prim": 36040649415,
+  "hodge_numbers_prim": [
+   5005,
+   20045675,
+   1083255095,
+   8626308515,
+   16581420835,
+   8626308515,
+   1083255095,
+   20045675,
+   5005
+  ],
+  "dim_hodge_classes": 1657193786,
+  "dim_decomposable": 1657193786,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 1.1
+ },
+ {
+  "n": 8,
+  "m": 17,
+  "b_prim": 64677154576,
+  "hodge_numbers_prim": [
+   11440,
+   38324000,
+   1983109040,
+   15500830400,
+   29632604816,
+   15500830400,
+   1983109040,
+   38324000,
+   11440
+  ],
+  "dim_hodge_classes": 514031617,
+  "dim_decomposable": 514031617,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 2.14
+ },
+ {
+  "n": 8,
+  "m": 18,
+  "b_prim": 111999661137,
+  "hodge_numbers_prim": [
+   24310,
+   70121260,
+   3494337760,
+   26872524580,
+   51125645317,
+   26872524580,
+   3494337760,
+   70121260,
+   24310
+  ],
+  "dim_hodge_classes": 10600229558,
+  "dim_decomposable": 10600229558,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 3.37
+ },
+ {
+  "n": 8,
+  "m": 19,
+  "b_prim": 187919327718,
+  "hodge_numbers_prim": [
+   48620,
+   123479840,
+   5953410200,
+   45131906765,
+   85501636868,
+   45131906765,
+   5953410200,
+   123479840,
+   48620
+  ],
+  "dim_hodge_classes": 999283069,
+  "dim_decomposable": 999283069,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 4.24
+ },
+ {
+  "n": 8,
+  "m": 20,
+  "b_prim": 306553312891,
+  "hodge_numbers_prim": [
+   92378,
+   210235532,
+   9844509311,
+   73685857190,
+   139071924069,
+   73685857190,
+   9844509311,
+   210235532,
+   92378
+  ],
+  "dim_hodge_classes": 17213755130,
+  "dim_decomposable": 17213755130,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 7.64
+ }
+]

@@ -1,0 +1,2 @@
+# The package itself has no dependencies. Tests need pytest.
+pytest>=7

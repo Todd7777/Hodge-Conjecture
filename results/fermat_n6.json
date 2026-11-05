@@ -1,0 +1,442 @@
+[
+ {
+  "n": 6,
+  "m": 3,
+  "b_prim": 86,
+  "hodge_numbers_prim": [
+   0,
+   0,
+   8,
+   70,
+   8,
+   0,
+   0
+  ],
+  "dim_hodge_classes": 71,
+  "dim_decomposable": 71,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.0
+ },
+ {
+  "n": 6,
+  "m": 4,
+  "b_prim": 1641,
+  "hodge_numbers_prim": [
+   0,
+   1,
+   266,
+   1107,
+   266,
+   1,
+   0
+  ],
+  "dim_hodge_classes": 1108,
+  "dim_decomposable": 1108,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.0
+ },
+ {
+  "n": 6,
+  "m": 5,
+  "b_prim": 13108,
+  "hodge_numbers_prim": [
+   0,
+   36,
+   2472,
+   8092,
+   2472,
+   36,
+   0
+  ],
+  "dim_hodge_classes": 4901,
+  "dim_decomposable": 4901,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.0
+ },
+ {
+  "n": 6,
+  "m": 6,
+  "b_prim": 65105,
+  "hodge_numbers_prim": [
+   0,
+   330,
+   13140,
+   38165,
+   13140,
+   330,
+   0
+  ],
+  "dim_hodge_classes": 38166,
+  "dim_decomposable": 38166,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.0
+ },
+ {
+  "n": 6,
+  "m": 7,
+  "b_prim": 239946,
+  "hodge_numbers_prim": [
+   0,
+   1708,
+   50288,
+   135954,
+   50288,
+   1708,
+   0
+  ],
+  "dim_hodge_classes": 44731,
+  "dim_decomposable": 44731,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.0
+ },
+ {
+  "n": 6,
+  "m": 8,
+  "b_prim": 720601,
+  "hodge_numbers_prim": [
+   1,
+   6371,
+   154645,
+   398567,
+   154645,
+   6371,
+   1
+  ],
+  "dim_hodge_classes": 219872,
+  "dim_decomposable": 219872,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.01
+ },
+ {
+  "n": 6,
+  "m": 9,
+  "b_prim": 1864136,
+  "hodge_numbers_prim": [
+   8,
+   19160,
+   406568,
+   1012664,
+   406568,
+   19160,
+   8
+  ],
+  "dim_hodge_classes": 343001,
+  "dim_decomposable": 343001,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.01
+ },
+ {
+  "n": 6,
+  "m": 10,
+  "b_prim": 4304673,
+  "hodge_numbers_prim": [
+   36,
+   49428,
+   949860,
+   2306025,
+   949860,
+   49428,
+   36
+  ],
+  "dim_hodge_classes": 1225450,
+  "dim_decomposable": 1225450,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.02
+ },
+ {
+  "n": 6,
+  "m": 11,
+  "b_prim": 9090910,
+  "hodge_numbers_prim": [
+   120,
+   113640,
+   2023680,
+   4816030,
+   2023680,
+   113640,
+   120
+  ],
+  "dim_hodge_classes": 551951,
+  "dim_decomposable": 551951,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.03
+ },
+ {
+  "n": 6,
+  "m": 12,
+  "b_prim": 17863241,
+  "hodge_numbers_prim": [
+   330,
+   238821,
+   4003736,
+   9377467,
+   4003736,
+   238821,
+   330
+  ],
+  "dim_hodge_classes": 4882180,
+  "dim_decomposable": 4882180,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.07
+ },
+ {
+  "n": 6,
+  "m": 13,
+  "b_prim": 33075516,
+  "hodge_numbers_prim": [
+   792,
+   466972,
+   7453952,
+   17232084,
+   7453952,
+   466972,
+   792
+  ],
+  "dim_hodge_classes": 1281421,
+  "dim_decomposable": 1281421,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.09
+ },
+ {
+  "n": 6,
+  "m": 14,
+  "b_prim": 58266481,
+  "hodge_numbers_prim": [
+   1716,
+   860574,
+   13189800,
+   30162301,
+   13189800,
+   860574,
+   1716
+  ],
+  "dim_hodge_classes": 8729366,
+  "dim_decomposable": 8729366,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.16
+ },
+ {
+  "n": 6,
+  "m": 15,
+  "b_prim": 98385938,
+  "hodge_numbers_prim": [
+   3432,
+   1509300,
+   22354488,
+   50651498,
+   22354488,
+   1509300,
+   3432
+  ],
+  "dim_hodge_classes": 8970851,
+  "dim_decomposable": 8970851,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.22
+ },
+ {
+  "n": 6,
+  "m": 16,
+  "b_prim": 160180665,
+  "hodge_numbers_prim": [
+   6435,
+   2538055,
+   36509195,
+   82073295,
+   36509195,
+   2538055,
+   6435
+  ],
+  "dim_hodge_classes": 11328760,
+  "dim_decomposable": 11328760,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.31
+ },
+ {
+  "n": 6,
+  "m": 17,
+  "b_prim": 252645136,
+  "hodge_numbers_prim": [
+   11440,
+   4116464,
+   57738544,
+   128912240,
+   57738544,
+   4116464,
+   11440
+  ],
+  "dim_hodge_classes": 4649681,
+  "dim_decomposable": 4649681,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.24
+ },
+ {
+  "n": 6,
+  "m": 18,
+  "b_prim": 387542081,
+  "hodge_numbers_prim": [
+   19448,
+   6469928,
+   88772504,
+   197018321,
+   88772504,
+   6469928,
+   19448
+  ],
+  "dim_hodge_classes": 50590794,
+  "dim_decomposable": 50590794,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.47
+ },
+ {
+  "n": 6,
+  "m": 19,
+  "b_prim": 579997926,
+  "hodge_numbers_prim": [
+   31824,
+   9892368,
+   133125912,
+   293897718,
+   133125912,
+   9892368,
+   31824
+  ],
+  "dim_hodge_classes": 7792471,
+  "dim_decomposable": 7792471,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.56
+ },
+ {
+  "n": 6,
+  "m": 20,
+  "b_prim": 849178153,
+  "hodge_numbers_prim": [
+   50388,
+   14760777,
+   195256806,
+   429042211,
+   195256806,
+   14760777,
+   50388
+  ],
+  "dim_hodge_classes": 73206212,
+  "dim_decomposable": 73206212,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 0.88
+ },
+ {
+  "n": 6,
+  "m": 21,
+  "b_prim": 1219047620,
+  "hodge_numbers_prim": [
+   77520,
+   21551700,
+   280744760,
+   614299660,
+   280744760,
+   21551700,
+   77520
+  ],
+  "dim_hodge_classes": 38846501,
+  "dim_decomposable": 38846501,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 1.38
+ },
+ {
+  "n": 6,
+  "m": 22,
+  "b_prim": 1719220881,
+  "hodge_numbers_prim": [
+   116280,
+   30859762,
+   396490412,
+   864287973,
+   396490412,
+   30859762,
+   116280
+  ],
+  "dim_hodge_classes": 60330622,
+  "dim_decomposable": 60330622,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 1.6
+ },
+ {
+  "n": 6,
+  "m": 23,
+  "b_prim": 2385907546,
+  "hodge_numbers_prim": [
+   170544,
+   43418364,
+   550937376,
+   1196854978,
+   550937376,
+   43418364,
+   170544
+  ],
+  "dim_hodge_classes": 18557771,
+  "dim_decomposable": 18557771,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 1.98
+ },
+ {
+  "n": 6,
+  "m": 24,
+  "b_prim": 3262957721,
+  "hodge_numbers_prim": [
+   245157,
+   60122667,
+   754317729,
+   1633586615,
+   754317729,
+   60122667,
+   245157
+  ],
+  "dim_hodge_classes": 226084280,
+  "dim_decomposable": 226084280,
+  "dim_indecomposable": 0,
+  "indecomposable_orbits": [],
+  "hodge_conjecture_verified_by_inductive_structure": true,
+  "seconds": 2.93
+ }
+]
