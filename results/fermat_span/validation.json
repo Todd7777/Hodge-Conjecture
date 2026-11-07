@@ -1,0 +1,1796 @@
+{
+ "date": "2026-11-07 04:13:33",
+ "def48": [
+  {
+   "q": 12,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "4": 3,
+      "3": 2
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ],
+    [
+     -1,
+     -1,
+     1
+    ]
+   ]
+  },
+  {
+   "q": 15,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "3": 2,
+      "5": 2
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 20,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "4": 3,
+      "5": 2
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 21,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "3": 2,
+      "7": 3
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 28,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "4": 3,
+      "7": 3
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 33,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "3": 2,
+      "11": 2
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 35,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "5": 2,
+      "7": 3
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 39,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "3": 2,
+      "13": 2
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 44,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "4": 3,
+      "11": 2
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 51,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "3": 2,
+      "17": 3
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 52,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "4": 3,
+      "13": 2
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 55,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "5": 2,
+      "11": 2
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 57,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "3": 2,
+      "19": 2
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 65,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "5": 2,
+      "13": 2
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     1,
+     1
+    ],
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 68,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "4": 3,
+      "17": 3
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  },
+  {
+   "q": 69,
+   "hodge": true,
+   "primitive_matches": [
+    [
+     "+",
+     {
+      "3": 2,
+      "23": 5
+     }
+    ]
+   ],
+   "recursion_conventions_ok": [
+    [
+     -1,
+     -1,
+     -1
+    ]
+   ]
+  }
+ ],
+ "kubert": [
+  {
+   "q": 12,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": false,
+   "rank_L0": 3,
+   "rank_literal": 2,
+   "cert_i": "results/fermat_span/kubert_q12.txt",
+   "cert_ii": "results/fermat_span/notDS_q12.txt"
+  },
+  {
+   "q": 15,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": true,
+   "rank_L0": 3,
+   "rank_literal": 3,
+   "cert_i": "results/fermat_span/kubert_q15.txt",
+   "cert_ii": "results/fermat_span/notDS_q15.txt"
+  },
+  {
+   "q": 20,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": false,
+   "rank_L0": 5,
+   "rank_literal": 3,
+   "cert_i": "results/fermat_span/kubert_q20.txt",
+   "cert_ii": "results/fermat_span/notDS_q20.txt"
+  },
+  {
+   "q": 21,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": true,
+   "rank_L0": 4,
+   "rank_literal": 4,
+   "cert_i": "results/fermat_span/kubert_q21.txt",
+   "cert_ii": "results/fermat_span/notDS_q21.txt"
+  },
+  {
+   "q": 28,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": false,
+   "rank_L0": 7,
+   "rank_literal": 4,
+   "cert_i": "results/fermat_span/kubert_q28.txt",
+   "cert_ii": "results/fermat_span/notDS_q28.txt"
+  },
+  {
+   "q": 33,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": true,
+   "rank_L0": 6,
+   "rank_literal": 6,
+   "cert_i": "results/fermat_span/kubert_q33.txt",
+   "cert_ii": "results/fermat_span/notDS_q33.txt"
+  },
+  {
+   "q": 35,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": true,
+   "rank_L0": 5,
+   "rank_literal": 5,
+   "cert_i": "results/fermat_span/kubert_q35.txt",
+   "cert_ii": "results/fermat_span/notDS_q35.txt"
+  },
+  {
+   "q": 39,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": true,
+   "rank_L0": 7,
+   "rank_literal": 7,
+   "cert_i": "results/fermat_span/kubert_q39.txt",
+   "cert_ii": "results/fermat_span/notDS_q39.txt"
+  },
+  {
+   "q": 44,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": false,
+   "rank_L0": 11,
+   "rank_literal": 6,
+   "cert_i": "results/fermat_span/kubert_q44.txt",
+   "cert_ii": "results/fermat_span/notDS_q44.txt"
+  },
+  {
+   "q": 51,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": true,
+   "rank_L0": 9,
+   "rank_literal": 9,
+   "cert_i": "results/fermat_span/kubert_q51.txt",
+   "cert_ii": "results/fermat_span/notDS_q51.txt"
+  },
+  {
+   "q": 52,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": false,
+   "rank_L0": 13,
+   "rank_literal": 7,
+   "cert_i": "results/fermat_span/kubert_q52.txt",
+   "cert_ii": "results/fermat_span/notDS_q52.txt"
+  },
+  {
+   "q": 55,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": true,
+   "rank_L0": 7,
+   "rank_literal": 7,
+   "cert_i": "results/fermat_span/kubert_q55.txt",
+   "cert_ii": "results/fermat_span/notDS_q55.txt"
+  },
+  {
+   "q": 57,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": true,
+   "rank_L0": 10,
+   "rank_literal": 10,
+   "cert_i": "results/fermat_span/kubert_q57.txt",
+   "cert_ii": "results/fermat_span/notDS_q57.txt"
+  },
+  {
+   "q": 65,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": true,
+   "rank_L0": 8,
+   "rank_literal": 8,
+   "cert_i": "results/fermat_span/kubert_q65.txt",
+   "cert_ii": "results/fermat_span/notDS_q65.txt"
+  },
+  {
+   "q": 68,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": false,
+   "rank_L0": 17,
+   "rank_literal": 9,
+   "cert_i": "results/fermat_span/kubert_q68.txt",
+   "cert_ii": "results/fermat_span/notDS_q68.txt"
+  },
+  {
+   "q": 69,
+   "2xi_in_DS": true,
+   "xi_in_DS": false,
+   "2xi_in_DS_literal": true,
+   "rank_L0": 12,
+   "rank_literal": 12,
+   "cert_i": "results/fermat_span/kubert_q69.txt",
+   "cert_ii": "results/fermat_span/notDS_q69.txt"
+  }
+ ],
+ "known_runs": [
+  {
+   "q": 12,
+   "d": 12,
+   "member": true,
+   "certificate": "results/fermat_span/cert_q12_d12.txt",
+   "reduced_hodge_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 8,
+    "4": 8,
+    "5": 4,
+    "6": 18
+   },
+   "signatures": [
+    {
+     "length": 3,
+     "class": "0",
+     "count": 4,
+     "witness": [
+      1,
+      7,
+      10
+     ]
+    },
+    {
+     "length": 3,
+     "class": "xi12",
+     "count": 4,
+     "witness": [
+      1,
+      8,
+      9
+     ]
+    },
+    {
+     "length": 4,
+     "class": "0",
+     "count": 4,
+     "witness": [
+      1,
+      5,
+      9,
+      9
+     ]
+    },
+    {
+     "length": 4,
+     "class": "xi12",
+     "count": 4,
+     "witness": [
+      1,
+      4,
+      9,
+      10
+     ]
+    },
+    {
+     "length": 5,
+     "class": "0",
+     "count": 4,
+     "witness": [
+      1,
+      1,
+      9,
+      9,
+      10
+     ]
+    },
+    {
+     "length": 6,
+     "class": "0",
+     "count": 10,
+     "witness": [
+      1,
+      1,
+      7,
+      7,
+      10,
+      10
+     ]
+    },
+    {
+     "length": 6,
+     "class": "xi12",
+     "count": 8,
+     "witness": [
+      1,
+      1,
+      7,
+      8,
+      9,
+      10
+     ]
+    }
+   ]
+  },
+  {
+   "q": 15,
+   "d": 15,
+   "member": true,
+   "certificate": "results/fermat_span/cert_q15_d15.txt",
+   "reduced_hodge_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 12,
+    "5": 0,
+    "6": 6
+   },
+   "signatures": [
+    {
+     "length": 4,
+     "class": "0",
+     "count": 4,
+     "witness": [
+      1,
+      6,
+      11,
+      12
+     ]
+    },
+    {
+     "length": 4,
+     "class": "xi15",
+     "count": 8,
+     "witness": [
+      1,
+      6,
+      10,
+      13
+     ]
+    },
+    {
+     "length": 6,
+     "class": "0",
+     "count": 6,
+     "witness": [
+      1,
+      2,
+      7,
+      11,
+      12,
+      12
+     ]
+    }
+   ]
+  },
+  {
+   "q": 20,
+   "d": 20,
+   "member": true,
+   "certificate": "results/fermat_span/cert_q20_d20.txt",
+   "reduced_hodge_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 16,
+    "4": 26,
+    "5": 24,
+    "6": 84
+   },
+   "signatures": [
+    {
+     "length": 3,
+     "class": "0",
+     "count": 8,
+     "witness": [
+      1,
+      11,
+      18
+     ]
+    },
+    {
+     "length": 3,
+     "class": "xi20",
+     "count": 8,
+     "witness": [
+      1,
+      12,
+      17
+     ]
+    },
+    {
+     "length": 4,
+     "class": "0",
+     "count": 10,
+     "witness": [
+      1,
+      9,
+      13,
+      17
+     ]
+    },
+    {
+     "length": 4,
+     "class": "xi20",
+     "count": 16,
+     "witness": [
+      1,
+      4,
+      17,
+      18
+     ]
+    },
+    {
+     "length": 5,
+     "class": "0",
+     "count": 16,
+     "witness": [
+      1,
+      1,
+      13,
+      17,
+      18
+     ]
+    },
+    {
+     "length": 5,
+     "class": "xi20",
+     "count": 8,
+     "witness": [
+      1,
+      4,
+      13,
+      14,
+      18
+     ]
+    },
+    {
+     "length": 6,
+     "class": "0",
+     "count": 52,
+     "witness": [
+      1,
+      1,
+      6,
+      17,
+      17,
+      18
+     ]
+    },
+    {
+     "length": 6,
+     "class": "xi20",
+     "count": 32,
+     "witness": [
+      1,
+      1,
+      11,
+      13,
+      16,
+      18
+     ]
+    }
+   ]
+  },
+  {
+   "q": 21,
+   "d": 21,
+   "member": true,
+   "certificate": "results/fermat_span/cert_q21_d21.txt",
+   "reduced_hodge_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 18,
+    "5": 0,
+    "6": 12
+   },
+   "signatures": [
+    {
+     "length": 4,
+     "class": "0",
+     "count": 6,
+     "witness": [
+      1,
+      8,
+      15,
+      18
+     ]
+    },
+    {
+     "length": 4,
+     "class": "xi21",
+     "count": 12,
+     "witness": [
+      1,
+      4,
+      18,
+      19
+     ]
+    },
+    {
+     "length": 6,
+     "class": "0",
+     "count": 8,
+     "witness": [
+      1,
+      5,
+      8,
+      12,
+      18,
+      19
+     ]
+    },
+    {
+     "length": 6,
+     "class": "xi21",
+     "count": 4,
+     "witness": [
+      1,
+      4,
+      9,
+      15,
+      16,
+      18
+     ]
+    }
+   ]
+  },
+  {
+   "q": 28,
+   "d": 28,
+   "member": true,
+   "certificate": "results/fermat_span/cert_q28_d28.txt",
+   "reduced_hodge_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 14,
+    "4": 22,
+    "5": 30,
+    "6": 106
+   },
+   "signatures": [
+    {
+     "length": 3,
+     "class": "0",
+     "count": 14,
+     "witness": [
+      1,
+      15,
+      26
+     ]
+    },
+    {
+     "length": 4,
+     "class": "0",
+     "count": 18,
+     "witness": [
+      1,
+      15,
+      16,
+      24
+     ]
+    },
+    {
+     "length": 4,
+     "class": "xi28",
+     "count": 4,
+     "witness": [
+      1,
+      9,
+      21,
+      25
+     ]
+    },
+    {
+     "length": 5,
+     "class": "0",
+     "count": 18,
+     "witness": [
+      1,
+      8,
+      15,
+      22,
+      24
+     ]
+    },
+    {
+     "length": 5,
+     "class": "xi28",
+     "count": 12,
+     "witness": [
+      1,
+      5,
+      17,
+      21,
+      26
+     ]
+    },
+    {
+     "length": 6,
+     "class": "0",
+     "count": 82,
+     "witness": [
+      1,
+      1,
+      15,
+      15,
+      26,
+      26
+     ]
+    },
+    {
+     "length": 6,
+     "class": "xi28",
+     "count": 24,
+     "witness": [
+      1,
+      5,
+      6,
+      21,
+      25,
+      26
+     ]
+    }
+   ]
+  },
+  {
+   "q": 33,
+   "d": 33,
+   "member": true,
+   "certificate": "results/fermat_span/cert_q33_d33.txt",
+   "reduced_hodge_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 10,
+    "5": 0,
+    "6": 14
+   },
+   "signatures": [
+    {
+     "length": 4,
+     "class": "0",
+     "count": 10,
+     "witness": [
+      1,
+      12,
+      23,
+      30
+     ]
+    },
+    {
+     "length": 6,
+     "class": "0",
+     "count": 10,
+     "witness": [
+      1,
+      4,
+      15,
+      23,
+      26,
+      30
+     ]
+    },
+    {
+     "length": 6,
+     "class": "xi33",
+     "count": 4,
+     "witness": [
+      1,
+      4,
+      16,
+      22,
+      25,
+      31
+     ]
+    }
+   ]
+  },
+  {
+   "q": 39,
+   "d": 39,
+   "member": true,
+   "certificate": "results/fermat_span/cert_q39_d39.txt",
+   "reduced_hodge_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 12,
+    "5": 0,
+    "6": 24
+   },
+   "signatures": [
+    {
+     "length": 4,
+     "class": "0",
+     "count": 12,
+     "witness": [
+      1,
+      14,
+      27,
+      36
+     ]
+    },
+    {
+     "length": 6,
+     "class": "0",
+     "count": 16,
+     "witness": [
+      1,
+      9,
+      14,
+      22,
+      35,
+      36
+     ]
+    },
+    {
+     "length": 6,
+     "class": "xi39",
+     "count": 8,
+     "witness": [
+      2,
+      5,
+      14,
+      29,
+      32,
+      35
+     ]
+    }
+   ]
+  },
+  {
+   "q": 35,
+   "d": 70,
+   "member": true,
+   "certificate": "results/fermat_span/cert_q35_d70.txt",
+   "reduced_hodge_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 36,
+    "4": 34,
+    "5": 30,
+    "6": 698
+   },
+   "signatures": [
+    {
+     "length": 3,
+     "class": "0",
+     "count": 36,
+     "witness": [
+      1,
+      36,
+      68
+     ]
+    },
+    {
+     "length": 4,
+     "class": "0",
+     "count": 34,
+     "witness": [
+      1,
+      18,
+      53,
+      68
+     ]
+    },
+    {
+     "length": 5,
+     "class": "0",
+     "count": 30,
+     "witness": [
+      1,
+      9,
+      44,
+      53,
+      68
+     ]
+    },
+    {
+     "length": 6,
+     "class": "0",
+     "count": 674,
+     "witness": [
+      3,
+      4,
+      17,
+      59,
+      62,
+      65
+     ]
+    },
+    {
+     "length": 6,
+     "class": "xi35",
+     "count": 24,
+     "witness": [
+      4,
+      14,
+      17,
+      57,
+      58,
+      60
+     ]
+    }
+   ]
+  },
+  {
+   "q": 55,
+   "d": 110,
+   "member": true,
+   "certificate": "results/fermat_span/cert_q55_d110.txt",
+   "reduced_hodge_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 54,
+    "4": 54,
+    "5": 58,
+    "6": 1524
+   },
+   "signatures": [
+    {
+     "length": 3,
+     "class": "0",
+     "count": 54,
+     "witness": [
+      1,
+      56,
+      108
+     ]
+    },
+    {
+     "length": 4,
+     "class": "0",
+     "count": 54,
+     "witness": [
+      1,
+      28,
+      83,
+      108
+     ]
+    },
+    {
+     "length": 5,
+     "class": "0",
+     "count": 50,
+     "witness": [
+      1,
+      14,
+      69,
+      83,
+      108
+     ]
+    },
+    {
+     "length": 5,
+     "class": "xi55",
+     "count": 8,
+     "witness": [
+      1,
+      31,
+      71,
+      81,
+      91
+     ]
+    },
+    {
+     "length": 6,
+     "class": "0",
+     "count": 1484,
+     "witness": [
+      3,
+      21,
+      29,
+      76,
+      97,
+      104
+     ]
+    },
+    {
+     "length": 6,
+     "class": "xi55",
+     "count": 40,
+     "witness": [
+      2,
+      3,
+      23,
+      93,
+      103,
+      106
+     ]
+    }
+   ]
+  },
+  {
+   "q": 57,
+   "d": 114,
+   "member": true,
+   "certificate": "results/fermat_span/cert_q57_d114.txt",
+   "reduced_hodge_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 56,
+    "4": 90,
+    "5": 270,
+    "6": 2576
+   },
+   "signatures": [
+    {
+     "length": 3,
+     "class": "0",
+     "count": 56,
+     "witness": [
+      1,
+      58,
+      112
+     ]
+    },
+    {
+     "length": 4,
+     "class": "0",
+     "count": 90,
+     "witness": [
+      1,
+      29,
+      86,
+      112
+     ]
+    },
+    {
+     "length": 5,
+     "class": "0",
+     "count": 270,
+     "witness": [
+      1,
+      18,
+      60,
+      94,
+      112
+     ]
+    },
+    {
+     "length": 6,
+     "class": "0",
+     "count": 2468,
+     "witness": [
+      1,
+      6,
+      18,
+      94,
+      111,
+      112
+     ]
+    },
+    {
+     "length": 6,
+     "class": "xi57",
+     "count": 108,
+     "witness": [
+      1,
+      13,
+      43,
+      91,
+      92,
+      102
+     ]
+    }
+   ]
+  },
+  {
+   "q": 35,
+   "d": 35,
+   "member": false,
+   "certificate": "results/fermat_span/dual_q35_d35.txt",
+   "reduced_hodge_counts": {
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 6
+   },
+   "signatures": [
+    {
+     "length": 6,
+     "class": "0",
+     "count": 6,
+     "witness": [
+      1,
+      8,
+      15,
+      22,
+      29,
+      30
+     ]
+    }
+   ]
+  }
+ ],
+ "aoki": [
+  {
+   "d": 12,
+   "Q": [
+    12
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 24,
+   "Q": [
+    12
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 36,
+   "Q": [
+    12
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 48,
+   "Q": [
+    12
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 60,
+   "Q": [
+    12,
+    15,
+    20
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 66,
+   "Q": [
+    33
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 84,
+   "Q": [
+    12,
+    21,
+    28
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 88,
+   "Q": [
+    44
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 90,
+   "Q": [
+    15
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 102,
+   "Q": [
+    51
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 104,
+   "Q": [
+    52
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 120,
+   "Q": [
+    12,
+    15,
+    20
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 132,
+   "Q": [
+    12,
+    33,
+    44
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 136,
+   "Q": [
+    68
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 156,
+   "Q": [
+    12,
+    39,
+    52
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 176,
+   "Q": [
+    44
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 180,
+   "Q": [
+    12,
+    15,
+    20
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 204,
+   "Q": [
+    12,
+    51,
+    68
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 208,
+   "Q": [
+    52
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 220,
+   "Q": [
+    20,
+    44,
+    55
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 264,
+   "Q": [
+    12,
+    33,
+    44
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 272,
+   "Q": [
+    68
+   ],
+   "dim": 1,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 308,
+   "Q": [
+    28,
+    44,
+    77
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 312,
+   "Q": [
+    12,
+    39,
+    52
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 330,
+   "Q": [
+    15,
+    33,
+    55
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 390,
+   "Q": [
+    15,
+    39,
+    65
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  },
+  {
+   "d": 462,
+   "Q": [
+    21,
+    33,
+    77
+   ],
+   "dim": 3,
+   "orbits_trivial_mod_L0": true
+  }
+ ],
+ "tables": [
+  {
+   "q": 33,
+   "d": 66,
+   "tuple": [
+    19,
+    26,
+    43,
+    44
+   ],
+   "length": 4,
+   "hodge": true,
+   "class": "xi33",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 35,
+   "d": 70,
+   "tuple": [
+    10,
+    12,
+    13,
+    53,
+    56,
+    66
+   ],
+   "length": 6,
+   "hodge": true,
+   "class": "xi35",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 39,
+   "d": 78,
+   "tuple": [
+    25,
+    43,
+    49
+   ],
+   "length": 3,
+   "hodge": true,
+   "class": "xi39",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 44,
+   "d": 132,
+   "tuple": [
+    3,
+    37,
+    39,
+    75,
+    84,
+    99,
+    125
+   ],
+   "length": 7,
+   "hodge": true,
+   "class": "xi44",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 51,
+   "d": 102,
+   "tuple": [
+    7,
+    19,
+    25,
+    60,
+    68,
+    87,
+    91
+   ],
+   "length": 7,
+   "hodge": true,
+   "class": "xi51",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 52,
+   "d": 156,
+   "tuple": [
+    24,
+    51,
+    63,
+    75,
+    87,
+    97,
+    149
+   ],
+   "length": 7,
+   "hodge": true,
+   "class": "xi52",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 55,
+   "d": 110,
+   "tuple": [
+    19,
+    29,
+    39,
+    79,
+    109
+   ],
+   "length": 5,
+   "hodge": true,
+   "class": "xi55",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 57,
+   "d": 114,
+   "tuple": [
+    23,
+    41,
+    64,
+    66,
+    71,
+    77
+   ],
+   "length": 6,
+   "hodge": true,
+   "class": "xi57",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 12,
+   "d": 12,
+   "tuple": [
+    1,
+    8,
+    9
+   ],
+   "length": 3,
+   "hodge": true,
+   "class": "xi12",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 15,
+   "d": 15,
+   "tuple": [
+    1,
+    7,
+    10,
+    12
+   ],
+   "length": 4,
+   "hodge": true,
+   "class": "xi15",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 20,
+   "d": 20,
+   "tuple": [
+    3,
+    8,
+    19
+   ],
+   "length": 3,
+   "hodge": true,
+   "class": "xi20",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 21,
+   "d": 21,
+   "tuple": [
+    1,
+    10,
+    15,
+    16
+   ],
+   "length": 4,
+   "hodge": true,
+   "class": "xi21",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 28,
+   "d": 28,
+   "tuple": [
+    5,
+    13,
+    17,
+    21
+   ],
+   "length": 4,
+   "hodge": true,
+   "class": "xi28",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 33,
+   "d": 33,
+   "tuple": [
+    1,
+    4,
+    16,
+    22,
+    25,
+    31
+   ],
+   "length": 6,
+   "hodge": true,
+   "class": "xi33",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 35,
+   "d": 35,
+   "tuple": [
+    1,
+    2,
+    16,
+    17,
+    21,
+    22,
+    30,
+    31
+   ],
+   "length": 8,
+   "hodge": true,
+   "class": "xi35",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 39,
+   "d": 39,
+   "tuple": [
+    1,
+    16,
+    19,
+    22,
+    28,
+    31
+   ],
+   "length": 6,
+   "hodge": true,
+   "class": "xi39",
+   "congruent_to_xi_mod_D+S": true
+  },
+  {
+   "q": 44,
+   "d": 44,
+   "tuple": [
+    8,
+    11,
+    15,
+    19,
+    27,
+    31,
+    43
+   ],
+   "length": 7,
+   "hodge": true,
+   "class": "xi44",
+   "congruent_to_xi_mod_D+S": true
+  }
+ ]
+}

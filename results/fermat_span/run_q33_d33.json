@@ -1,0 +1,82 @@
+{
+ "q": 33,
+ "d": 33,
+ "Q_divisors": [
+  33
+ ],
+ "rank_K": 6,
+ "h": 16,
+ "n_standard": 12,
+ "rank_L0": 6,
+ "eldiv_gt1": [
+  2
+ ],
+ "dim_V": 1,
+ "xi_available": [
+  33
+ ],
+ "xi_missing_from_csv": [],
+ "rank_xi_classes": 1,
+ "xi_orbits_trivial_mod_L0": true,
+ "xi_basis_of_K_mod_L0": true,
+ "reduced_hodge_counts": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 10,
+  "5": 0,
+  "6": 14
+ },
+ "enum_seconds": 0.0,
+ "signatures": [
+  {
+   "length": 4,
+   "class": "0",
+   "count": 10,
+   "witness": [
+    1,
+    12,
+    23,
+    30
+   ]
+  },
+  {
+   "length": 6,
+   "class": "0",
+   "count": 10,
+   "witness": [
+    1,
+    4,
+    15,
+    23,
+    26,
+    30
+   ]
+  },
+  {
+   "length": 6,
+   "class": "xi33",
+   "count": 4,
+   "witness": [
+    1,
+    4,
+    16,
+    22,
+    25,
+    31
+   ]
+  }
+ ],
+ "known_used": [],
+ "dim_short_span": 1,
+ "dim_Lambda_image": 1,
+ "dim_orbit_xi_q": 1,
+ "member": true,
+ "dim_orbit_cap_Lambda": 1,
+ "short_classes": [
+  "0",
+  "xi33"
+ ],
+ "certificate": "results/fermat_span/cert_q33_d33.txt",
+ "seconds": 0.0
+}

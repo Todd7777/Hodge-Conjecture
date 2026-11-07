@@ -1,0 +1,211 @@
+{
+ "q": 44,
+ "d": 396,
+ "Q_divisors": [
+  12,
+  33,
+  44
+ ],
+ "rank_K": 137,
+ "h": 197,
+ "n_standard": 363,
+ "rank_L0": 137,
+ "eldiv_gt1": [
+  2,
+  2,
+  2
+ ],
+ "dim_V": 3,
+ "xi_available": [
+  12,
+  33,
+  44
+ ],
+ "xi_missing_from_csv": [],
+ "rank_xi_classes": 3,
+ "xi_orbits_trivial_mod_L0": true,
+ "xi_basis_of_K_mod_L0": true,
+ "reduced_hodge_counts": {
+  "1": 0,
+  "2": 0,
+  "3": 206,
+  "4": 388,
+  "5": 1398,
+  "6": 25920
+ },
+ "enum_seconds": 2.45,
+ "signatures": [
+  {
+   "length": 3,
+   "class": "0",
+   "count": 202,
+   "witness": [
+    1,
+    199,
+    394
+   ]
+  },
+  {
+   "length": 3,
+   "class": "xi12",
+   "count": 4,
+   "witness": [
+    33,
+    264,
+    297
+   ]
+  },
+  {
+   "length": 4,
+   "class": "0",
+   "count": 352,
+   "witness": [
+    1,
+    133,
+    265,
+    393
+   ]
+  },
+  {
+   "length": 4,
+   "class": "xi33",
+   "count": 20,
+   "witness": [
+    6,
+    150,
+    264,
+    372
+   ]
+  },
+  {
+   "length": 4,
+   "class": "xi12",
+   "count": 16,
+   "witness": [
+    22,
+    99,
+    308,
+    363
+   ]
+  },
+  {
+   "length": 5,
+   "class": "0",
+   "count": 1142,
+   "witness": [
+    1,
+    65,
+    201,
+    329,
+    394
+   ]
+  },
+  {
+   "length": 5,
+   "class": "xi12+xi33",
+   "count": 40,
+   "witness": [
+    6,
+    99,
+    150,
+    363,
+    372
+   ]
+  },
+  {
+   "length": 5,
+   "class": "xi33",
+   "count": 160,
+   "witness": [
+    3,
+    150,
+    201,
+    264,
+    372
+   ]
+  },
+  {
+   "length": 5,
+   "class": "xi12",
+   "count": 56,
+   "witness": [
+    11,
+    55,
+    275,
+    297,
+    352
+   ]
+  },
+  {
+   "length": 6,
+   "class": "0",
+   "count": 24020,
+   "witness": [
+    1,
+    6,
+    65,
+    329,
+    393,
+    394
+   ]
+  },
+  {
+   "length": 6,
+   "class": "xi12+xi33",
+   "count": 200,
+   "witness": [
+    6,
+    48,
+    99,
+    300,
+    363,
+    372
+   ]
+  },
+  {
+   "length": 6,
+   "class": "xi33",
+   "count": 804,
+   "witness": [
+    6,
+    48,
+    88,
+    300,
+    372,
+    374
+   ]
+  },
+  {
+   "length": 6,
+   "class": "xi12",
+   "count": 896,
+   "witness": [
+    11,
+    44,
+    143,
+    297,
+    319,
+    374
+   ]
+  }
+ ],
+ "known_used": [
+  12,
+  33
+ ],
+ "dim_short_span": 2,
+ "dim_Lambda_image": 2,
+ "dim_orbit_xi_q": 1,
+ "member": false,
+ "dim_orbit_cap_Lambda": 0,
+ "short_classes": [
+  "0",
+  "xi12",
+  "xi12+xi33",
+  "xi33"
+ ],
+ "dual_functional": "chi(xi_q')=1 exactly for q' in {44}",
+ "dual_kills_all_other_xi": true,
+ "certificate": "results/fermat_span/dual_q44_d396.txt",
+ "seconds": 2.73
+}

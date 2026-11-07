@@ -1,0 +1,104 @@
+{
+ "q": 57,
+ "d": 114,
+ "Q_divisors": [
+  57
+ ],
+ "rank_K": 38,
+ "h": 56,
+ "n_standard": 98,
+ "rank_L0": 38,
+ "eldiv_gt1": [
+  2
+ ],
+ "dim_V": 1,
+ "xi_available": [
+  57
+ ],
+ "xi_missing_from_csv": [],
+ "rank_xi_classes": 1,
+ "xi_orbits_trivial_mod_L0": true,
+ "xi_basis_of_K_mod_L0": true,
+ "reduced_hodge_counts": {
+  "1": 0,
+  "2": 0,
+  "3": 56,
+  "4": 90,
+  "5": 270,
+  "6": 2576
+ },
+ "enum_seconds": 0.03,
+ "signatures": [
+  {
+   "length": 3,
+   "class": "0",
+   "count": 56,
+   "witness": [
+    1,
+    58,
+    112
+   ]
+  },
+  {
+   "length": 4,
+   "class": "0",
+   "count": 90,
+   "witness": [
+    1,
+    29,
+    86,
+    112
+   ]
+  },
+  {
+   "length": 5,
+   "class": "0",
+   "count": 270,
+   "witness": [
+    1,
+    18,
+    60,
+    94,
+    112
+   ]
+  },
+  {
+   "length": 6,
+   "class": "0",
+   "count": 2468,
+   "witness": [
+    1,
+    6,
+    18,
+    94,
+    111,
+    112
+   ]
+  },
+  {
+   "length": 6,
+   "class": "xi57",
+   "count": 108,
+   "witness": [
+    1,
+    13,
+    43,
+    91,
+    92,
+    102
+   ]
+  }
+ ],
+ "known_used": [],
+ "dim_short_span": 1,
+ "dim_Lambda_image": 1,
+ "dim_orbit_xi_q": 1,
+ "member": true,
+ "dim_orbit_cap_Lambda": 1,
+ "short_classes": [
+  "0",
+  "xi57"
+ ],
+ "certificate": "results/fermat_span/cert_q57_d114.txt",
+ "seconds": 0.07
+}

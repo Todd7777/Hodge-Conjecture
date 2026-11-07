@@ -1,0 +1,12 @@
+# Validation (ii): xi_q is NOT in D_q + S_q.  chi(v) = #(entries of v in U) mod 2 vanishes on every linear
+# and every (lifted) standard tuple of degree q and is odd on xi_q.
+# check: python3 scripts/fermat_span/fs_check.py <this file>
+type nonmember
+scope DS
+q 52
+d 52
+xi_q 1 10 14 17 18 21 22 24 29 41 45 46 50
+known -
+modulus 2
+U 1 25 27 51
+end

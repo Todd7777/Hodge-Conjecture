@@ -1,0 +1,80 @@
+{
+ "q": 15,
+ "d": 15,
+ "Q_divisors": [
+  15
+ ],
+ "rank_K": 3,
+ "h": 7,
+ "n_standard": 6,
+ "rank_L0": 3,
+ "eldiv_gt1": [
+  2
+ ],
+ "dim_V": 1,
+ "xi_available": [
+  15
+ ],
+ "xi_missing_from_csv": [],
+ "rank_xi_classes": 1,
+ "xi_orbits_trivial_mod_L0": true,
+ "xi_basis_of_K_mod_L0": true,
+ "reduced_hodge_counts": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 12,
+  "5": 0,
+  "6": 6
+ },
+ "enum_seconds": 0.0,
+ "signatures": [
+  {
+   "length": 4,
+   "class": "0",
+   "count": 4,
+   "witness": [
+    1,
+    6,
+    11,
+    12
+   ]
+  },
+  {
+   "length": 4,
+   "class": "xi15",
+   "count": 8,
+   "witness": [
+    1,
+    6,
+    10,
+    13
+   ]
+  },
+  {
+   "length": 6,
+   "class": "0",
+   "count": 6,
+   "witness": [
+    1,
+    2,
+    7,
+    11,
+    12,
+    12
+   ]
+  }
+ ],
+ "known_used": [],
+ "dim_short_span": 1,
+ "dim_Lambda_image": 1,
+ "dim_orbit_xi_q": 1,
+ "member": true,
+ "dim_orbit_cap_Lambda": 1,
+ "short_classes": [
+  "0",
+  "xi15"
+ ],
+ "certificate": "results/fermat_span/cert_q15_d15.txt",
+ "seconds": 0.0
+}

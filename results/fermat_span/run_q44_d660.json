@@ -1,0 +1,534 @@
+{
+ "q": 44,
+ "d": 660,
+ "Q_divisors": [
+  12,
+  15,
+  20,
+  33,
+  44,
+  55,
+  660
+ ],
+ "rank_K": 249,
+ "h": 329,
+ "n_standard": 738,
+ "rank_L0": 249,
+ "eldiv_gt1": [
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2
+ ],
+ "dim_V": 7,
+ "xi_available": [
+  12,
+  15,
+  20,
+  33,
+  44,
+  55
+ ],
+ "xi_missing_from_csv": [
+  660
+ ],
+ "rank_xi_classes": 6,
+ "xi_orbits_trivial_mod_L0": true,
+ "xi_basis_of_K_mod_L0": false,
+ "reduced_hodge_counts": {
+  "1": 0,
+  "2": 0,
+  "3": 380,
+  "4": 866,
+  "5": 3292,
+  "6": 83294
+ },
+ "enum_seconds": 23.36,
+ "signatures": [
+  {
+   "length": 3,
+   "class": "raw:0",
+   "count": 344,
+   "witness": [
+    1,
+    331,
+    658
+   ]
+  },
+  {
+   "length": 3,
+   "class": "raw:31",
+   "count": 16,
+   "witness": [
+    11,
+    451,
+    528
+   ]
+  },
+  {
+   "length": 3,
+   "class": "raw:41",
+   "count": 8,
+   "witness": [
+    22,
+    440,
+    528
+   ]
+  },
+  {
+   "length": 3,
+   "class": "raw:42",
+   "count": 4,
+   "witness": [
+    55,
+    440,
+    495
+   ]
+  },
+  {
+   "length": 3,
+   "class": "raw:70",
+   "count": 8,
+   "witness": [
+    11,
+    440,
+    539
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:0",
+   "count": 666,
+   "witness": [
+    1,
+    221,
+    441,
+    657
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:3",
+   "count": 16,
+   "witness": [
+    22,
+    165,
+    528,
+    605
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:31",
+   "count": 64,
+   "witness": [
+    11,
+    132,
+    539,
+    638
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:32",
+   "count": 16,
+   "witness": [
+    11,
+    165,
+    539,
+    605
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:41",
+   "count": 40,
+   "witness": [
+    11,
+    341,
+    440,
+    528
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:42",
+   "count": 4,
+   "witness": [
+    55,
+    220,
+    495,
+    550
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:48",
+   "count": 20,
+   "witness": [
+    10,
+    250,
+    440,
+    620
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:70",
+   "count": 40,
+   "witness": [
+    11,
+    220,
+    451,
+    638
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:0",
+   "count": 2240,
+   "witness": [
+    1,
+    109,
+    333,
+    549,
+    658
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:3",
+   "count": 80,
+   "witness": [
+    11,
+    165,
+    341,
+    528,
+    605
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:9",
+   "count": 80,
+   "witness": [
+    10,
+    132,
+    250,
+    620,
+    638
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:a",
+   "count": 40,
+   "witness": [
+    10,
+    165,
+    250,
+    605,
+    620
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:20",
+   "count": 8,
+   "witness": [
+    6,
+    186,
+    426,
+    486,
+    546
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:31",
+   "count": 288,
+   "witness": [
+    11,
+    22,
+    528,
+    539,
+    550
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:32",
+   "count": 80,
+   "witness": [
+    11,
+    55,
+    451,
+    495,
+    638
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:38",
+   "count": 80,
+   "witness": [
+    10,
+    121,
+    250,
+    620,
+    649
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:41",
+   "count": 120,
+   "witness": [
+    11,
+    220,
+    341,
+    528,
+    550
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:42",
+   "count": 8,
+   "witness": [
+    22,
+    165,
+    418,
+    440,
+    605
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:48",
+   "count": 100,
+   "witness": [
+    5,
+    250,
+    335,
+    440,
+    620
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:70",
+   "count": 168,
+   "witness": [
+    11,
+    110,
+    440,
+    451,
+    638
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:0",
+   "count": 66326,
+   "witness": [
+    1,
+    6,
+    109,
+    549,
+    657,
+    658
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:3",
+   "count": 240,
+   "witness": [
+    44,
+    66,
+    165,
+    528,
+    572,
+    605
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:9",
+   "count": 720,
+   "witness": [
+    10,
+    80,
+    132,
+    500,
+    620,
+    638
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:a",
+   "count": 200,
+   "witness": [
+    10,
+    80,
+    165,
+    500,
+    605,
+    620
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:20",
+   "count": 80,
+   "witness": [
+    12,
+    18,
+    138,
+    558,
+    618,
+    636
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:31",
+   "count": 6464,
+   "witness": [
+    22,
+    88,
+    99,
+    528,
+    616,
+    627
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:32",
+   "count": 336,
+   "witness": [
+    22,
+    33,
+    165,
+    561,
+    594,
+    605
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:38",
+   "count": 720,
+   "witness": [
+    10,
+    80,
+    121,
+    500,
+    620,
+    649
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:41",
+   "count": 3048,
+   "witness": [
+    22,
+    88,
+    220,
+    506,
+    528,
+    616
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:42",
+   "count": 1416,
+   "witness": [
+    22,
+    154,
+    165,
+    440,
+    594,
+    605
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:48",
+   "count": 344,
+   "witness": [
+    10,
+    90,
+    190,
+    440,
+    620,
+    630
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:70",
+   "count": 3336,
+   "witness": [
+    22,
+    33,
+    220,
+    550,
+    561,
+    594
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:73",
+   "count": 64,
+   "witness": [
+    11,
+    165,
+    220,
+    451,
+    528,
+    605
+   ]
+  }
+ ],
+ "known_used": [
+  12,
+  15,
+  20,
+  33,
+  55
+ ],
+ "dim_short_span": 5,
+ "dim_Lambda_image": 5,
+ "dim_orbit_xi_q": 1,
+ "member": false,
+ "dim_orbit_cap_Lambda": 0,
+ "short_classes": [
+  "raw:0",
+  "raw:20",
+  "raw:3",
+  "raw:31",
+  "raw:32",
+  "raw:38",
+  "raw:41",
+  "raw:42",
+  "raw:48",
+  "raw:70",
+  "raw:73",
+  "raw:9",
+  "raw:a"
+ ],
+ "dual_functional": "chi(xi_q')=1 exactly for q' in {44}",
+ "dual_kills_all_other_xi": true,
+ "certificate": "results/fermat_span/dual_q44_d660.txt",
+ "seconds": 25.34
+}

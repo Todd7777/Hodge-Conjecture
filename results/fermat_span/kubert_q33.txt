@@ -1,0 +1,33 @@
+# Validation (i), Kubert-Aoki (MMRV Theorem 4.3): 2 xi_q is an explicit Z-combination of linear tuples
+# and standard tuples of degree q (S_q read as in the authors' code: s_{p,i} of every divisor of q, lifted).
+# check: python3 scripts/fermat_span/fs_check.py <this file>
+type member
+multiple 2
+scope DS
+q 33
+d 33
+xi_q 1 4 13 16 19 22 27 30
+known -
+gen -1 std 3 7 33 7 12 18 29
+gen -1 std 3 10 33 3 10 21 32
+gen -1 std 3 14 33 3 14 24 25
+gen -1 std 3 17 33 6 15 17 28
+gen -1 std 3 20 33 6 9 20 31
+gen -1 std 11 2 33 2 5 8 11 11 14 17 20 23 26 29 32
+gen 2 lin 1 1 32
+gen 1 lin 2 2 31
+gen 2 lin 3 3 30
+gen 2 lin 4 4 29
+gen 1 lin 5 5 28
+gen 2 lin 6 6 27
+gen 1 lin 7 7 26
+gen 1 lin 8 8 25
+gen 1 lin 9 9 24
+gen 1 lin 10 10 23
+gen 2 lin 11 11 22
+gen 1 lin 12 12 21
+gen 2 lin 13 13 20
+gen 2 lin 14 14 19
+gen 1 lin 15 15 18
+gen 2 lin 16 16 17
+end

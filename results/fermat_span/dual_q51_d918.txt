@@ -1,0 +1,15 @@
+# fermat_span DUAL certificate (NON-MEMBER): xi_q does not lie in Lambda_d (MMRV notation)
+# U is a subset of (Z/d)-{0} with U = -U and d/2 not in U; chi(v) = #(entries of v in U) mod 2 is a
+# homomorphism R_d -> Z/2 (y = chi/2 is a rational vector with y.v integral for every generator v).
+# claim: chi = 0 on (a)+(-a), eps_d, every lifted standard tuple of every divisor of d, every G_d-conjugate
+# of every known xi_q' and EVERY Hodge tuple of length <= 6 in degree d; chi(lift(xi_q)) = 1.
+# check: python3 scripts/fermat_span/fs_check.py <this file>   (runs the independent C enumeration)
+type nonmember
+q 51
+d 918
+xi_q 1 10 13 18 22 28 34 37 43 49
+known -
+modulus 2
+functional chi(xi_q')=1 exactly for q' in {51}
+U 1 2 3 4 5 6 8 10 12 13 16 17 24 26 31 34 49 51 55 61 62 91 98 102 104 110 122 127 129 137 143 145 184 293 294 298 301 302 303 304 305 306 307 308 310 312 314 316 322 330 332 337 349 355 357 361 367 368 397 407 425 433 435 443 449 469 475 483 485 493 511 521 550 551 557 561 563 569 581 586 588 596 602 604 606 608 610 611 612 613 614 615 616 617 620 624 625 734 773 775 781 789 791 796 808 814 816 820 827 856 857 863 867 869 884 887 892 894 901 902 905 906 908 910 912 913 914 915 916 917
+end

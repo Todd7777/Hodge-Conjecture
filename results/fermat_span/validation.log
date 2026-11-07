@@ -1,0 +1,98 @@
+[def4.8] q=12 Hodge=True primitive=[('+', {4: 3, 3: 2})] recursion ok for (eps,s,x)=[(-1, -1, -1), (-1, -1, 1)]
+[def4.8] q=15 Hodge=True primitive=[('+', {3: 2, 5: 2})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=20 Hodge=True primitive=[('+', {4: 3, 5: 2})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=21 Hodge=True primitive=[('+', {3: 2, 7: 3})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=28 Hodge=True primitive=[('+', {4: 3, 7: 3})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=33 Hodge=True primitive=[('+', {3: 2, 11: 2})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=35 Hodge=True primitive=[('+', {5: 2, 7: 3})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=39 Hodge=True primitive=[('+', {3: 2, 13: 2})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=44 Hodge=True primitive=[('+', {4: 3, 11: 2})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=51 Hodge=True primitive=[('+', {3: 2, 17: 3})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=52 Hodge=True primitive=[('+', {4: 3, 13: 2})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=55 Hodge=True primitive=[('+', {5: 2, 11: 2})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=57 Hodge=True primitive=[('+', {3: 2, 19: 2})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=65 Hodge=True primitive=[('+', {5: 2, 13: 2})] recursion ok for (eps,s,x)=[(-1, 1, 1), (-1, -1, -1)]
+[def4.8] q=68 Hodge=True primitive=[('+', {4: 3, 17: 3})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[def4.8] q=69 Hodge=True primitive=[('+', {3: 2, 23: 5})] recursion ok for (eps,s,x)=[(-1, -1, -1)]
+[i/ii] q=12 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: False, rank 2 vs 3)
+[i/ii] q=15 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: True, rank 3 vs 3)
+[i/ii] q=20 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: False, rank 3 vs 5)
+[i/ii] q=21 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: True, rank 4 vs 4)
+[i/ii] q=28 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: False, rank 4 vs 7)
+[i/ii] q=33 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: True, rank 6 vs 6)
+[i/ii] q=35 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: True, rank 5 vs 5)
+[i/ii] q=39 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: True, rank 7 vs 7)
+[i/ii] q=44 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: False, rank 6 vs 11)
+[i/ii] q=51 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: True, rank 9 vs 9)
+[i/ii] q=52 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: False, rank 7 vs 13)
+[i/ii] q=55 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: True, rank 7 vs 7)
+[i/ii] q=57 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: True, rank 10 vs 10)
+[i/ii] q=65 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: True, rank 8 vs 8)
+[i/ii] q=68 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: False, rank 9 vs 17)
+[i/ii] q=69 2xi in D+S: True xi in D+S: False (literal Def 3.7 S_q: 2xi in D+S_lit: True, rank 12 vs 12)
+[q=12 d=12] h=5 rank K=3 #std=8 rank L0=3 dim_F2 K/L0=1 Q(d)=[12] xi-basis=True missing=[] (0.0s)
+[q=12 d=12] member=True dim K/L0=1 dim short span=1 dim Lambda/L0=1 known=[] short classes=['0', 'xi12'] counts={1: 0, 2: 0, 3: 8, 4: 8, 5: 4, 6: 18} cert=results/fermat_span/cert_q12_d12.txt (0.0s)
+[q=15 d=15] h=7 rank K=3 #std=6 rank L0=3 dim_F2 K/L0=1 Q(d)=[15] xi-basis=True missing=[] (0.0s)
+[q=15 d=15] member=True dim K/L0=1 dim short span=1 dim Lambda/L0=1 known=[] short classes=['0', 'xi15'] counts={1: 0, 2: 0, 3: 0, 4: 12, 5: 0, 6: 6} cert=results/fermat_span/cert_q15_d15.txt (0.0s)
+[q=20 d=20] h=9 rank K=5 #std=12 rank L0=5 dim_F2 K/L0=1 Q(d)=[20] xi-basis=True missing=[] (0.0s)
+[q=20 d=20] member=True dim K/L0=1 dim short span=1 dim Lambda/L0=1 known=[] short classes=['0', 'xi20'] counts={1: 0, 2: 0, 3: 16, 4: 26, 5: 24, 6: 84} cert=results/fermat_span/cert_q20_d20.txt (0.01s)
+[q=21 d=21] h=10 rank K=4 #std=8 rank L0=4 dim_F2 K/L0=1 Q(d)=[21] xi-basis=True missing=[] (0.0s)
+[q=21 d=21] member=True dim K/L0=1 dim short span=1 dim Lambda/L0=1 known=[] short classes=['0', 'xi21'] counts={1: 0, 2: 0, 3: 0, 4: 18, 5: 0, 6: 12} cert=results/fermat_span/cert_q21_d21.txt (0.0s)
+[q=28 d=28] h=13 rank K=7 #std=16 rank L0=7 dim_F2 K/L0=1 Q(d)=[28] xi-basis=True missing=[] (0.0s)
+[q=28 d=28] member=True dim K/L0=1 dim short span=1 dim Lambda/L0=1 known=[] short classes=['0', 'xi28'] counts={1: 0, 2: 0, 3: 14, 4: 22, 5: 30, 6: 106} cert=results/fermat_span/cert_q28_d28.txt (0.0s)
+[q=33 d=33] h=16 rank K=6 #std=12 rank L0=6 dim_F2 K/L0=1 Q(d)=[33] xi-basis=True missing=[] (0.0s)
+[q=33 d=33] member=True dim K/L0=1 dim short span=1 dim Lambda/L0=1 known=[] short classes=['0', 'xi33'] counts={1: 0, 2: 0, 3: 0, 4: 10, 5: 0, 6: 14} cert=results/fermat_span/cert_q33_d33.txt (0.0s)
+[q=39 d=39] h=19 rank K=7 #std=14 rank L0=7 dim_F2 K/L0=1 Q(d)=[39] xi-basis=True missing=[] (0.0s)
+[q=39 d=39] member=True dim K/L0=1 dim short span=1 dim Lambda/L0=1 known=[] short classes=['0', 'xi39'] counts={1: 0, 2: 0, 3: 0, 4: 12, 5: 0, 6: 24} cert=results/fermat_span/cert_q39_d39.txt (0.0s)
+[q=35 d=70] h=34 rank K=22 #std=56 rank L0=22 dim_F2 K/L0=1 Q(d)=[35] xi-basis=True missing=[] (0.0s)
+[q=35 d=70] member=True dim K/L0=1 dim short span=1 dim Lambda/L0=1 known=[] short classes=['0', 'xi35'] counts={1: 0, 2: 0, 3: 36, 4: 34, 5: 30, 6: 698} cert=results/fermat_span/cert_q35_d70.txt (0.01s)
+[q=55 d=110] h=54 rank K=34 #std=84 rank L0=34 dim_F2 K/L0=1 Q(d)=[55] xi-basis=True missing=[] (0.0s)
+[q=55 d=110] member=True dim K/L0=1 dim short span=1 dim Lambda/L0=1 known=[] short classes=['0', 'xi55'] counts={1: 0, 2: 0, 3: 54, 4: 54, 5: 58, 6: 1524} cert=results/fermat_span/cert_q55_d110.txt (0.05s)
+[q=57 d=114] h=56 rank K=38 #std=98 rank L0=38 dim_F2 K/L0=1 Q(d)=[57] xi-basis=True missing=[] (0.0s)
+[q=57 d=114] member=True dim K/L0=1 dim short span=1 dim Lambda/L0=1 known=[] short classes=['0', 'xi57'] counts={1: 0, 2: 0, 3: 56, 4: 90, 5: 270, 6: 2576} cert=results/fermat_span/cert_q57_d114.txt (0.07s)
+[q=35 d=35] h=17 rank K=5 #std=10 rank L0=5 dim_F2 K/L0=1 Q(d)=[35] xi-basis=True missing=[] (0.0s)
+[q=35 d=35] member=False dim K/L0=1 dim short span=0 dim Lambda/L0=0 known=[] short classes=['0'] counts={1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 6} cert=results/fermat_span/dual_q35_d35.txt (0.01s)
+[aoki] d=12 Q(d)=[12]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=24 Q(d)=[12]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=36 Q(d)=[12]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=48 Q(d)=[12]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=60 Q(d)=[12, 15, 20]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=66 Q(d)=[33]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=84 Q(d)=[12, 21, 28]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=88 Q(d)=[44]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=90 Q(d)=[15]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=102 Q(d)=[51]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=104 Q(d)=[52]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=120 Q(d)=[12, 15, 20]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=132 Q(d)=[12, 33, 44]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=136 Q(d)=[68]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=156 Q(d)=[12, 39, 52]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=176 Q(d)=[44]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=180 Q(d)=[12, 15, 20]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=204 Q(d)=[12, 51, 68]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=208 Q(d)=[52]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=220 Q(d)=[20, 44, 55]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=264 Q(d)=[12, 33, 44]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=272 Q(d)=[68]: K_d = L0 + T_d, K_d/L0 = F_2^1 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=308 Q(d)=[28, 44, 77]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=312 Q(d)=[12, 39, 52]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=330 Q(d)=[15, 33, 55]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=390 Q(d)=[15, 39, 65]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[aoki] d=462 Q(d)=[21, 33, 77]: K_d = L0 + T_d, K_d/L0 = F_2^3 with basis the xi classes; every G_d-conjugate t.xi_q' == xi_q' mod L0: True
+[iv] q=33 d=66 (19, 26, 43, 44) (length 4) Hodge=True class in K/L0 = xi33; tuple - xi_q in D_d+S_d: True
+[iv] q=35 d=70 (10, 12, 13, 53, 56, 66) (length 6) Hodge=True class in K/L0 = xi35; tuple - xi_q in D_d+S_d: True
+[iv] q=39 d=78 (25, 43, 49) (length 3) Hodge=True class in K/L0 = xi39; tuple - xi_q in D_d+S_d: True
+[iv] q=44 d=132 (3, 37, 39, 75, 84, 99, 125) (length 7) Hodge=True class in K/L0 = xi44; tuple - xi_q in D_d+S_d: True
+[iv] q=51 d=102 (7, 19, 25, 60, 68, 87, 91) (length 7) Hodge=True class in K/L0 = xi51; tuple - xi_q in D_d+S_d: True
+[iv] q=52 d=156 (24, 51, 63, 75, 87, 97, 149) (length 7) Hodge=True class in K/L0 = xi52; tuple - xi_q in D_d+S_d: True
+[iv] q=55 d=110 (19, 29, 39, 79, 109) (length 5) Hodge=True class in K/L0 = xi55; tuple - xi_q in D_d+S_d: True
+[iv] q=57 d=114 (23, 41, 64, 66, 71, 77) (length 6) Hodge=True class in K/L0 = xi57; tuple - xi_q in D_d+S_d: True
+[iv] q=12 d=12 (1, 8, 9) (length 3) Hodge=True class in K/L0 = xi12; tuple - xi_q in D_d+S_d: True
+[iv] q=15 d=15 (1, 7, 10, 12) (length 4) Hodge=True class in K/L0 = xi15; tuple - xi_q in D_d+S_d: True
+[iv] q=20 d=20 (3, 8, 19) (length 3) Hodge=True class in K/L0 = xi20; tuple - xi_q in D_d+S_d: True
+[iv] q=21 d=21 (1, 10, 15, 16) (length 4) Hodge=True class in K/L0 = xi21; tuple - xi_q in D_d+S_d: True
+[iv] q=28 d=28 (5, 13, 17, 21) (length 4) Hodge=True class in K/L0 = xi28; tuple - xi_q in D_d+S_d: True
+[iv] q=33 d=33 (1, 4, 16, 22, 25, 31) (length 6) Hodge=True class in K/L0 = xi33; tuple - xi_q in D_d+S_d: True
+[iv] q=35 d=35 (1, 2, 16, 17, 21, 22, 30, 31) (length 8) Hodge=True class in K/L0 = xi35; tuple - xi_q in D_d+S_d: True
+[iv] q=39 d=39 (1, 16, 19, 22, 28, 31) (length 6) Hodge=True class in K/L0 = xi39; tuple - xi_q in D_d+S_d: True
+[iv] q=44 d=44 (8, 11, 15, 19, 27, 31, 43) (length 7) Hodge=True class in K/L0 = xi44; tuple - xi_q in D_d+S_d: True

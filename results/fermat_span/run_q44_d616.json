@@ -1,0 +1,137 @@
+{
+ "q": 44,
+ "d": 616,
+ "Q_divisors": [
+  28,
+  44,
+  77
+ ],
+ "rank_K": 187,
+ "h": 307,
+ "n_standard": 449,
+ "rank_L0": 187,
+ "eldiv_gt1": [
+  2,
+  2,
+  2
+ ],
+ "dim_V": 3,
+ "xi_available": [
+  28,
+  44,
+  77
+ ],
+ "xi_missing_from_csv": [],
+ "rank_xi_classes": 3,
+ "xi_orbits_trivial_mod_L0": true,
+ "xi_basis_of_K_mod_L0": true,
+ "reduced_hodge_counts": {
+  "1": 0,
+  "2": 0,
+  "3": 308,
+  "4": 314,
+  "5": 496,
+  "6": 47980
+ },
+ "enum_seconds": 12.8,
+ "signatures": [
+  {
+   "length": 3,
+   "class": "0",
+   "count": 308,
+   "witness": [
+    1,
+    309,
+    614
+   ]
+  },
+  {
+   "length": 4,
+   "class": "0",
+   "count": 310,
+   "witness": [
+    1,
+    309,
+    310,
+    612
+   ]
+  },
+  {
+   "length": 4,
+   "class": "xi28",
+   "count": 4,
+   "witness": [
+    22,
+    198,
+    462,
+    550
+   ]
+  },
+  {
+   "length": 5,
+   "class": "0",
+   "count": 468,
+   "witness": [
+    1,
+    155,
+    309,
+    463,
+    612
+   ]
+  },
+  {
+   "length": 5,
+   "class": "xi28",
+   "count": 28,
+   "witness": [
+    11,
+    198,
+    319,
+    462,
+    550
+   ]
+  },
+  {
+   "length": 6,
+   "class": "0",
+   "count": 47884,
+   "witness": [
+    4,
+    78,
+    193,
+    464,
+    501,
+    608
+   ]
+  },
+  {
+   "length": 6,
+   "class": "xi28",
+   "count": 96,
+   "witness": [
+    22,
+    110,
+    132,
+    462,
+    550,
+    572
+   ]
+  }
+ ],
+ "known_used": [
+  28
+ ],
+ "dim_short_span": 1,
+ "dim_Lambda_image": 1,
+ "dim_orbit_xi_q": 1,
+ "member": false,
+ "dim_orbit_cap_Lambda": 0,
+ "short_classes": [
+  "0",
+  "xi28"
+ ],
+ "dual_functional": "chi(xi_q')=1 exactly for q' in {44}",
+ "dual_kills_all_other_xi": true,
+ "certificate": "results/fermat_span/dual_q44_d616.txt",
+ "seconds": 13.97
+}

@@ -1,0 +1,164 @@
+# Output of: python3 scripts/fermat_formal_module.py all ./fermat_hodge_tuples
+# (fermat_hodge_tuples built with: gcc -O2 -o fermat_hodge_tuples scripts/fermat_hodge_tuples.c; python-flint 0.9.0; run 2026-11-07)
+## structure d=44: rank B_d = 33; #sorted surface chars 293, fourfold chars 3164, standard chars 50
+   B/(D+B2): free rank 1, torsion invariant factors []
+   lambda_44 = {11: 1, 33: -1}: vanishes on D: True and on every surface and fourfold character: True
+   lambda_44(alpha_44) = -1 for alpha_44 = (1, 5, 13, 22, 24, 33, 37, 41); alpha_44 Hodge: True
+   rank(D+B2+B4) = 32 (= rank(D+B2) = 32)
+   [B : D+S] = 2, [B : D+S+B2+B4] = 2, 2B in D+S: True
+   lambda on standard chars: [-2, 0, 2]  (0.5s)
+## structure d=52: rank B_d = 39; #sorted surface chars 399, fourfold chars 4884, standard chars 60
+   B/(D+B2): free rank 1, torsion invariant factors []
+   lambda_52 = {1: 1, 25: 1, 27: -1, 51: -1}: vanishes on D: True and on every surface and fourfold character: True
+   lambda_52(alpha_52) = 1 for alpha_52 = (1, 4, 17, 21, 29, 41, 45, 50); alpha_52 Hodge: True
+   rank(D+B2+B4) = 38 (= rank(D+B2) = 38)
+   [B : D+S] = 2, [B : D+S+B2+B4] = 2, 2B in D+S: True
+   lambda on standard chars: [-2, 0, 2]  (0.7s)
+## structure d=51: rank B_d = 34; #sorted surface chars 341, fourfold chars 3341, standard chars 64
+   B/(D+B2): free rank 1, torsion invariant factors []
+   lambda_51 = {17: 1, 34: -1}: vanishes on D: True and on every surface and fourfold character: True
+   lambda_51(alpha_51) = -1 for alpha_51 = (1, 4, 7, 19, 24, 34, 37, 40, 43, 46); alpha_51 Hodge: True
+   rank(D+B2+B4) = 33 (= rank(D+B2) = 33)
+   [B : D+S] = 2, [B : D+S+B2+B4] = 2, 2B in D+S: True
+   lambda on standard chars: [-2, 0, 2]  (0.4s)
+## orbits in results/fermat_fast_6_44.txt: 24
+   (1, 1, 12, 23, 26, 34, 36, 43)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 2, 6, 17, 28, 39, 40, 43)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 2, 13, 24, 28, 30, 35, 43)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 3, 12, 23, 26, 34, 36, 41)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 3, 14, 20, 25, 34, 36, 43)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 3, 14, 23, 25, 34, 36, 40)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 3, 23, 25, 26, 28, 34, 36)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 4, 5, 13, 33, 37, 41, 42)  lambda=-1  in D+B2: False  in D+S+B2: False
+   (1, 5, 8, 9, 33, 37, 41, 42)  lambda=-1  in D+B2: False  in D+S+B2: False
+   (1, 5, 9, 16, 29, 33, 41, 42)  lambda=-1  in D+B2: False  in D+S+B2: False
+   (1, 5, 9, 24, 26, 33, 37, 41)  lambda=-1  in D+B2: False  in D+S+B2: False
+   (1, 5, 12, 13, 33, 34, 37, 41)  lambda=-1  in D+B2: False  in D+S+B2: False
+   (1, 5, 13, 22, 24, 33, 37, 41)  lambda=-1  in D+B2: False  in D+S+B2: False
+   (1, 6, 12, 23, 26, 34, 36, 38)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 6, 14, 23, 26, 34, 36, 36)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 6, 17, 23, 26, 28, 36, 39)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 8, 12, 23, 26, 34, 36, 36)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 10, 12, 23, 26, 34, 34, 36)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 11, 12, 23, 26, 33, 34, 36)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 12, 12, 23, 26, 30, 34, 38)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 12, 12, 23, 26, 32, 34, 36)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 12, 14, 23, 26, 30, 34, 36)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 12, 16, 23, 26, 28, 34, 36)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 12, 18, 23, 26, 26, 34, 36)  lambda=+0  in D+B2: True  in D+S+B2: True
+   summary (lambda, in D+B2, in D+S+B2) -> count: {(0, True, True): 18, (-1, False, False): 6}
+## orbits in results/fermat_fast_6_52.txt: 28
+   (1, 1, 14, 27, 30, 40, 44, 51)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 2, 7, 20, 33, 46, 48, 51)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 2, 15, 28, 34, 36, 41, 51)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 3, 14, 27, 30, 40, 44, 49)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 3, 16, 28, 29, 38, 42, 51)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 4, 17, 21, 29, 41, 45, 50)  lambda=+1  in D+B2: False  in D+S+B2: False
+   (1, 5, 9, 12, 37, 45, 49, 50)  lambda=+1  in D+B2: False  in D+S+B2: False
+   (1, 5, 9, 14, 37, 45, 48, 49)  lambda=+1  in D+B2: False  in D+S+B2: False
+   (1, 5, 9, 14, 41, 44, 45, 49)  lambda=+1  in D+B2: False  in D+S+B2: False
+   (1, 5, 9, 22, 33, 41, 48, 49)  lambda=+1  in D+B2: False  in D+S+B2: False
+   (1, 5, 9, 26, 33, 37, 48, 49)  lambda=+1  in D+B2: False  in D+S+B2: False
+   (1, 5, 9, 29, 32, 37, 45, 50)  lambda=+1  in D+B2: False  in D+S+B2: False
+   (1, 5, 12, 18, 31, 44, 46, 51)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 6, 14, 27, 30, 40, 44, 46)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 7, 20, 27, 30, 33, 44, 46)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 8, 14, 27, 30, 40, 44, 44)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 10, 14, 23, 27, 36, 48, 49)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 10, 14, 27, 30, 36, 44, 46)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 10, 14, 27, 30, 40, 42, 44)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 12, 14, 27, 30, 40, 40, 44)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 13, 14, 27, 30, 39, 40, 44)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 14, 14, 27, 30, 38, 40, 44)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 14, 16, 27, 30, 36, 40, 44)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 14, 18, 27, 30, 34, 40, 44)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 14, 20, 23, 27, 30, 44, 49)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 14, 20, 27, 30, 32, 40, 44)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 14, 20, 27, 30, 34, 40, 42)  lambda=+0  in D+B2: True  in D+S+B2: True
+   (1, 14, 22, 27, 30, 30, 40, 44)  lambda=+0  in D+B2: True  in D+S+B2: True
+   summary (lambda, in D+B2, in D+S+B2) -> count: {(0, True, True): 21, (1, False, False): 7}
+## orbits in results/fermat_fast_8_51.txt: 1
+   (1, 4, 7, 19, 24, 34, 37, 40, 43, 46)  lambda=-1  in D+B2: False  in D+S+B2: False
+   summary (lambda, in D+B2, in D+S+B2) -> count: {(-1, False, False): 1}
+## orbits in results/fermat_fast_8_44.txt: 343
+   summary (lambda, in D+B2, in D+S+B2) -> count: {(0, True, True): 169, (-1, False, False): 167, (1, False, False): 7}
+## orbits in results/fermat_fast_8_52.txt: 500
+   summary (lambda, in D+B2, in D+S+B2) -> count: {(0, True, True): 247, (1, False, False): 240, (-1, False, False): 13}
+## certificates: each line is an identity  alpha * gamma_1 * ... ~ delta_1 * ... (multisets)
+   d=44: (1, 12, 23, 26, 34, 36) * (4, 20, 21, 43) * (8, 18, 22, 40) * (10, 22, 24, 32)  ~  (1, 43) * (4, 40) * (8, 36) * (10, 34) * (12, 32) * (18, 26) * (20, 24) * (21, 23) * (22, 22)   valid: True; auxiliary lengths [2, 4]
+   d=44: (1, 6, 17, 23, 26, 28, 36, 39) * (4, 20, 21, 43) * (5, 22, 27, 34) * (8, 18, 22, 40) * (10, 16, 24, 38)  ~  (1, 43) * (4, 40) * (5, 39) * (6, 38) * (8, 36) * (10, 34) * (16, 28) * (17, 27) * (18, 26) * (20, 24) * (21, 23) * (22, 22)   valid: True; auxiliary lengths [2, 4]
+   d=52: (1, 14, 27, 30, 40, 44) * (4, 24, 25, 51) * (8, 22, 26, 48) * (12, 26, 28, 38)  ~  (1, 51) * (4, 48) * (8, 44) * (12, 40) * (14, 38) * (22, 30) * (24, 28) * (25, 27) * (26, 26)   valid: True; auxiliary lengths [2, 4]
+   d=52: (1, 7, 20, 27, 30, 33, 44, 46) * (4, 24, 25, 51) * (6, 26, 32, 40) * (8, 22, 26, 48) * (12, 19, 28, 45)  ~  (1, 51) * (4, 48) * (6, 46) * (7, 45) * (8, 44) * (12, 40) * (19, 33) * (20, 32) * (22, 30) * (24, 28) * (25, 27) * (26, 26)   valid: True; auxiliary lengths [2, 4]
+   d=44: (1, 4, 5, 13, 33, 37, 41, 42) * (2, 22, 24, 40)  ~  (1, 5, 13, 22, 24, 33, 37, 41) * (2, 42) * (4, 40)   valid: True; auxiliary lengths [2, 4, 8]
+   d=44: (1, 5, 8, 9, 33, 37, 41, 42) * (2, 24, 26, 36) * (13, 18, 22, 35)  ~  (1, 5, 13, 22, 24, 33, 37, 41) * (2, 42) * (8, 36) * (9, 35) * (18, 26)   valid: True; auxiliary lengths [2, 4, 8]
+   d=44: (1, 5, 9, 16, 29, 33, 41, 42) * (2, 22, 24, 40) * (4, 13, 35, 36) * (8, 15, 28, 37)  ~  (1, 5, 13, 22, 24, 33, 37, 41) * (2, 42) * (4, 40) * (8, 36) * (9, 35) * (15, 29) * (16, 28)   valid: True; auxiliary lengths [2, 4, 8]
+   d=44: (1, 5, 9, 24, 26, 33, 37, 41) * (13, 18, 22, 35)  ~  (1, 5, 13, 22, 24, 33, 37, 41) * (9, 35) * (18, 26)   valid: True; auxiliary lengths [2, 4, 8]
+   d=44: (1, 5, 12, 13, 33, 34, 37, 41) * (10, 22, 24, 32)  ~  (1, 5, 13, 22, 24, 33, 37, 41) * (10, 34) * (12, 32)   valid: True; auxiliary lengths [2, 4, 8]
+## chi_4, d=44: f(unit a) = (-1)*chi_4(a): True; nonzero f on non-units: {11: '-5', 33: '5'}
+## chi_3, d=51: f(unit a) = (-2/3)*chi_3(a): True; nonzero f on non-units: {17: '-16/3', 34: '16/3'}
+## chi_4, d=52: f(unit a) = (0)*chi_4(a): True; nonzero f on non-units: {13: '-6', 39: '6'}
+## inherited check for results/fermat_fast_6_44.txt; fourfold orbit (1, 12, 23, 26, 34, 36) (canonical (1, 12, 23, 26, 34, 36))
+   (1, 1, 12, 23, 26, 34, 36, 43): splitting ('N', (1, 12, 23, 26, 34, 36), (1, 8, 36, 43))
+   (1, 2, 6, 17, 28, 39, 40, 43): splitting ('Z', (1, 43), (2, 6, 17, 28, 39, 40))
+   (1, 2, 13, 24, 28, 30, 35, 43): splitting ('Z', (1, 43), (2, 13, 24, 28, 30, 35))
+   (1, 3, 12, 23, 26, 34, 36, 41): splitting ('N', (1, 12, 23, 26, 34, 36), (3, 8, 36, 41))
+   (1, 3, 14, 20, 25, 34, 36, 43): splitting ('Z', (1, 43), (3, 14, 20, 25, 34, 36))
+   (1, 3, 14, 23, 25, 34, 36, 40): splitting ('N', (1, 23, 24, 40), (3, 14, 20, 25, 34, 36))
+   (1, 3, 23, 25, 26, 28, 34, 36): splitting ('N', (1, 12, 23, 26, 34, 36), (3, 25, 28, 32))
+   (1, 4, 5, 13, 33, 37, 41, 42): no Hodge splitting (primitive)
+   (1, 5, 8, 9, 33, 37, 41, 42): no Hodge splitting (primitive)
+   (1, 5, 9, 16, 29, 33, 41, 42): no Hodge splitting (primitive)
+   (1, 5, 9, 24, 26, 33, 37, 41): no Hodge splitting (primitive)
+   (1, 5, 12, 13, 33, 34, 37, 41): no Hodge splitting (primitive)
+   (1, 5, 13, 22, 24, 33, 37, 41): no Hodge splitting (primitive)
+   (1, 6, 12, 23, 26, 34, 36, 38): splitting ('N', (1, 12, 23, 26, 34, 36), (6, 8, 36, 38))
+   (1, 6, 14, 23, 26, 34, 36, 36): splitting ('N', (1, 12, 23, 26, 34, 36), (6, 14, 32, 36))
+   (1, 6, 17, 23, 26, 28, 36, 39): no Hodge splitting (primitive)
+   (1, 8, 12, 23, 26, 34, 36, 36): splitting ('N', (1, 12, 23, 26, 34, 36), (8, 8, 36, 36))
+   (1, 10, 12, 23, 26, 34, 34, 36): splitting ('N', (1, 10, 34, 43), (1, 12, 23, 26, 34, 36))
+   (1, 11, 12, 23, 26, 33, 34, 36): splitting ('N', (1, 11, 33, 43), (1, 12, 23, 26, 34, 36))
+   (1, 12, 12, 23, 26, 30, 34, 38): splitting ('N', (1, 12, 23, 26, 34, 36), (8, 12, 30, 38))
+   (1, 12, 12, 23, 26, 32, 34, 36): splitting ('N', (1, 12, 32, 43), (1, 12, 23, 26, 34, 36))
+   (1, 12, 14, 23, 26, 30, 34, 36): splitting ('N', (1, 14, 30, 43), (1, 12, 23, 26, 34, 36))
+   (1, 12, 16, 23, 26, 28, 34, 36): splitting ('N', (1, 16, 28, 43), (1, 12, 23, 26, 34, 36))
+   (1, 12, 18, 23, 26, 26, 34, 36): splitting ('N', (1, 18, 26, 43), (1, 12, 23, 26, 34, 36))
+## inherited check for results/fermat_fast_6_52.txt; fourfold orbit (1, 14, 27, 30, 40, 44) (canonical (1, 14, 27, 30, 40, 44))
+   (1, 1, 14, 27, 30, 40, 44, 51): splitting ('N', (1, 14, 27, 30, 40, 44), (1, 8, 44, 51))
+   (1, 2, 7, 20, 33, 46, 48, 51): splitting ('Z', (1, 51), (2, 7, 20, 33, 46, 48))
+   (1, 2, 15, 28, 34, 36, 41, 51): splitting ('Z', (1, 51), (2, 15, 28, 34, 36, 41))
+   (1, 3, 14, 27, 30, 40, 44, 49): splitting ('N', (1, 14, 27, 30, 40, 44), (3, 8, 44, 49))
+   (1, 3, 16, 28, 29, 38, 42, 51): splitting ('Z', (1, 51), (3, 16, 28, 29, 38, 42))
+   (1, 4, 17, 21, 29, 41, 45, 50): no Hodge splitting (primitive)
+   (1, 5, 9, 12, 37, 45, 49, 50): no Hodge splitting (primitive)
+   (1, 5, 9, 14, 37, 45, 48, 49): no Hodge splitting (primitive)
+   (1, 5, 9, 14, 41, 44, 45, 49): no Hodge splitting (primitive)
+   (1, 5, 9, 22, 33, 41, 48, 49): no Hodge splitting (primitive)
+   (1, 5, 9, 26, 33, 37, 48, 49): no Hodge splitting (primitive)
+   (1, 5, 9, 29, 32, 37, 45, 50): no Hodge splitting (primitive)
+   (1, 5, 12, 18, 31, 44, 46, 51): splitting ('Z', (1, 51), (5, 12, 18, 31, 44, 46))
+   (1, 6, 14, 27, 30, 40, 44, 46): splitting ('N', (1, 14, 27, 30, 40, 44), (6, 8, 44, 46))
+   (1, 7, 20, 27, 30, 33, 44, 46): no Hodge splitting (primitive)
+   (1, 8, 14, 27, 30, 40, 44, 44): splitting ('N', (1, 14, 27, 30, 40, 44), (8, 8, 44, 44))
+   (1, 10, 14, 23, 27, 36, 48, 49): splitting ('N', (1, 27, 28, 48), (10, 14, 23, 24, 36, 49))
+   (1, 10, 14, 27, 30, 36, 44, 46): splitting ('N', (1, 14, 27, 30, 40, 44), (10, 12, 36, 46))
+   (1, 10, 14, 27, 30, 40, 42, 44): splitting ('N', (1, 14, 27, 30, 40, 44), (8, 10, 42, 44))
+   (1, 12, 14, 27, 30, 40, 40, 44): splitting ('N', (1, 12, 40, 51), (1, 14, 27, 30, 40, 44))
+   (1, 13, 14, 27, 30, 39, 40, 44): splitting ('N', (1, 13, 39, 51), (1, 14, 27, 30, 40, 44))
+   (1, 14, 14, 27, 30, 38, 40, 44): splitting ('N', (1, 14, 38, 51), (1, 14, 27, 30, 40, 44))
+   (1, 14, 16, 27, 30, 36, 40, 44): splitting ('N', (1, 16, 36, 51), (1, 14, 27, 30, 40, 44))
+   (1, 14, 18, 27, 30, 34, 40, 44): splitting ('N', (1, 18, 34, 51), (1, 14, 27, 30, 40, 44))
+   (1, 14, 20, 23, 27, 30, 44, 49): splitting ('N', (1, 14, 27, 30, 40, 44), (12, 20, 23, 49))
+   (1, 14, 20, 27, 30, 32, 40, 44): splitting ('N', (1, 20, 32, 51), (1, 14, 27, 30, 40, 44))
+   (1, 14, 20, 27, 30, 34, 40, 42): splitting ('N', (1, 14, 27, 30, 40, 44), (8, 20, 34, 42))
+   (1, 14, 22, 27, 30, 30, 40, 44): splitting ('N', (1, 22, 30, 51), (1, 14, 27, 30, 40, 44))
+## A_(11,44) admissible characters, class 1 mod 4, last entry 33: lambda -> count {-2: 1}
+## A_(11,44) admissible characters, class 2 mod 4, last entry 22: lambda -> count {0: 252}
+## A_(11,44) admissible characters, class 3 mod 4, last entry 11: lambda -> count {2: 1}
+## lift D=88 (q=44): rank B=67; dim_F2 B/(D+S) = 1 ([B:D+S]=2); after +B2: 1; after +B4: 1; lift of alpha_44 in D+S+B2+B4: False  (0.4s)
+## lift D=132 (q=44): rank B=111; dim_F2 B/(D+S) = 3 ([B:D+S]=8); after +B2: 1; after +B4: 1; lift of alpha_44 in D+S+B2+B4: False  (2.0s)
+## lift D=176 (q=44): rank B=135; dim_F2 B/(D+S) = 1 ([B:D+S]=2); after +B2: 1; after +B4: 1; lift of alpha_44 in D+S+B2+B4: False  (6.1s)
+## lift D=220 (q=44): rank B=179; dim_F2 B/(D+S) = 3 ([B:D+S]=8); after +B2: 2; after +B4: 1; lift of alpha_44 in D+S+B2+B4: False  (15.6s)
+## lift D=104 (q=52): rank B=79; dim_F2 B/(D+S) = 1 ([B:D+S]=2); after +B2: 1; after +B4: 1; lift of alpha_52 in D+S+B2+B4: False  (0.6s)
+## lift D=156 (q=52): rank B=131; dim_F2 B/(D+S) = 3 ([B:D+S]=8); after +B2: 1; after +B4: 1; lift of alpha_52 in D+S+B2+B4: False  (3.1s)
+## lift D=102 (q=51): rank B=85; dim_F2 B/(D+S) = 1 ([B:D+S]=2); after +B2: 1; after +B4: 1; lift of alpha_51 in D+S+B2+B4: False  (0.6s)
+## lift D=153 (q=51): rank B=104; dim_F2 B/(D+S) = 1 ([B:D+S]=2); after +B2: 1; after +B4: 1; lift of alpha_51 in D+S+B2+B4: False  (2.9s)

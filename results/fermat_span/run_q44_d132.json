@@ -1,0 +1,199 @@
+{
+ "q": 44,
+ "d": 132,
+ "Q_divisors": [
+  12,
+  33,
+  44
+ ],
+ "rank_K": 45,
+ "h": 65,
+ "n_standard": 119,
+ "rank_L0": 45,
+ "eldiv_gt1": [
+  2,
+  2,
+  2
+ ],
+ "dim_V": 3,
+ "xi_available": [
+  12,
+  33,
+  44
+ ],
+ "xi_missing_from_csv": [],
+ "rank_xi_classes": 3,
+ "xi_orbits_trivial_mod_L0": true,
+ "xi_basis_of_K_mod_L0": true,
+ "reduced_hodge_counts": {
+  "1": 0,
+  "2": 0,
+  "3": 68,
+  "4": 138,
+  "5": 534,
+  "6": 4156
+ },
+ "enum_seconds": 0.06,
+ "signatures": [
+  {
+   "length": 3,
+   "class": "0",
+   "count": 64,
+   "witness": [
+    1,
+    67,
+    130
+   ]
+  },
+  {
+   "length": 3,
+   "class": "xi12",
+   "count": 4,
+   "witness": [
+    11,
+    88,
+    99
+   ]
+  },
+  {
+   "length": 4,
+   "class": "0",
+   "count": 114,
+   "witness": [
+    1,
+    45,
+    89,
+    129
+   ]
+  },
+  {
+   "length": 4,
+   "class": "xi33",
+   "count": 20,
+   "witness": [
+    2,
+    50,
+    88,
+    124
+   ]
+  },
+  {
+   "length": 4,
+   "class": "xi12",
+   "count": 4,
+   "witness": [
+    11,
+    44,
+    99,
+    110
+   ]
+  },
+  {
+   "length": 5,
+   "class": "0",
+   "count": 394,
+   "witness": [
+    1,
+    21,
+    69,
+    109,
+    130
+   ]
+  },
+  {
+   "length": 5,
+   "class": "xi12+xi33",
+   "count": 40,
+   "witness": [
+    2,
+    33,
+    50,
+    121,
+    124
+   ]
+  },
+  {
+   "length": 5,
+   "class": "xi33",
+   "count": 100,
+   "witness": [
+    1,
+    50,
+    67,
+    88,
+    124
+   ]
+  },
+  {
+   "length": 6,
+   "class": "0",
+   "count": 3404,
+   "witness": [
+    1,
+    6,
+    21,
+    109,
+    129,
+    130
+   ]
+  },
+  {
+   "length": 6,
+   "class": "xi12+xi33",
+   "count": 200,
+   "witness": [
+    2,
+    16,
+    33,
+    100,
+    121,
+    124
+   ]
+  },
+  {
+   "length": 6,
+   "class": "xi33",
+   "count": 304,
+   "witness": [
+    2,
+    18,
+    38,
+    88,
+    124,
+    126
+   ]
+  },
+  {
+   "length": 6,
+   "class": "xi12",
+   "count": 248,
+   "witness": [
+    1,
+    33,
+    44,
+    67,
+    121,
+    130
+   ]
+  }
+ ],
+ "known_used": [
+  12,
+  33
+ ],
+ "dim_short_span": 2,
+ "dim_Lambda_image": 2,
+ "dim_orbit_xi_q": 1,
+ "member": false,
+ "dim_orbit_cap_Lambda": 0,
+ "short_classes": [
+  "0",
+  "xi12",
+  "xi12+xi33",
+  "xi33"
+ ],
+ "dual_functional": "chi(xi_q')=1 exactly for q' in {44}",
+ "dual_kills_all_other_xi": true,
+ "certificate": "results/fermat_span/dual_q44_d132.txt",
+ "seconds": 0.09
+}

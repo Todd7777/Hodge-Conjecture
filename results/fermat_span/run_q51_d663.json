@@ -1,0 +1,92 @@
+{
+ "q": 51,
+ "d": 663,
+ "Q_divisors": [
+  39,
+  51,
+  221
+ ],
+ "rank_K": 139,
+ "h": 331,
+ "n_standard": 308,
+ "rank_L0": 139,
+ "eldiv_gt1": [
+  2,
+  2,
+  2
+ ],
+ "dim_V": 3,
+ "xi_available": [
+  39,
+  51,
+  221
+ ],
+ "xi_missing_from_csv": [],
+ "rank_xi_classes": 3,
+ "xi_orbits_trivial_mod_L0": true,
+ "xi_basis_of_K_mod_L0": true,
+ "reduced_hodge_counts": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 220,
+  "5": 0,
+  "6": 232
+ },
+ "enum_seconds": 2.57,
+ "signatures": [
+  {
+   "length": 4,
+   "class": "0",
+   "count": 220,
+   "witness": [
+    1,
+    222,
+    443,
+    660
+   ]
+  },
+  {
+   "length": 6,
+   "class": "0",
+   "count": 224,
+   "witness": [
+    1,
+    74,
+    295,
+    443,
+    516,
+    660
+   ]
+  },
+  {
+   "length": 6,
+   "class": "xi39",
+   "count": 8,
+   "witness": [
+    34,
+    85,
+    238,
+    493,
+    544,
+    595
+   ]
+  }
+ ],
+ "known_used": [
+  39
+ ],
+ "dim_short_span": 1,
+ "dim_Lambda_image": 1,
+ "dim_orbit_xi_q": 1,
+ "member": false,
+ "dim_orbit_cap_Lambda": 0,
+ "short_classes": [
+  "0",
+  "xi39"
+ ],
+ "dual_functional": "chi(xi_q')=1 exactly for q' in {51}",
+ "dual_kills_all_other_xi": true,
+ "certificate": "results/fermat_span/dual_q51_d663.txt",
+ "seconds": 4.08
+}

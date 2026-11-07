@@ -1,0 +1,59 @@
+{
+ "q": 35,
+ "d": 35,
+ "Q_divisors": [
+  35
+ ],
+ "rank_K": 5,
+ "h": 17,
+ "n_standard": 10,
+ "rank_L0": 5,
+ "eldiv_gt1": [
+  2
+ ],
+ "dim_V": 1,
+ "xi_available": [
+  35
+ ],
+ "xi_missing_from_csv": [],
+ "rank_xi_classes": 1,
+ "xi_orbits_trivial_mod_L0": true,
+ "xi_basis_of_K_mod_L0": true,
+ "reduced_hodge_counts": {
+  "1": 0,
+  "2": 0,
+  "3": 0,
+  "4": 0,
+  "5": 0,
+  "6": 6
+ },
+ "enum_seconds": 0.0,
+ "signatures": [
+  {
+   "length": 6,
+   "class": "0",
+   "count": 6,
+   "witness": [
+    1,
+    8,
+    15,
+    22,
+    29,
+    30
+   ]
+  }
+ ],
+ "known_used": [],
+ "dim_short_span": 0,
+ "dim_Lambda_image": 0,
+ "dim_orbit_xi_q": 1,
+ "member": false,
+ "dim_orbit_cap_Lambda": 0,
+ "short_classes": [
+  "0"
+ ],
+ "dual_functional": "chi(xi_q')=1 exactly for q' in {35}",
+ "dual_kills_all_other_xi": true,
+ "certificate": "results/fermat_span/dual_q35_d35.txt",
+ "seconds": 0.01
+}

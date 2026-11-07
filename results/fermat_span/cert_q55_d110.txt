@@ -1,0 +1,36 @@
+# fermat_span certificate (MEMBER): xi_q lies in Lambda_d (MMRV arXiv:2609.27301 notation)
+# identity in R_d:  lift_{q->d}(xi_q) = sum over 'gen' lines of coef * (tuple)
+# check: python3 scripts/fermat_span/fs_check.py <this file>
+type member
+q 55
+d 110
+xi_q 1 2 12 15 16 26 27 30 35 37 41 45 46 52
+known -
+gen 1 hodge 1 31 71 81 91
+gen -1 std 5 3 55 6 28 50 72 80 94
+gen -1 std 5 9 55 18 20 40 62 84 106
+gen -1 std 2 1 110 1 55 56 108
+gen -1 std 2 31 110 31 48 55 86
+gen -1 std 2 71 110 16 55 71 78
+gen -1 std 2 81 110 26 55 58 81
+gen -1 std 2 91 110 36 38 55 91
+gen 1 lin 2 2 108
+gen 1 lin 4 4 106
+gen 1 lin 6 6 104
+gen 1 lin 16 16 94
+gen 1 lin 18 18 92
+gen 1 lin 20 20 90
+gen 1 lin 24 24 86
+gen 1 lin 26 26 84
+gen 1 lin 28 28 82
+gen 1 lin 30 30 80
+gen 1 lin 32 32 78
+gen 1 lin 36 36 74
+gen 1 lin 38 38 72
+gen 1 lin 40 40 70
+gen 1 lin 48 48 62
+gen 1 lin 50 50 60
+gen 1 lin 52 52 58
+gen 1 lin 54 54 56
+gen 5 eps 55
+end

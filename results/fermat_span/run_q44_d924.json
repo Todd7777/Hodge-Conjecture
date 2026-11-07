@@ -1,0 +1,352 @@
+{
+ "q": 44,
+ "d": 924,
+ "Q_divisors": [
+  12,
+  21,
+  28,
+  33,
+  44,
+  77,
+  924
+ ],
+ "rank_K": 341,
+ "h": 461,
+ "n_standard": 982,
+ "rank_L0": 341,
+ "eldiv_gt1": [
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2
+ ],
+ "dim_V": 7,
+ "xi_available": [
+  12,
+  21,
+  28,
+  33,
+  44,
+  77
+ ],
+ "xi_missing_from_csv": [
+  924
+ ],
+ "rank_xi_classes": 6,
+ "xi_orbits_trivial_mod_L0": true,
+ "xi_basis_of_K_mod_L0": false,
+ "reduced_hodge_counts": {
+  "1": 0,
+  "2": 0,
+  "3": 500,
+  "4": 1018,
+  "5": 3506,
+  "6": 135808
+ },
+ "enum_seconds": 97.13,
+ "signatures": [
+  {
+   "length": 3,
+   "class": "raw:0",
+   "count": 472,
+   "witness": [
+    1,
+    463,
+    922
+   ]
+  },
+  {
+   "length": 3,
+   "class": "raw:8",
+   "count": 24,
+   "witness": [
+    22,
+    528,
+    836
+   ]
+  },
+  {
+   "length": 3,
+   "class": "raw:24",
+   "count": 4,
+   "witness": [
+    77,
+    616,
+    693
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:0",
+   "count": 858,
+   "witness": [
+    1,
+    309,
+    617,
+    921
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:8",
+   "count": 120,
+   "witness": [
+    11,
+    473,
+    528,
+    836
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:23",
+   "count": 16,
+   "witness": [
+    11,
+    319,
+    693,
+    825
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:24",
+   "count": 4,
+   "witness": [
+    77,
+    308,
+    693,
+    770
+   ]
+  },
+  {
+   "length": 4,
+   "class": "raw:55",
+   "count": 20,
+   "witness": [
+    14,
+    350,
+    616,
+    868
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:0",
+   "count": 2902,
+   "witness": [
+    1,
+    153,
+    465,
+    769,
+    922
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:7",
+   "count": 32,
+   "witness": [
+    11,
+    308,
+    319,
+    825,
+    847
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:8",
+   "count": 384,
+   "witness": [
+    11,
+    132,
+    473,
+    814,
+    880
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:23",
+   "count": 48,
+   "witness": [
+    11,
+    143,
+    561,
+    693,
+    902
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:55",
+   "count": 100,
+   "witness": [
+    7,
+    350,
+    469,
+    616,
+    868
+   ]
+  },
+  {
+   "length": 5,
+   "class": "raw:71",
+   "count": 40,
+   "witness": [
+    14,
+    231,
+    350,
+    847,
+    868
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:0",
+   "count": 120772,
+   "witness": [
+    1,
+    6,
+    153,
+    769,
+    921,
+    922
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:7",
+   "count": 128,
+   "witness": [
+    33,
+    55,
+    308,
+    715,
+    814,
+    847
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:8",
+   "count": 12208,
+   "witness": [
+    11,
+    132,
+    143,
+    759,
+    836,
+    891
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:23",
+   "count": 172,
+   "witness": [
+    11,
+    143,
+    198,
+    693,
+    825,
+    902
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:24",
+   "count": 1880,
+   "witness": [
+    1,
+    231,
+    308,
+    463,
+    847,
+    922
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:2b",
+   "count": 48,
+   "witness": [
+    11,
+    143,
+    264,
+    693,
+    825,
+    836
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:2c",
+   "count": 96,
+   "witness": [
+    22,
+    231,
+    308,
+    660,
+    704,
+    847
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:55",
+   "count": 304,
+   "witness": [
+    14,
+    126,
+    266,
+    616,
+    868,
+    882
+   ]
+  },
+  {
+   "length": 6,
+   "class": "raw:71",
+   "count": 200,
+   "witness": [
+    14,
+    112,
+    231,
+    700,
+    847,
+    868
+   ]
+  }
+ ],
+ "known_used": [
+  12,
+  21,
+  28,
+  33
+ ],
+ "dim_short_span": 4,
+ "dim_Lambda_image": 4,
+ "dim_orbit_xi_q": 1,
+ "member": false,
+ "dim_orbit_cap_Lambda": 0,
+ "short_classes": [
+  "raw:0",
+  "raw:23",
+  "raw:24",
+  "raw:2b",
+  "raw:2c",
+  "raw:55",
+  "raw:7",
+  "raw:71",
+  "raw:8"
+ ],
+ "dual_functional": "chi(xi_q')=1 exactly for q' in {44,77}",
+ "dual_kills_all_other_xi": false,
+ "certificate": "results/fermat_span/dual_q44_d924.txt",
+ "seconds": 108.1
+}
