@@ -1,0 +1,18 @@
+# fermat_fast: Hodge characters of X^4_25 and the Shioda-Katsura inductive structure
+n 4
+m 25
+b_prim 7644120
+phi_m 20
+sorted_tuples_with_target_sum 9926
+hodge_sorted_tuples 368
+hodge_orbits 39
+dim_hodge_classes 185281
+dim_decomposable 182401
+dim_indecomposable 2880
+indecomposable_sorted_tuples 4
+indecomposable_orbits 1
+hodge_conjecture_verified_by_inductive_structure False
+memo_entries 39
+seconds 0.00
+# indecomposable orbit representatives (canonical form = min over the Galois action of the sorted tuple), lexicographic order
+1 6 11 16 20 21
