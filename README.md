@@ -44,5 +44,5 @@ python3 scripts/make_tables.py
 ## Caveats, stated plainly
 
 * The computations verify the conjecture only for the specific varieties listed, and only modulo the cited theorems (Shioda–Katsura 1979, Lefschetz (1,1)). They prove nothing about the general conjecture.
-* The 2025–26 literature was consulted through search-engine excerpts because the sandbox blocked arxiv.org and journal sites; see the note at the end of `docs/05-references.md`.
+* Most of the 2025–26 literature was consulted through search-engine excerpts. arxiv.org turned out to be reachable with `curl` but not with the web-fetch tool; see the note at the end of `docs/05-references.md`.
 * Claims marked **[unverified]** in the docs (including an October 2026 AI-generated manuscript on CM abelian varieties and a 2026 preprint on Fermat degrees 44, 51, 52) have not been independently confirmed.
