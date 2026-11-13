@@ -117,3 +117,10 @@ def test_theorem_L_no_cyclotomic_or_2_11_radical_field_contains_sqrt_theta44():
     fits = [(x, y, c) for x, y, c in itertools.product((0, 1), repeat=3)
             if all(p * a ** x * b ** y == chi ** c for p, a, b, chi in rows)]
     assert fits == []
+
+
+@pytest.mark.parametrize("q", [44, 51, 52])
+def test_theorem_L_for_44_51_52(q):
+    ok, n, fits, rad = G.theorem_L_data(q, nprimes=25)
+    assert ok == n            # Deligne 7.15 end-to-end identity for the explicit theta_q
+    assert fits == []         # sqrt(theta_q) is in no Q(zeta_N, p^(1/N) : p | 2q)

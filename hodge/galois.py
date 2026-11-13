@@ -214,3 +214,84 @@ def discrete_log(pd: PrimeData, b: int) -> int:
 THETA44_SINE_EXPONENTS = {1: -2, 2: -1, 3: -2, 5: -2, 6: -1, 7: -2, 9: -1, 10: -1, 11: -1, 13: -2, 14: -1, 15: -1,
                           17: -1, 18: -1, 19: -1, 20: -1, 21: -1}
 XI44_AUTHORS = (1, 5, 6, 13, 14, 18, 20, 33, 34, 37, 41, 42)
+
+
+# ------------------------------------------------------------------------------------------- Theorem L
+
+from fractions import Fraction as _Fr
+
+# theta_q = Gamma~(xi_q)^2 = (root of unity) * prod_p p^{R_p} * prod_a sin(pi a/q)^{n_a}   (results/gamma_periods.txt)
+THETA = {
+    44: dict(xi=(1, 5, 6, 13, 14, 18, 20, 33, 34, 37, 41, 42), R={2: _Fr(-497, 22), 11: _Fr(1, 4)},
+             n={1: -2, 2: -1, 3: -2, 5: -2, 6: -1, 7: -2, 9: -1, 10: -1, 11: -1, 13: -2, 14: -1, 15: -1, 17: -1,
+                18: -1, 19: -1, 20: -1, 21: -1}),
+    51: dict(xi=(1, 10, 13, 18, 22, 28, 34, 37, 43, 49), R={2: _Fr(-26), 3: _Fr(1, 17), 17: _Fr(1, 6)},
+             n={1: -2, 2: -2, 4: -1, 5: -1, 7: -1, 8: -2, 10: -2, 11: -1, 13: -2, 14: -2, 16: -1, 17: -1, 18: -1,
+                19: -1, 20: -1, 22: -2, 23: -2, 25: -1}),
+    52: dict(xi=(1, 10, 14, 17, 18, 21, 22, 24, 29, 41, 45, 46, 50), R={2: _Fr(-339, 13), 13: _Fr(1, 4)},
+             n={1: -2, 2: -1, 3: -1, 5: -1, 6: -1, 7: -2, 9: -1, 10: -1, 11: -2, 14: -1, 15: -1, 17: -2, 18: -1,
+                19: -1, 21: -2, 22: -1, 23: -2, 24: -1, 25: -1}),
+}
+
+
+def _lcm(*xs: int) -> int:
+    out = 1
+    for x in xs:
+        out = out * x // gcd(out, x)
+    return out
+
+
+def theorem_L_data(q: int, nprimes: int = 30):
+    """For q in THETA: primes l = 1 mod M; returns (end-to-end identity count, list of fitting Dirichlet options).
+
+    End-to-end (Deligne, Thm 7.15): the Gauss-sum character of xi_q at P equals Frobenius on sqrt(R) * sqrt(u).
+    Fits: options (x_p for p | 2q, c) with psi_u * prod_p (p/P)_4^{x_p} = chi_32^c at every prime (all primes are
+    l = 1 mod 16, and chi_32(l) = +1 iff l = 1 mod 32 is the only nontrivial quadratic character of 1 + 16 Z_2, while
+    the odd p-adic factors are pro-p); an empty list proves
+    that sqrt(theta_q) lies in no field Q(zeta_N, p^(1/N) : p | 2q)."""
+    import itertools
+    D = THETA[q]
+    rad = sorted(p for p in range(2, 2 * q + 1) if (2 * q) % p == 0 and is_prime(p))
+    M = _lcm(4 * q, 16, *[(e / 2).denominator for e in D["R"].values()], *[4 * p for p in rad])
+    primes, l = [], M + 1
+    while len(primes) < nprimes:
+        if is_prime(l):
+            primes.append(l)
+        l += M
+    xi = D["xi"] if len(D["xi"]) % 2 == 0 else tuple(sorted(D["xi"] + (q // 2,)))
+    ok, rows = 0, []
+    for l in primes:
+        pd = PrimeData(l, q)
+        eps = 1
+        for a in xi:
+            eps = eps * pd.fact[(l - 1) * ((-a) % q) // q] % l
+        eps = pow(eps, l - 2, l)
+        if (len(xi) + len(xi) // 2) % 2:
+            eps = (-eps) % l
+        z = pow(pd.g, (l - 1) // (4 * q), l)                    # zeta_{4q}; zeta_q = z^4 matches PrimeData
+        inv2i = pow(2 * pow(z, q, l) % l, l - 2, l)
+        u = 1
+        for a, e in D["n"].items():
+            s = (pow(z, 2 * a, l) - pow(z, 4 * q - 2 * a, l)) * inv2i % l
+            u = u * pow(s, e % (l - 1), l) % l
+        psi = 1 if pow(u, (l - 1) // 2, l) == 1 else -1
+        fr = 1
+        for p, e in D["R"].items():
+            h = e / 2
+            fr = fr * pow(pow(p, (l - 1) // h.denominator, l), h.numerator % (l - 1), l) % l
+        ok += (eps == fr * (psi % l) % l)
+        quart = [1 if pow(p, (l - 1) // 4, l) == 1 else -1 for p in rad]
+        rows.append((psi, quart, 1 if l % 32 == 1 else -1))     # unique nontrivial quadratic char of 1 + 16 Z_2
+    fits = []
+    for xs in itertools.product((0, 1), repeat=len(rad) + 1):
+        *xp, c = xs
+        if all(psi * _prod(qq ** x for qq, x in zip(quart, xp)) == chi ** c for psi, quart, chi in rows):
+            fits.append(xs)
+    return ok, len(primes), fits, rad
+
+
+def _prod(it):
+    out = 1
+    for x in it:
+        out *= x
+    return out
