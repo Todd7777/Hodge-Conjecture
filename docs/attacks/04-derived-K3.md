@@ -2,14 +2,16 @@
 
 **Round 2 (2026-11-07): retreat after refereeing.** Claimed status: **no proof of the target. An obstruction is identified, but it is elementary and essentially known.**
 
-Three round-1 referees found the core lemmas correct: Fact 1.2, Lemmas 1.3, 1.5, 2.2, Theorem A, Lemma 3.3, Proposition 4.1, Theorems C and C′, Proposition 5.1. They also found four problems:
+**Referee (2026-11-13):** major revision; corrections applied. Report summary: docs/06-attack-report.md. Passages below that cite round-1 referees ("the slip the referees found", "referee 3", "both referees", "the referees' objection") describe objections recorded in the 2026-11-07 drafts, whose reports are not in the repository; each correction stands on its own proof.
+
+Three round-1 referees, whose reports are not in the repository (docs/attacks/README.md records the first-run referees as having failed to run), are said to have found the core lemmas correct; that approval is unsupported, and the 2026-11-13 referee report re-checked these results: Fact 1.2, Lemmas 1.3, 1.5, 2.2, Theorem A, Lemma 3.3, Proposition 4.1, Theorems C and C′, Proposition 5.1. They also found four problems:
 
 - **(i) One false sub-claim.** The second sentence of Proposition 5.2(3), read literally, would prove the Hodge conjecture for $S\times S$ for every real-quadratic RM surface with $\rho\ge3$.
 - **(ii) One overreaching headline claim.** Round 1 said that *no* combination of the tools of this strategy can prove the Hodge conjecture for $S\times S$ unless $E$ is multiquadratic. Only $H^2$-level similitude chains were treated.
 - **(iii) False literature statements.** Elsenhans–Jahnel's explicit $\mathbb Q(\sqrt5)$ examples are six-line double planes. For those, the Hodge conjecture for $S\times S$ is a theorem of Schlickewei. Algebraic similitudes of non-square multiplier are also known from algebraic Kuga–Satake correspondences.
 - **(iv) Overstated novelty.**
 
-In this round I checked (iii) against the full texts of the papers (§4.4, §8). The file now keeps, with complete proofs, only what survives:
+In this round I checked (iii) against the full texts of the papers (§4.4; the §8 record was lost in the 2026-11-07 snapshot). The file now keeps, with complete proofs, only what survives:
 
 - Proposition 5.2(3) and Remark 2.3 are corrected and proved.
 - Theorem A is sharpened to equalities.
@@ -17,7 +19,7 @@ In this round I checked (iii) against the full texts of the papers (§4.4, §8).
 - Remark 3.6 now proves that the obstruction does *not* extend beyond $H^2$.
 - §4.4 lists the known cases.
 
-§7 records the attempt and exactly where it broke. §8 answers every referee point. The final table lists what is still claimed.
+§7 (the attempt and exactly where it broke), §8 (answers to the referee points), §9 (the checklist), the references and the final table of claimed results were lost in the 2026-11-07 snapshot; this version ends after §6. The round-1 checklist and references survive in commit 3ce8e76.
 
 **Verdict in one paragraph.** The top target is **not** proved: every element of $E=\operatorname{End}_{HS}(T(S)_{\mathbb Q})$, with $E$ totally real of degree $>1$, is algebraic on $S\times S$. What is proved, with complete proofs, is elementary and essentially known.
 
@@ -31,7 +33,7 @@ It is **not** an obstruction to the strategy as a whole. Remark 3.6 gives a corr
 
 **(C) Real twists (Proposition 5.1).** For every totally positive $q\in E$ and $\rho(S)\ge 3$ there is a real twist $S_q$. This is van Geemen's real twist (2008, §4.7, stated there for $\dim T\le 11$), extended routinely. The corrected Proposition 5.2 describes the algebraic maps $T(S)\to T(S_q)$.
 
-Nothing here settles an open case. Gaps: §6. Attempt and failure: §7. Response to referees: §8. Checklist: §9. Claimed results: final table.
+Nothing here settles an open case. Gaps: §6. (§§7–9, the references and the final table were lost in the 2026-11-07 snapshot.)
 
 ---
 
@@ -43,7 +45,7 @@ Throughout, $S$ is a complex projective K3 surface, $H^2(S,\mathbb Z)\cong\Lambd
 
 **Fact 1.2 (RM: decomposition at the real places, and $m\ge 3$).** Assume RM; put $d=[E:\mathbb Q]$, $m=\dim_E T$, so $r=md$. Over $\mathbb R$, $T_{\mathbb R}=\bigoplus_{\sigma:E\hookrightarrow\mathbb R}T_\sigma$, $T_\sigma=T\otimes_{E,\sigma}\mathbb R$, and the summands are mutually orthogonal: for $x\in T_\sigma$, $y\in T_\tau$ and $e\in E$, $\sigma(e)(x,y)=(ex,y)=(x,ey)=\tau(e)(x,y)$, so $(x,y)=0$ if $\sigma\ne\tau$. The line $H^{2,0}$ is an $E$-eigenline on which $E$ acts through one embedding $\sigma_1$ (the eigenvalue is real because $E$ is totally real), and $H^{0,2}=\overline{H^{2,0}}$ has the same eigenvalue; hence $P\subset T_{\sigma_1}$. Consequently $(\,,)|_{T_{\sigma_1}}$ has signature $(2,m-2)$, and $(\,,)|_{T_\sigma}$ is negative definite for $\sigma\ne\sigma_1$. Each $T_\sigma$ is of type $(1,1)$ for $\sigma\neq\sigma_1$. Finally $m\ge 3$ (van Geemen, Michigan Math. J. 56 (2008), Lemma 3.2). *Proof for completeness.* $m\ge 2$ since $P\subset T_{\sigma_1}$. Suppose $m=2$. Let $\psi:T\times T\to E$ be the $E$-bilinear form with $\operatorname{tr}_{E/\mathbb Q}\circ\psi=(\,,)$ (it exists and is symmetric because every $e\in E$ is self-adjoint). Its discriminant $\delta\in E^{*}/E^{*2}$ is totally positive ($\psi_{\sigma_1}$ is positive definite on $T_{\sigma_1}=P$, $\psi_\sigma$ negative definite for $\sigma\ne\sigma_1$), so $L:=E(\sqrt{-\delta})$ is a CM field and $(T,\psi)\cong(L,\,a\cdot N_{L/E})$ for some $a\in E^{*}$. The Hodge structure is a homomorphism $h:\mathbb C^{*}\to SO(T_{\mathbb R})$ which acts on $T_{\sigma_1}=P$ through $SO(P)=SO(\psi_{\sigma_1})$ and trivially on the other $T_\sigma$; each $SO(\psi_\sigma)$ is the group of norm-one elements of $L_\sigma=L\otimes_{E,\sigma}\mathbb R\cong\mathbb C$ acting by multiplication, which commutes with multiplication by $L$. So $L\subseteq\operatorname{End}_{HS}(T)=E$, contradicting $[L:E]=2$. $\square$
 
-Thus RM forces $r=md\ge 6$, $\rho\le 16$, $d\le 7$; in particular no K3 surface with $\rho\ge 17$ (the Shioda–Inose / Morrison range where the Kuga–Satake correspondence is known to be algebraic) has RM.
+Thus RM by $E\neq\mathbb Q$ forces $r=md\ge 6$, $\rho\le 16$, $d\le 7$; in particular no K3 surface with $\rho\ge 17$ has RM by $E\neq\mathbb Q$ (for $\rho\ge17$ the Kuga–Satake correspondence is algebraic: Morrison for Shioda–Inose structures, and in general Floccari, Geom. Topol. 30 (2026), Thm. 5.11, combined with Theorem B of 05-kuga-satake.md).
 
 **Lemma 1.3 (Hodge classes on $S\times S$).** $\operatorname{Hdg}^2(S\times S)=\mathbb Q[S\times\mathrm{pt}]\oplus\mathbb Q[\mathrm{pt}\times S]\oplus(NS(S)_{\mathbb Q}\otimes NS(S)_{\mathbb Q})\oplus\{\gamma_e: e\in E\}$, where $\gamma_e\in T\otimes T\subset H^4(S\times S,\mathbb Q)$ is the unique class with $(\gamma_e)_*|_{T}=e$ and $(\gamma_e)_*|_{NS}=0$. The first three summands are algebraic. Hence, with
 $$E^{\mathrm{alg}}:=\{e\in E:\ \gamma_e \text{ is algebraic}\}=\{e\in E:\ e=\Gamma_*|_{T}\text{ for some algebraic }\Gamma\in CH^2(S\times S)_{\mathbb Q}\},$$
@@ -87,7 +89,7 @@ The steps are:
 
 So $F=E$ and $E^{\mathrm{alg}}=E$. $\square$
 
-Thus **the Hodge conjecture holds for $S\times S$ whenever $S$ has CM**. This is due to Ramón-Marí (arXiv:math/0505357) for $\rho\ge5$ via Mukai–Nikulin, and holds in general by Buskin 2019 and Huybrechts 2019, Cor. 0.4(ii).
+Thus **the Hodge conjecture holds for $S\times S$ whenever $S$ has CM**. Ramón-Marí (arXiv:math/0505357, Thm. 3.3) states it, for all powers of $S$, relying on Mukai's 2002 announcement, which was then proved only for $\rho\ge5$ (Mukai, Nikulin; see Schlickewei 2010, §1), and holds in general by Buskin 2019 and Huybrechts 2019, Cor. 0.4(ii).
 
 In the RM case the only Hodge isometries in $E$ are $\pm1$, because $e^{\dagger}e=e^{2}=1$. *As far as isometries are concerned*, this is the whole difference between the two cases.
 
@@ -163,7 +165,7 @@ Corollary 3.4 concerns only the action of the constructions between transcendent
 $$\textstyle\int_X abcd=q(a,b)q(c,d)+q(a,c)q(b,d)+q(a,d)q(b,c).\tag{3.6.1}$$
 Recall also that $H^{4}(X,\mathbb Q)=\operatorname{Sym}^{2}H^{2}(X,\mathbb Q)$ (Verbitsky; $b_4=276=\binom{24}{2}$).
 
-*(a) Representation theory (unchanged from round 1; the referees found it correct).*
+*(a) Representation theory (unchanged from round 1).*
 $$\operatorname{Hom}_{HS}(T(-1),H^{4}(X))=\operatorname{Hom}_{HS}(T(-1),NS(X)\otimes T(X)).$$
 So every Hodge morphism $T\to H^4(X)(1)$ has the form $x\mapsto\sum_jD_j\cdot\phi_j(x)$, where $(D_j)$ is a basis of $NS(X)_{\mathbb Q}$ and $\phi_j\in\operatorname{Hom}_{HS}(T,T(X))$.
 *Proof.* Hodge morphisms are the morphisms equivariant for the Mumford–Tate group, which in the RM case is $\operatorname{Res}_{E/\mathbb Q}SO(T,\psi)$ (Zarhin); over $\overline{\mathbb Q}$, $T=\bigoplus_\sigma T_\sigma$ with $T_\sigma$ the standard representation of the $\sigma$-th factor $SO_m$, and $\operatorname{Sym}^2T=\bigoplus_\sigma(\mathbf 1\oplus\operatorname{Sym}^2_0T_\sigma)\oplus\bigoplus_{\sigma<\tau}T_\sigma\otimes T_\tau$, whose irreducible constituents have dimensions $1$, $\frac{m(m+1)}2-1>m$, $m^{2}>m$ for $m\ge3$, so none is isomorphic to a $T_\rho$; the summands $\operatorname{Sym}^2NS$ are of type $(2,2)$. $\square$
@@ -233,7 +235,7 @@ Let $\Lambda(S)\subseteq\mathbb Q_{>0}/\mathbb Q^{*2}$ be the set of classes of 
 
 *Proof.* Lemma 3.3 gives an algebraic Hodge similitude of multiplier $\delta$ between $T_{S'}$ and $T_{S''}$, in one direction; its adjoint is algebraic (Lemma 1.5) with the same multiplier (Lemma 3.2(5)), so there is an algebraic similitude $T_{S'}\to T_{S''}$ of multiplier $\delta$. Composing with an algebraic Hodge isometry $T\to T_{S'}$ (Fact 1.4) gives $\delta\in\Lambda(S)$; apply Theorem C, (3)$\Rightarrow$(1). $\square$
 
-*Status of Proposition 4.1 and Theorems C, C′ (round 2).* All three are correct (all three referees). They are known in substance: Proposition 4.1(1) and Theorem C′ are the argument of Varesco 2023, Thm. 2.1 (quotient map plus Buskin isometry). Theorem C repackages Varesco 2023, §§0.2 and 2. Theorem C′ only drops the Galois hypothesis, and I know no new instance of it (Corollary 4.2(b), (d)).
+*Status of Proposition 4.1 and Theorems C, C′ (round 2).* All three are correct (re-checked in the 2026-11-13 referee report). They are known in substance: Proposition 4.1(1) and Theorem C′ are the argument of Varesco 2023, Thm. 2.1 (quotient map plus Buskin isometry). Theorem C repackages Varesco 2023, §§0.2 and 2. Theorem C′ only drops the Galois hypothesis, and I know no new instance of it (Corollary 4.2(b), (d)).
 
 **Corollary 4.2 (Varesco's theorem, and the reach of finite maps; corrected in round 2).**
 
@@ -259,7 +261,7 @@ In particular $\sqrt5$ is algebraic on those surfaces. As far as I know, this al
 
 **Remark 4.3 (the problem lives inside the isogeny class; corrected in round 2).** Let $S$ have RM by $\mathbb Q(\sqrt D)$. A K3 surface $Y$ is Hodge-similar to $S$ with multiplier $D$ iff it is isogenous to $S$. Indeed, if $N(\phi)=D$ then $N(\phi\circ\sqrt D^{-1})=D^{-1}\cdot D=1$; conversely, $N(\theta\sqrt D)=D$ for an isometry $\theta$.
 
-So all the surfaces $S''$ in Theorem C′ are automatically isogenous to $S$. By Huybrechts 2019 (Thm. 0.1, Cor. 1.4), such surfaces are connected to $S$ by a *chain* of twisted derived equivalences. In general they are not single twisted Fourier–Mukai partners of $S$ (loc. cit., Rem. 1.3). The real quadratic problem is therefore a question about the isogeny class of $S$: *is the self-similitude $\sqrt D$ of $T$ algebraic?*
+So all the surfaces $S''$ in Theorem C′ are automatically isogenous to $S$. By Huybrechts 2019 (Thm. 0.1, Cor. 1.4), such surfaces are connected to $S$ by a *chain* of twisted derived equivalences. Huybrechts does not expect them to be single twisted Fourier–Mukai partners of $S$ in general (loc. cit., Rem. 1.3, where no example is worked out). The real quadratic problem is therefore a question about the isogeny class of $S$: *is the self-similitude $\sqrt D$ of $T$ algebraic?*
 
 Buskin's theorem says that the isometries are algebraic. Algebraic similitudes of non-square multiplier are known from two sources:
 - (i) finite maps (Varesco 2023, Thm. 2.1; Theorem C′);
@@ -273,13 +275,15 @@ Buskin's theorem says that the isometries are algebraic. Algebraic similitudes o
    - RM occurs in one-parameter subfamilies ($\rho=16$, $m=3$).
    - RM by $\mathbb Q(\sqrt d)$ occurs exactly for $d$ a sum of two squares (BvGS 2024, Ex. 11.2). Existence was shown for odd $d$ by van Geemen 2008, Ex. 3.4, and for all such $d$ by Elsenhans–Jahnel 2014.
 2. *Families of generic Picard number $16$ with algebraic Kuga–Satake correspondence.*
-   - Varesco (arXiv:2203.09778, Thm. 0.2) proves the Hodge conjecture for all powers of every member of a four-dimensional family with $T_{\mathbb Q}\cong U_{\mathbb Q}^2\oplus\langle a\rangle\oplus\langle b\rangle$, provided the Kuga–Satake correspondence is algebraic on it. He applies this to the six-line family and to desingularised $15$-nodal quartics in $\mathbb P^4$, whose Kuga–Satake correspondence is algebraic by Ingalls–Logan–Patashnick.
+   - Varesco (arXiv:2203.09778, Thm. 0.2) proves the Hodge conjecture for all powers of every member of a four-dimensional family with $T_{\mathbb Q}\cong U_{\mathbb Q}^2\oplus\langle a\rangle\oplus\langle b\rangle$, provided the Kuga–Satake correspondence is algebraic on it. He applies this to the six-line family and to desingularised K3 surfaces in $\mathbb P^4$ with $15$ nodes, whose Kuga–Satake correspondence is algebraic by Ingalls–Logan–Patashnick.
    - Floccari (Compositio 160 (2024), arXiv:2210.02948) proves the Kuga–Satake Hodge conjecture for countably many four-dimensional families with $T\cong T(K)(2)$, $K$ a generalized Kummer sixfold. Combined with Varesco 2023, Thm. 5.3, this gives the Hodge conjecture for $S\times S$ on their one-dimensional real quadratic RM subfamilies (Varesco 2023, end of §5).
 3. *Symplectic automorphisms* (Corollary 4.2(a); Varesco 2023, Thms. 2.9, 2.15, Props. 2.6, 2.12).
    - $\sqrt2$ is algebraic for every K3 surface with $\mathbb Q(\sqrt2)\subseteq E$ that is Hodge isometric to one with a Nikulin involution. These form families of dimension $\le4$ ($\rho\ge10$), and the Hodge conjecture for $S\times S$ follows when $E=\mathbb Q(\sqrt2)$.
    - Likewise for $\sqrt3$ and order-$3$ automorphisms, in families of dimension $\le2$ ($\rho\ge14$).
 
-In every known case $E$ is real quadratic; in cases 1–2, $\rho=16$. Combining this list with Corollary 4.2(c), the following are, in particular, *not covered by any result I could find*:
+4. *Floccari 2025* (Geom. Topol. 30 (2026), arXiv:2501.02315, Thms. 1.2, 5.11): the Kuga–Satake correspondence is algebraic and the Hodge conjecture holds for all powers of every projective K3 surface with $T_{\mathbb Q}\hookrightarrow(U^{\oplus3}\oplus\langle-m\rangle)_{\mathbb Q}$ for some $m>0$; for $\rho=16$ this means that $T_{\mathbb Q}$ has Witt index $2$ (05-kuga-satake.md, Theorem B(3)). It covers every RM surface with $\rho=16$ and split $C^+(T)$ and subsumes items 1–2.
+
+In every known case $E$ is real quadratic; in cases 1, 2 and 4, $\rho=16$. Combining this list with Corollary 4.2(c), the following are, in particular, *not covered by any result I could find*:
 - RM by $\mathbb Q(\sqrt D)$ with $D\not\equiv2,3\pmod{\mathbb Q^{*2}}$ and $\rho\le14$;
 - RM by $\mathbb Q(\sqrt2)$ with $\rho\le8$;
 - RM by $\mathbb Q(\sqrt3)$ with $\rho\le12$;
@@ -300,7 +304,7 @@ Varesco 2023, Rem. 2.10, says explicitly that the quartic case with $\dim T=12$ 
 (v) $L_{\mathbb Q}$ is a sub-Hodge structure of $H^2(S_q,\mathbb Q)$: it contains $\omega'$ and $\bar\omega'$, on whose span the form is non-degenerate, so $L_{\mathbb C}=\langle\omega',\bar\omega'\rangle\oplus(L_{\mathbb C}\cap\langle\omega',\bar\omega'\rangle^{\perp})$ is the induced Hodge decomposition. Moreover $\iota:T\to L_{\mathbb Q}$ is an isomorphism of Hodge structures: both sides have $H^{2,0}$ spanned by $\omega$ resp. $\omega'$, and the $(1,1)$-part of $T$ is the orthogonal of $\{\omega,\bar\omega\}$ for $(\,,)$, which coincides with the orthogonal for $(\,,)_q$ because $q\omega=\sigma_1(q)\omega$. Hence $L_{\mathbb Q}$ is irreducible and contains $H^{2,0}(S_q)$; since $T(S_q)_{\mathbb Q}$ is the smallest sub-Hodge structure containing $H^{2,0}(S_q)$ and is contained in $L_{\mathbb Q}$, $T(S_q)_{\mathbb Q}=L_{\mathbb Q}$ and $\phi_q:=\iota$ is a Hodge isometry $(T,(\,,)_q)\to T(S_q)_{\mathbb Q}$, i.e. $N(\phi_q)=q$.
 (vi) Uniqueness up to isogeny: if $\phi'_q:T\to T_{S'_q}$ is another such map, $\phi'_q\phi_q^{-1}$ is a Hodge isometry. By Lemma 2.2(1) every $\phi\in\operatorname{Hom}_{HS}(T,T_{S_q})$ is $\phi_qa$ with $N(\phi)=qa^{2}$; so an isometry (resp. similitude) exists iff $q\in E^{*2}$ (resp. $q\in\mathbb Q_{>0}E^{*2}$). $\square$
 
-*Attribution (round 2).* This is van Geemen's real twist (2008, §4.7). He states it for $\dim T\le11$, using Nikulin's embedding theorem. The extension to $\dim T\le19$ above via Hasse–Minkowski and the period map is routine; all referees found it correct. Van Geemen (§7.8) also poses the problem behind Proposition 5.2: is the identity $T_{S}\to T_{S_a}$ algebraic?
+*Attribution (round 2).* This is van Geemen's real twist (2008, §4.7). He states it for $\dim T\le11$, using Nikulin's embedding theorem. The extension to $\dim T\le19$ above via Hasse–Minkowski and the period map is routine (re-checked in the 2026-11-13 referee report). Van Geemen (§7.8) also poses the problem behind Proposition 5.2: is the identity $T_{S}\to T_{S_a}$ algebraic?
 
 **Proposition 5.2 (algebraic maps to the twists; item (3) corrected in round 2).** Let $S$ have RM by $E$ with $\rho(S)\ge3$. Let $q\in E$ be totally positive, with $S_q,\phi_q$ as in Proposition 5.1.
 1. If some $\phi\in\operatorname{Hom}_{HS}(T,T_{S_q})$ is algebraic, then $E^{\mathrm{alg}}\supseteq\mathbb Q(N(\phi))$ and $N(\phi)\in q\cdot E^{*2}$.
@@ -358,7 +362,7 @@ So the honest content of (c) is as follows. For real quadratic $E$, there is an 
 - *Why I cannot prove it:* no construction known to me produces an algebraic element of $E\setminus E^{(2)}$, for any $S$ (§4.4).
 - Theorem A shows that $H^2$-level similitude chains cannot. Remark 3.7 shows that such an element needs a surface in $S\times S$ of geometric genus $\ge2$ carrying two different copies of $T$.
 - Remark 3.6(c) shows that an algebraic class $Q_f$ in $H^4$ of a hyper-Kähler fourfold would suffice. Its algebraicity is again an open instance of the Hodge conjecture, equivalent to the target when $X=S^{[2]}$.
-- The Kuga–Satake correspondence is known to be algebraic only on special families with $\rho=16$. There $m\cdot[E:\mathbb Q]=6$ and $m\ge3$, so $E$ is at most quadratic.
+- Among K3 surfaces with RM by $E\neq\mathbb Q$, the Kuga–Satake correspondence is known to be algebraic only when $\rho=16$ (Paranjape; Ingalls–Logan–Patashnick; Floccari 2024 and 2025, the last covering every such surface whose $T_{\mathbb Q}$ has Witt index $2$). There $m\cdot[E:\mathbb Q]=6$ and $m\ge3$, so $E$ is at most quadratic.
 
 **G2 — the real quadratic case in general.**
 - *Needed:* $D\in\Lambda(S)$, i.e. one algebraic Hodge similitude of multiplier $Dc^{2}$ out of $T$ (Theorem C). Equivalently, by Proposition 4.1: every rational Hodge similitude of multiplier $D$ from $T$ to the transcendental lattice of a projective K3 surface is algebraic.

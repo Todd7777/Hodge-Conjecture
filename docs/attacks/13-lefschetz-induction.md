@@ -8,12 +8,14 @@
    - Only the total space of a Lefschetz pencil detects them faithfully, through the classes that vanish on every fibre (Proposition 3.2).
    - The missing step, a cohomological form of Griffiths–Zucker "Jacobi inversion" for families of homologically trivial cycles on the members, is *equivalent* to the class being algebraic (Proposition 3.3). HC in dimension $2m+1$, a statement modulo homological equivalence, contributes nothing to it.
 
-   Concretely, a reduction to fourfolds would have to prove that Weil classes on Weil-type abelian sixfolds of discriminant $+1$ are algebraic. That case is open, and those classes lie entirely in the part the method cannot see (Proposition 3.4).
+   Concretely, a reduction to fourfolds would have to prove that Weil classes on Weil-type abelian sixfolds of non-split discriminant ($\neq-1$ with $\mathrm{disc}=\det H$, the normalization of Markman and Brosnan) are algebraic. That case is open, and those classes lie entirely in the part the method cannot see (Proposition 3.4).
 3. **The invariant measuring the failure, and an explicit computation (§4, §5).**
    - The cokernel on Hodge classes of the Gysin maps from smooth ample divisors is $\mathcal D(X)=\mathrm{Hdg}^p(X)/\mathrm{NS}(X)_{\mathbb Q}\cdot\mathrm{Hdg}^{p-1}(X)$ (Proposition 5.1).
    - A single divisor $D\in|L|$ with only isolated singularities lowers it by at most the total Milnor number $\mu(D)$ (Proposition 4.2; believed new in this form, but elementary).
    - For the Fermat cubic fourfold, $\mathcal D(X)\cong\mathbb Q^{20}$. Each of its 243 Segre-cubic hyperplane sections (10 nodes) lowers it by at least 5, and by exactly 5 given the classical $b_4(S_3)=6$. Four suitable sections lower it to 0 (Example 5.3, an exact computation done by computer).
    - Nori's connectivity theorem is used as a black box. It shows that on very general members of a sufficiently ample linear system, algebraic classes come from the ambient variety. Consequently the induction step is there an *equivalence* that cannot create cycles for "new" Hodge classes (Propositions 5.2, 5.4).
+
+**Referee (2026-11-13):** minor revision; corrections applied. Report summary: docs/06-attack-report.md.
 
 No step uses more than rational cohomology, an ample class and Hilbert schemes. Nothing here can prove the integral or the Kähler Hodge conjecture; §7 checks this.
 
@@ -232,7 +234,7 @@ So (JI) is implied by "Jacobi inversion": $AJ(\mathcal Z_{v'})=c\,\nu_\alpha(\ph
 
 (JI) concerns cycles that are **homologically trivial on every member**. $\mathrm{HC}(Y_t)$ is a statement modulo homological equivalence and says nothing about such cycles. Nori's theorem sharpens this (cited, not proved here, statement as reported in [AC94]): for sections of sufficiently high degree, the restriction to a very general member $Y$ of a cycle representing a nonzero primitive class is **not algebraically equivalent to zero**, even rationally. The needed inductive input therefore lives in the Griffiths groups $\mathrm{Griff}^p(Y_t)_{\mathbb Q}$, which can be infinitely generated (Clemens, Voisin, Nori), and HC for $(2m+1)$-folds does not control them. This is the precise sense in which "HC$(2m+1)\Rightarrow$HC$(2m+2)$" is out of reach of the method. It is not a proof that the implication is false.
 
-**Proposition 3.4 (a reduction to fourfolds would settle an open case by a method blind to it).** Let $A$ be a general abelian sixfold of Weil type for an imaginary quadratic field $K$ (signature $(3,3)$), for instance of discriminant $+1$, and let $W_K\subseteq\mathrm{Hdg}^3(A)$ be its 2-dimensional space of Weil classes. Then:
+**Proposition 3.4 (a reduction to fourfolds would settle an open case by a method blind to it).** Let $A$ be a general abelian sixfold of Weil type for an imaginary quadratic field $K$ (signature $(3,3)$), for instance of non-split discriminant, and let $W_K\subseteq\mathrm{Hdg}^3(A)$ be its 2-dimensional space of Weil classes. Then:
 - the images of $W_K$ in $\mathcal D^3(A):=\mathrm{Hdg}^3(A)/\mathrm{NS}_{\mathbb Q}\cdot\mathrm{Hdg}^2(A)$ span a 2-dimensional subspace;
 - the Gysin images from all smooth ample divisors of $A$ meet $W_K$ only in $0$;
 - every smooth member of $|L^k|$, for the polarization $L$, restricts $W_K$ to $0$.
@@ -245,7 +247,7 @@ Write $H^1(A,\mathbb C)=V_\sigma\oplus V_{\bar\sigma}$ for the eigenspaces of $K
 
 By (HL), $P^6_\theta\cap\theta H^4=0$, so $W_K\cap\mathrm{NS}\cdot\mathrm{Hdg}^2=0$ and $W_K$ injects into $\mathcal D^3(A)$; this is the first item. Every ample class is a rational multiple of $\theta$, so Proposition 3.1(2) gives the second item and Proposition 3.1(1) the third. $\square$
 
-The algebraicity of $W_K$ for discriminant $+1$ is open (docs/02 §2.2, docs/03 §3.5 P1). Any proof of HC$(6)$ from HC$(5)$ must prove it. Propositions 3.1 and 3.4 show that restriction to, and Gysin maps from, smooth ample divisors give no information about these classes. Markman's proof for discriminant $-1$ uses mechanism M2 of docs/03, not induction on dimension.
+The algebraicity of $W_K$ for non-split discriminant is open (docs/02 §2.2, docs/03 §3.5 P1). Any proof of HC$(6)$ from HC$(5)$ must prove it. Propositions 3.1 and 3.4 show that restriction to, and Gysin maps from, smooth ample divisors give no information about these classes. Markman's proof for discriminant $-1$ uses mechanism M2 of docs/03, not induction on dimension.
 
 ## 4. Target (a) in the middle degree: the Gysin condition
 
@@ -365,7 +367,7 @@ The intersection form is positive definite on $\mathrm{Hdg}^2(X)_{\mathbb R}$ (H
 
 For $\mathrm{HC}(M,p)$, let $\beta\in\mathrm{Hdg}^p(M)$. The very general locus is the complement of a countable union of proper closed subsets $S_i\subset|L|$. Choose $t_1$ outside all $S_i$ and an admissible pencil through $t_1$. Admissibility is an open condition on lines through $t_1$. Such a pencil is contained in no $S_i$, so it meets each $S_i$ in finitely many points, and $j^*\beta$ is algebraic on uncountably many of its members. Theorem A and Corollary A.1 give $\beta\in A^p(M)$. $\square$
 
-*Reading.* On very general sections, where Nori's theorem applies, the induction step neither gains nor loses. $\mathrm{HC}(M,p)$ is equivalent to HC for the very general section plus a purely Hodge-theoretic "no new classes" statement; I expect that statement to follow from Nori's theorem combined with the algebraicity of Hodge loci [CDK95], but I have not checked this and do not use it. The classes that make a $2p$-fold hard, those in $\mathcal D$, occur only on special members (Hodge loci). There the hypothesis "very general" fails, and Proposition 3.1 shows that restriction and Gysin maps of smooth members see nothing of them. **This is the rigorous form of "the induction cannot close": the step closes only on classes already restricted from the ambient variety, and the residue is $\mathcal D$.**
+*Reading.* On very general sections, where Nori's theorem applies, the induction step neither gains nor loses. $\mathrm{HC}(M,p)$ is equivalent to HC for the very general section plus a purely Hodge-theoretic "no new classes" statement; I expect that statement to follow from Nori's theorem combined with the algebraicity of Hodge loci [CDK95], but I have not checked this and do not use it. The classes that make a $2p$-fold hard, those in $\mathcal D$, occur only on special members (Hodge loci). There the hypothesis "very general" fails, and Proposition 3.1 shows that restriction and Gysin maps of smooth members see nothing of them. **For very general sections of a Nori-ample system this is a precise form of "the induction cannot create new cycles": there the step closes only on classes already restricted from the ambient variety, and the residue $\mathcal D$ lives on special members (where §4 shows that singular sections can still close it, as for the Fermat cubic).**
 
 ## 6. GAPS
 
@@ -381,7 +383,7 @@ Given that, Propositions 4.1 and 4.2 with Lefschetz $(1,1)$ for $p=2$, or Theore
 
 **G4 (Griffiths-group consequence of Nori).** The statement in Remark 3.3′ is taken from the summary of [AC94]: restrictions of cycles representing nonzero primitive classes are nonzero in $\mathrm{Griff}(Y)_{\mathbb Q}$ for very general high-degree $Y$. It is not proved here and not used in any labelled result.
 
-**G5 (Example 5.3, upper bound).** "$\dim V_{D_\lambda}=5$ exactly" and "at least 4 Segre sections are needed" use the classical fact $b_4(S_3)=6$ [Hu96], which is not reproved. Without it, Proposition 4.2 gives $5\le\dim V_{D_\lambda}\le10$, and hence that at least 2 sections are needed. The lower bounds and "four suffice" are rigorous computations: exact rational rank for the 15- and 16-element Gram matrices, and the rank modulo a prime against the upper bound 21 for the others.
+**G5 (Example 5.3, upper bound).** "$\dim V_{D_\lambda}=5$ exactly" and "at least 4 Segre sections are needed" use the classical fact $b_4(S_3)=6$ [Hu96]. Proof (added at the referee's suggestion): $\mathrm{Bl}_5\mathbb P^3\to S_3$ is a small resolution whose exceptional set is a disjoint union of ten $\mathbb P^1$'s, so $H^4(S_3)\cong H^4(\mathrm{Bl}_5\mathbb P^3)$, which has rank $b_2(\mathrm{Bl}_5\mathbb P^3)=6$. Without it, Proposition 4.2 gives $5\le\dim V_{D_\lambda}\le10$, and hence that at least 2 sections are needed. The lower bounds and "four suffice" are rigorous computations: exact rational rank for the 15- and 16-element Gram matrices, and the rank modulo a prime against the upper bound 21 for the others.
 
 **G6 (cited structure facts).** The following are taken from the literature and not reproved:
 - Proposition 3.4 uses $\mathrm{End}^0(A)=K$ and $\rho(A)=1$ for a general Weil-type abelian variety, and that Weil classes are Hodge [We77, vG94];

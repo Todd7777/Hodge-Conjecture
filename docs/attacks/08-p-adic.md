@@ -2,17 +2,19 @@
 
 **Status (read this first).** The top target of the ladder is **not proved**. That target says: an absolute Hodge class on a variety over a number field, with Galois-invariant $p$-adic realization, is algebraic. It contains HC for all abelian varieties, because by Deligne their Hodge classes are absolute. What this file proves:
 
-1. **Theorem A** (§2, a conditional reduction with complete proof). It isolates exactly what the chain "reduce mod $p$ → Tate conjecture → lift with BEK" needs. Besides the Tate conjecture (T) and algebraization, it needs two further inputs:
+1. **Theorem A** (§2, a conditional reduction with complete proof). It isolates inputs sufficient for the chain "reduce mod $p$ → Tate conjecture → lift with BEK". (dR$_v$), (Rat$_v$) and the instance of (pVHC$_v$) are shown to be necessary; (T$_v$) and (D$_v$) are not. Besides the Tate conjecture (T) and algebraization, it needs two further inputs:
    - a rationality statement (Rat$_v$), which is the crystalline form of Milne's rationality conjecture;
    - homological = numerical equivalence (D) on the special fibre.
 
    Proposition 3.1 (known) shows that (Rat$_v$) cannot be extracted from $p$-adic data: the $\mathbb Q_p$-coefficient analogue is false.
-2. **Theorem B** (§4, conditional, believed new in this form). Assume hypothesis (Cont): algebraic $K$-theory of a smooth projective $W(k)$-scheme is continuous with finite coefficients. This is the proper-scheme analogue of a theorem of Clausen–Mathew–Morrow for complete noetherian rings. Then every class that Bloch–Esnault–Kerz lift to the formal scheme is, up to a nonzero integer multiple, *numerically* equivalent on the special fibre to the specialization of a class from the generic fibre. So BEK + (Cont) yields the algebraization half of the $p$-adic variational Hodge conjecture modulo numerical equivalence.
-3. **Theorem C** (§5, conditional, believed new in this form; the positivity trick is standard). Assume (Cont), and a Lefschetz-type condition (Pos$_v$) on the special fibre. Let $\alpha$ be a Hodge class on a variety over a number field whose crystalline specialization at one good unramified prime $p>d+6$ is algebraic. Then $\alpha$ is algebraic. Hodge–Riemann positivity in characteristic $0$ replaces standard conjecture D.
-4. **Corollaries C.1–C.2.** For abelian varieties with supersingular good reduction, (T), (D) and (Pos$_v$) hold unconditionally (Proposition 5.2). So modulo (Cont), a Hodge class satisfying (Rat$_v$) at one such prime is algebraic, and conversely an algebraic class satisfies (Rat$_v$) at all but finitely many such primes. CM abelian varieties have infinitely many such primes. Consequently, modulo (Cont), **Milne's rationality conjecture (its crystalline part at one supersingular prime) implies HC for CM abelian varieties.** The converse implication is Milne's.
-5. **§6** records the reduction asked for in ladder item (c) (Voisin 2007, known). It adds a proved necessary condition: every $p$-adic method is confined to Hodge classes whose de Rham component is $\bar{\mathbb Q}$-rational.
+2. **Theorem B** (§4, conditional on the open hypothesis (Cont); novelty not checked against [BEK, §1], [Mo1], [Mo2] or Emerton's p-adic variational Hodge conjecture). Assume hypothesis (Cont): algebraic $K$-theory of a smooth projective $W(k)$-scheme is continuous with finite coefficients. This is the proper-scheme analogue of a theorem of Clausen–Mathew–Morrow for complete noetherian rings, and it is a strong open hypothesis. CMM say their methods are limited to the affine case. With (D) and BEK it implies the p-adic variational Hodge conjecture (Corollary B.1). With Milne's rationality conjecture it implies HC for CM abelian varieties (Corollary C.2), and hence, by [Mi1, Thm. 3.4], the Tate conjecture for abelian varieties over finite fields. Then every class that Bloch–Esnault–Kerz lift to the formal scheme is, up to a nonzero integer multiple, *numerically* equivalent on the special fibre to the specialization of a class from the generic fibre. So BEK + (Cont) yields the algebraization half of the $p$-adic variational Hodge conjecture modulo numerical equivalence.
+3. **Theorem C** (§5, conditional; the positivity trick is standard, and novelty is not checked). Assume (Cont), and a Lefschetz-type condition (Pos$_v$) on the special fibre. Let $\alpha$ be a Hodge class on a variety over a number field $F$, de Rham-rational over $F$, whose crystalline specialization at one good unramified prime $p>d+6$ is algebraic. Then $\alpha$ is algebraic. Hodge–Riemann positivity in characteristic $0$ replaces standard conjecture D.
+4. **Corollaries C.1–C.2.** For abelian varieties with supersingular good reduction, (T), (D) and (Pos$_v$) hold unconditionally (Proposition 5.2). So modulo (Cont), a Hodge class satisfying (Rat$_v$) at one such prime is algebraic, and conversely an algebraic class satisfies (Rat$_v$) at all but finitely many such primes. CM abelian varieties have infinitely many such primes. Consequently, modulo (Cont), Milne's rationality conjecture (its crystalline part at one supersingular prime) implies HC for CM abelian varieties. Since (Cont) is open and at least as strong as the p-adic variational Hodge conjecture modulo (D), this is a reduction between open problems, not progress towards HC. The converse implication is Milne's.
+5. **§6** records the reduction asked for in ladder item (c) (Voisin 2007, known). It adds a proved necessary condition: the $p$-adic constructions of this file, which start from $\alpha_{\rm crys}=\mathrm{BO}(\iota_v\alpha_{dR})$, apply only to Hodge classes whose de Rham component is $\bar{\mathbb Q}$-rational. By Corollary 2.3 this is in any case necessary for algebraicity.
 
 No unconditional new case of HC, or of the $p$-adic variational Hodge conjecture, is proved. The ladder item "codimension-2 classes when $H^2(X,\mathcal O)=0$" is not achieved. §4.4 explains that this hypothesis controls the wrong obstruction group and gives the correct analogue.
+
+**Referee (2026-11-13):** minor revision; corrections applied. Report summary: docs/06-attack-report.md.
 
 **Access caveat.** arXiv, journal sites and author home pages were unreachable (DNS-blocked), and the shared web-search budget ran out partway through. Every external input is stated below in the form I use it, with a flag recording how far that form could be checked (search-engine excerpts only).
 
@@ -56,7 +58,7 @@ For $\alpha\in\mathrm{Hdg}^r(X_{\sigma,\mathbb C})$, write $\alpha_B\in H^{2r}(X
   - specialization of cycles and its compatibility with Chern classes [Fu, Ch. 20];
   - $K_{-1}(Y)=0$ for $Y$ regular, and Zariski descent for $K$ [TT];
   - Goodwillie's theorem [Go].
-- **(I8) [v]** Lazda–Pál [LP]: the crystalline variational Tate conjecture fails for line bundles with $\mathbb Q_p$-coefficients, with examples from elliptic curves.
+- **(I8) [u]** Lazda–Pál [LP] (attribution not verified): the crystalline variational Tate conjecture fails for line bundles with $\mathbb Q_p$-coefficients, with examples from elliptic curves. Proposition 3.1 below gives a self-contained example.
 - **(I9) [v]** Milne's **rationality conjecture** [Mi1]. Let $A/\mathbb Q^{al}$ have CM, or more generally good reduction $A_0$ over $\mathbb F=\bar{\mathbb F}_p$. Then the product of the specialization to $A_0$ of any Hodge class on $A$ with any Lefschetz class on $A_0$ of complementary dimension lies in $\mathbb Q$.
   - HC for CM abelian varieties implies it [Mi1].
   - It is listed as open in [Mi3] (2025).
@@ -109,7 +111,7 @@ To compare the two classes:
 
 *Proof.* Let $v_1,\dots,v_m$ be a basis of $V$. By injectivity there are $v'_1,\dots,v'_m\in V'$ with $M=(\langle v_i,v'_j\rangle)\in GL_m(\mathbb Q)$. Write $x=\sum c_iv_i$ with $c_i\in E$. Then $(\langle x,v'_j\rangle)_j=cM$. If $x$ pairs to $0$, then $c=0$, which is (a). If all $\langle x,v'_j\rangle$ are rational, then $c=(\langle x,v'_j\rangle)_jM^{-1}\in\mathbb Q^m$, which is (b). $\square$
 
-**Theorem A (what the reduction argument needs).** Let $\alpha\in\mathrm{Hdg}^r(X_{\sigma,\mathbb C})$, with $2r\le d$, be de Rham-rational over $F$. Let $v$ be a good unramified place with $p>d+6$.
+**Theorem A (what the reduction argument needs).** Let $\alpha\in\mathrm{Hdg}^r(X_{\sigma,\mathbb C})$, with $2r\le d$, be de Rham-rational over $F$. Let $v$ be a good unramified place.
 
 - **(i) Lifting.** Suppose $\alpha_{\rm crys}=c_{\rm crys}(z_1)$ for some $z_1\in CH^r(X_1\otimes k')_{\mathbb Q}$, and (pVHC$_v$) holds for $z_1$. Then $\alpha$ is algebraic.
 - **(ii) Specialization is algebraic.** Suppose $\alpha_p$ is $G_{F_v}$-invariant and (dR$_v$), (T$_v$), (D$_v$), (Rat$_v$) hold. Then $\alpha_{\rm crys}=c_{\rm crys}(z_1)$ for some $z_1\in CH^r(X_1)_{\mathbb Q}$.
@@ -318,7 +320,7 @@ Then $\alpha$ is algebraic. Hypothesis (a) is necessary, by Theorem A(iii).
 - By the Shimura–Taniyama formula [CCO, §2.1] **[u]**, every good reduction of $A$ above $p$ is supersingular.
 - After enlarging $F$ as in C.1, and also so that the endomorphisms are defined over $F$, all but finitely many of these $p$ are unramified in $F$, of good reduction, and $>g+6$.
 
-So C.1 applies at infinitely many places. Choose $F$ so large that all of the finite-dimensional space $\mathrm{Hdg}^*(A)$ is $G_F$-invariant and de Rham-rational. Then one place serves for all classes. In particular, **if (Cont$_0$) holds for abelian schemes over $W(\mathbb F_q)$, then the crystalline component of Milne's rationality conjecture (I9), at a single such place, implies HC for every Hodge class on $A$.** The converse (HC $\Rightarrow$ (Rat$_v$)) is elementary (Corollary C.1) and is Milne's observation [Mi1]. So, modulo (Cont), HC for a CM abelian variety is equivalent to (Rat$_v$) for its Hodge classes at a supersingular unramified place outside a finite set. HC is known for $g\le5$ (Markman, docs/02), so the content is for $g\ge6$.
+So C.1 applies at infinitely many places. Choose $F$ so large that all of the finite-dimensional space $\mathrm{Hdg}^*(A)$ is $G_F$-invariant and de Rham-rational. Then one place serves for all classes. In particular, **if (Cont$_0$) holds for abelian schemes over $W(\mathbb F_q)$, then the crystalline component of Milne's rationality conjecture (I9), at a single such place, implies HC for every Hodge class on $A$.** The converse (HC $\Rightarrow$ (Rat$_v$)) is elementary (Corollary C.1) and is Milne's observation [Mi1]. So, modulo (Cont), HC for a CM abelian variety is equivalent to (Rat$_v$) for its Hodge classes at a supersingular unramified place outside a finite set. (Cont) carries most of the weight here: together with (Rat) it yields, via [Mi1, Thm. 3.4], the Tate conjecture for all abelian varieties over finite fields. HC is known for $g\le5$ (Markman, docs/02), so the content is for $g\ge6$.
 
 ## 6. Ladder item (c): from number fields to $\mathbb C$, and what $p$-adic methods cannot see
 
@@ -333,7 +335,7 @@ So C.1 applies at infinitely many places. Choose $F$ so large that all of the fi
 2. Deligne's global invariant cycle theorem and semisimplicity give an absolute Hodge class $\tilde\alpha$ on a smooth compactification of $\mathcal X$, defined over $\bar{\mathbb Q}$, restricting to $\alpha$.
 3. Apply (i) to $\tilde\alpha$. $\square$
 
-**Proposition 6.2 (proved here; elementary).** Let $X$ be defined over $\bar{\mathbb Q}$ and $\alpha\in\mathrm{Hdg}^r(X_{\mathbb C})$. The following are equivalent:
+**Proposition 6.2 (elementary and known: the $\mathrm{Aut}(\mathbb C/\bar{\mathbb Q})$-part of 'weakly absolute', cf. [Vo], [CS]).** Let $X$ be defined over $\bar{\mathbb Q}$ and $\alpha\in\mathrm{Hdg}^r(X_{\mathbb C})$. The following are equivalent:
 - (a) $\alpha_{dR}\in H^{2r}_{dR}(X/\bar{\mathbb Q})$;
 - (b) for every $\tau\in\mathrm{Aut}(\mathbb C/\bar{\mathbb Q})$, the vector $\tau(\alpha_{dR})$ is the de Rham component of a rational Hodge class on $X$. Here $\tau$ acts on $H_{dR}(X/\bar{\mathbb Q})\otimes\mathbb C$ through the second factor.
 
@@ -412,6 +414,7 @@ For CM abelian varieties only (Rat$_v$) and (Cont) remain (Corollary C.2).
 - [BO] P. Berthelot, A. Ogus, *F-isocrystals and de Rham cohomology I*, Invent. Math. 72 (1983), 159–199.
 - [CCO] C.-L. Chai, B. Conrad, F. Oort, *Complex multiplication and lifting problems*, AMS Math. Surveys and Monographs 195 (2014).
 - [CMM] D. Clausen, A. Mathew, M. Morrow, *K-theory and topological cyclic homology of henselian pairs*, J. Amer. Math. Soc. 34 (2021); arXiv:1803.10897.
+- [CS] F. Charles, C. Schnell, *Notes on absolute Hodge classes*, in *Hodge Theory*, Math. Notes 49, Princeton 2014; arXiv:1101.3647.
 - [De] P. Deligne (notes by J. Milne), *Hodge cycles on abelian varieties*, LNM 900 (1982).
 - [Fu] W. Fulton, *Intersection theory*, 2nd ed., Springer 1998.
 - [GM] H. Gillet, W. Messing, *Cycle classes and Riemann–Roch for crystalline cohomology*, Duke Math. J. 55 (1987).
@@ -437,19 +440,19 @@ For CM abelian varieties only (Rat$_v$) and (Cont) remain (Corollary C.2).
 | Lemma 2.2 | A cycle class over any algebraically closed $\Omega\supseteq\bar F$ is the class of a cycle over $\bar F$ | proved here (standard rigidity) |
 | Corollary 2.3 | Algebraic Hodge classes on varieties over $\bar{\mathbb Q}$ have $\bar{\mathbb Q}$-rational de Rham component | proved here (known) |
 | Lemma 2.4 | Rational pairings plus nondegeneracy force $E$-combinations to be rational | proved here (elementary) |
-| Theorem A | Absolute class + (dR$_v$) + (T$_v$) + (D$_v$) + (Rat$_v$) + (pVHC$_v$) $\Rightarrow$ algebraic; (dR$_v$), (Rat$_v$) and the instance of (pVHC$_v$) used are necessary | proved here, conditional on the named hypotheses |
+| Theorem A | Absolute class + (dR$_v$) + (T$_v$) + (D$_v$) + (Rat$_v$) + (pVHC$_v$) $\Rightarrow$ algebraic; (dR$_v$), (Rat$_v$) and the instance of (pVHC$_v$) used are necessary | proved here, conditional on the named hypotheses. Known in substance: [Mi1, §4] stresses that Tate gives only a $\mathbb Q_p$-span and rationality is the extra input. |
 | Proposition 3.1 | The $\mathbb Q_p$-coefficient version fails: there is a Frobenius-invariant $F^1$-class in $NS(X_1)\otimes\mathbb Q_p$ that is neither rational nor liftable | known (Serre–Tate; cf. Lazda–Pál), proof included |
 | Lemma 4.1 | $K_0(X_n)_{\mathbb Q}=K_0(X_1)_{\mathbb Q}$, which pins down the meaning of the BEK lift | proved here, from Goodwillie (known in substance) |
 | Lemma 4.2 | The numerical $K$-group $\mathcal N(Y)$ is finitely generated free | proved here (standard) |
-| Theorem B | (Cont$_0$) + a BEK formal lift $\Rightarrow$ $N'N\xi_1$ is numerically a specialization | proved here, conditional on (Cont$_0$) (and BEK for the corollaries); believed new in this form |
+| Theorem B | (Cont$_0$) + a BEK formal lift $\Rightarrow$ $N'N\xi_1$ is numerically a specialization | proved here, conditional on (Cont$_0$) (and BEK for the corollaries); novelty unverified |
 | Corollary B.1 | (Cont$_0$) + (D$_v$) + $p>d+6$ $\Rightarrow$ (pVHC$_v$) | proved here, conditional on (Cont$_0$), (D$_v$), BEK |
 | Proposition B.2 | $p$-adic VHC for divisors (some $p$-power lifts) | known (Berthelot–Ogus + Grothendieck existence) |
 | Corollary B.3 | If $h^{i,2r-i}=0$ for $i<r$, every codim-$r$ cycle on $X_1$ is numerically a specialization | proved here, conditional on (Cont$_0$) (and (D$_v$) for the cohomological form) |
 | Lemma 5.0 | $\int x*_Lx>0$ for nonzero rational $(r,r)$-classes, $2r\le d$ | known (Hodge–Riemann), proof included |
 | Lemma 5.1 | (Pos$_v$) follows from (T) in codimension $d-r$, from B, or from (D) | proved here (elementary) |
-| Theorem C | Algebraic crystalline specialization + (Cont$_0$) + (Pos$_v$) $\Rightarrow$ algebraic | proved here, conditional on (Cont$_0$), (Pos$_v$), BEK; believed new in this form (positivity trick standard) |
+| Theorem C | Algebraic crystalline specialization + (Cont$_0$) + (Pos$_v$) $\Rightarrow$ algebraic | proved here, conditional on (Cont$_0$), (Pos$_v$), BEK; novelty unverified (positivity trick standard) |
 | Proposition 5.2 | Supersingular abelian $A_1$: Tate classes are $\mathbb Q_p$-spans of Lefschetz classes, and (D) holds | proved here (known in substance) |
 | Corollary C.1 | Supersingular good reduction, given (Cont$_0$): Hodge class algebraic $\Leftarrow$ (Rat$_v$); converse at almost all such $v$ | proved here, conditional on (Cont$_0$) and the inputs (I2), (I5), (I6) |
 | Corollary C.2 | CM: infinitely many supersingular places. Hence (Cont$_0$) + Milne's rationality conjecture (crystalline part) $\Rightarrow$ HC for CM abelian varieties | proved here, conditional on (Cont$_0$), (Rat$_v$), BEK and Shimura–Taniyama (cited) |
 | Proposition 6.1 | HC $\Leftrightarrow$ HC for absolute classes over $\bar{\mathbb Q}$ $\wedge$ (Hodge $\Rightarrow$ absolute) | known (Voisin 2007, Deligne) |
-| Proposition 6.2 | For $X/\bar{\mathbb Q}$: $\alpha_{dR}$ is $\bar{\mathbb Q}$-rational iff all $\mathrm{Aut}(\mathbb C/\bar{\mathbb Q})$-conjugates of $\alpha_{dR}$ are Hodge | proved here (elementary) |
+| Proposition 6.2 | For $X/\bar{\mathbb Q}$: $\alpha_{dR}$ is $\bar{\mathbb Q}$-rational iff all $\mathrm{Aut}(\mathbb C/\bar{\mathbb Q})$-conjugates of $\alpha_{dR}$ are Hodge | known/elementary (countability) |

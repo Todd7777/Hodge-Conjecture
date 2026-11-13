@@ -2,11 +2,13 @@
 
 *Second run, 2026-11-07. Draft for adversarial refereeing. It does not prove the top target.*
 
+**Referee (2026-11-13):** minor revision; corrections applied. Report summary: docs/06-attack-report.md.
+
 ## 0. Summary and honest status
 
 **Top target (ladder (a)).** I want to show that for every projective K3 surface $S$ the Kuga–Satake class $\kappa_S\in H^4(S\times A\times A,\mathbb Q)$, $A=\mathrm{KS}(S)$, is algebraic. **I do not prove this.** §2 reduces it exactly to one statement, with complete proofs of the reduction (Theorem A, Corollaries A.1, A.2). The statement is the variational Hodge conjecture for the Kuga–Satake family over the moduli space $M_d$ of degree-$2d$ K3 surfaces, for each squarefree $d$. Equivalently, it is KS-HC for **one very general** K3 surface of each squarefree degree. It would follow from the Lefschetz standard conjecture $B$, or from HC for codimension-2 classes, on **one** smooth projective compactification $\bar{\mathcal X}_d$ of the total space, for each $d$. The argument stops at this algebraization step (GAPS G1–G3). Seeds of algebraicity are dense in $M_d$, but density cannot help (Remark 2.4).
 
-**Ladder (b).** Theorem B is a complete, elementary classification of the rational transcendental lattices reachable through hyper-Kähler varieties of generalized Kummer type (Floccari's method). Every $T$ of rank $\le 5$ is reachable. A rank-6 $T$ (Picard rank $16$) is reachable iff its Witt index is $2$. That holds iff the even Clifford algebra $C^+(T)$ is split ($\cong M_4(K)$), which in turn holds iff $\mathrm{KS}(T)\sim B^4$ with $B$ an abelian fourfold. Combined with Floccari's theorem, this gives KS-HC for all $\rho\ge17$ and for $\rho=16$ in the split case (Corollary B.1). That consequence is **known in substance** (Floccari 2025); what I add is the exact boundary and its proof. The complementary class (Picard rank $16$, $C^+(T)\cong M_2(D)$ with $D$ a quaternion *division* algebra over an imaginary quadratic field) is nonempty (Example B.2). No method that transports KS-HC along Hodge similitudes can reach it from known cases (Proposition B.3). Specialization inside families with an imaginary-quadratic action on $T$ cannot reach it either (Proposition B.4). I propose it as the precise **first open case** at $\rho=16$.
+**Ladder (b).** Theorem B is a complete, elementary classification of the rational transcendental lattices reachable through hyper-Kähler varieties of generalized Kummer type (Floccari's method). Every $T$ of rank $\le 5$ is reachable. A rank-6 $T$ (Picard rank $16$) is reachable iff its Witt index is $2$. That holds iff the even Clifford algebra $C^+(T)$ is split ($\cong M_4(K)$), and then $\mathrm{KS}(T)\sim B^4$ with $B$ an abelian fourfold. The converse is not proved here, and probably fails for surfaces with real multiplication: by Schlickewei 2010, Thm. 1, $\mathrm{KS}(T)$ is isogenous to the fourth power of an abelian fourfold for every $T$ of rank 6 with real multiplication by a quadratic field. Combined with Floccari's theorem, this gives KS-HC for all $\rho\ge17$ and for $\rho=16$ in the split case (Corollary B.1). That consequence is Floccari 2025, Thm. 5.11, combined with an elementary classification; what I add is that classification (Theorem B) and its proof. The complementary class (Picard rank $16$, $C^+(T)\cong M_2(D)$ with $D$ a quaternion *division* algebra over an imaginary quadratic field) is nonempty (Example B.2). No method that transports KS-HC along Hodge similitudes can reach it from known cases (Proposition B.3). Specialization inside families with an imaginary-quadratic action on $T$ cannot reach it either (Proposition B.4). I propose it as the precise **first open case** at $\rho=16$.
 
 **Ladder (c).** Corollary A.2 is a reduction of KS-HC for all K3 surfaces to $B$ or $\mathrm{HC}^2$ for the countably many varieties $\bar{\mathcal X}_d$. This is André's argument made explicit for a single variety. The reduction to an "explicit family of abelian or hyper-Kähler varieties" asked for in (c) is **not** achieved. Proposition B.5 and Remark 4.1 say why: any such reduction needs a variety with odd cohomology linked algebraically to $S$, and the only known hyper-Kähler examples, of Kummer type, have $b_2=7$.
 
@@ -152,12 +154,12 @@ Fix a countable algebraically closed field $k_0\subset\mathbb C$ over which $\ma
 Steps 1–2 (Propositions 2.1, 2.3) are complete. Step 3, propagating algebraicity from the seeds, needs one of the statements in Theorem A. I tried three routes; each stops at a precisely identifiable point.
 
 **(i) Semiregularity (mechanism M2 of docs/03).**
-- *What it needs.* By Bloch / Buchweitz–Flenner, a semiregular $E\in D^b(X_{t_0})$ deforms along every direction in which all of $\mathrm{ch}(E)$ stays Hodge; Artin approximation would then give Theorem A(3). This needs an object at some seed whose *entire* Chern character consists of flat Hodge sections over $M$, with $\kappa$ among them, and whose semiregularity map is injective.
+- *What it needs.* By Bloch / Buchweitz–Flenner, a semiregular $E\in D^b(X_{t_0})$ deforms along every direction in which all of $\mathrm{ch}(E)$ stays Hodge; Artin approximation would then give Theorem A(3). This needs a coherent sheaf at some seed whose Chern character components in a set $I$, with $\kappa$ among them, are flat Hodge sections over $M$, and whose semiregularity map restricted to the $I$-components is injective (Buchweitz–Flenner 2003, Thm. 5.1); with full semiregularity, the entire Chern character must stay Hodge.
 - *Why the known cycles fail.* The cycles known at seeds include Morrison's graphs of rational maps $A\times A\dashrightarrow\mathrm{Km}(B)$ composed with isogenies. They also include Floccari's composites of the correspondences relating $S_K$, a moduli space of sheaves on $S_K$, the crepant resolution $Y_K$ of $K/G$, and $K$, with the Kuga–Satake cycles for Kummer type [Ma23, Vo22, VV22]. As far as I can see, the individual classes of these cycles involve $NS(S_{t_0})$ and $\operatorname{End}^0(A_{t_0})$ beyond the generic ones, so they are not flat Hodge sections; only special $\mathbb Q$-combinations are. I have not checked this for every seed construction and claim nothing about it. In any case, semiregularity does not apply to $\mathbb Q$-combinations of cycles.
 - *Status.* I know no admissible object $E$ (GAP G2).
 
 **(ii) Formal lifting.**
-- *What is available.* At a seed, $\xi_0=\mathrm{ch}^{-1}(z_0)\in K_0(X_{t_0})_{\mathbb Q}$ has Chern character $\kappa_{t_0}$, which stays in $F^2$ along $M$. So Bloch–Esnault–Kerz [BEK14] should give, in their setting (formal deformations in characteristic 0), a lift to the pro-system of $K$-groups of the infinitesimal thickenings. I have not checked their hypotheses for this family, and I do not use this.
+- *What is available.* At a seed, $\xi_0=\mathrm{ch}^{-1}(z_0)\in K_0(X_{t_0})_{\mathbb Q}$ has Chern character $\kappa_{t_0}$, which stays in $F^2$ along $M$. So Bloch–Esnault–Kerz [BEK14] should give, in their setting (formal deformations in characteristic 0), a lift to the pro-system of $K$-groups of the infinitesimal thickenings. BEK's Theorem 1.2 assumes the Chow–Künneth property for the generic fibre; it appears to hold here (Chow–Künneth decompositions exist for K3 surfaces, abelian varieties and their products), but I do not use this.
 - *What is missing.* Algebraizing such formal lifts is problem P5 of docs/03 and is exactly Theorem A(3) (GAP G1).
 
 **(iii) Bounded complexity (Theorem A(4)).**
@@ -215,11 +217,11 @@ Steps 1–2 (Propositions 2.1, 2.3) are complete. Step 3, propagating algebraici
     4. The class $[C^+(T)]=[C(T)_K]$ has exponent dividing 2, since $C(T)$ carries an involution of the first kind; hence the exponent is exactly 2, so its index is 2 by (Q6). Therefore $C^+(T)\cong M_2(D)$ with $D$ a division algebra ramified at $\mathfrak p$.
 - **(5).** The right action of $C^+(T)^{op}\cong C^+(T)$ (via the canonical involution) lies in $\operatorname{End}^0(\mathrm{KS}(T))$, and $\dim\mathrm{KS}(T)=16$. Matrix units of $M_4(K)$, respectively of $M_2(D)$, split $\mathrm{KS}(T)$ into four, respectively two, isogenous factors. $\square$
 
-**Input (F$_n$)** (Floccari: [Fl24] for $n=3$; [Fl25] as stated for all $n\ge2$; I could not access [Fl25], so its exact scope is not re-checked). For every projective hyper-Kähler manifold $K$ of generalized Kummer type of dimension $2n$ there are:
+**Input (F$_n$)** (Floccari: [Fl24] for $n=3$; [Fl25] as stated for all $n\ge2$; checked 2026-11-13: [Fl25, Thm. 1.2] holds for every projective $K$ of Kum$_n$-type, $n\ge2$, and [Fl25, Thm. 5.11] is the embedding criterion used in Corollary B.1). For every projective hyper-Kähler manifold $K$ of generalized Kummer type of dimension $2n$ there are:
 - a projective K3 surface $S_K$ with a Hodge isometry $T(S_K)\cong T(K)(2)$, where $T(K)\subset H^2(K,\mathbb Z)$ carries the Beauville–Bogomolov form;
 - the property that KS-HC$(S_K)$ holds.
 
-**Corollary B.1** (known in substance [Fl25]; proof of the reduction to Theorem B given here). Let $\mathcal N$ be the set of $n\ge2$ for which (F$_n$) holds. If $T(S)_{\mathbb Q}\hookrightarrow W_{-(n+1)}$ for some $n\in\mathcal N$, then KS-HC$(S)$ holds. If $\mathcal N=\mathbb Z_{\ge2}$, KS-HC holds for every $S$ with $\rho(S)\ge17$, and for every $S$ with $\rho(S)=16$ and $C^+(T(S)_{\mathbb Q})$ split.
+**Corollary B.1** (the first sentence is [Fl25, Thm. 5.11]; the second combines it with Theorem B). Let $\mathcal N$ be the set of $n\ge2$ for which (F$_n$) holds. If $T(S)_{\mathbb Q}\hookrightarrow W_{-(n+1)}$ for some $n\in\mathcal N$, then KS-HC$(S)$ holds. If $\mathcal N=\mathbb Z_{\ge2}$, KS-HC holds for every $S$ with $\rho(S)\ge17$, and for every $S$ with $\rho(S)=16$ and $C^+(T(S)_{\mathbb Q})$ split.
 
 *Proof.*
 1. **A lattice embedding.** By Beauville, $H^2(K,\mathbb Z)=U^3\perp\langle-2(n+1)\rangle$. With the form doubled, its rationalization is $H^3\perp\langle-4(n+1)\rangle\cong W_{-(n+1)}$. So an embedding $T(S)_{\mathbb Q}\hookrightarrow W_{-(n+1)}$ is an isometric embedding $\iota\colon T(S)_{\mathbb Q}(\tfrac12)\hookrightarrow H^2(K,\mathbb Q)$.
@@ -289,7 +291,7 @@ Achieved (Corollaries A.1 and A.2): KS-HC for all projective K3 surfaces is equi
 - *A variant not claimed:* replacing "very general" by "transcendence degree 19 over $\bar{\mathbb Q}$" would need $(\mathcal A,\kappa)$ to descend to a number field compatibly with $\mathrm{Aut}(\mathbb C/\bar{\mathbb Q})$.
 
 **G2 — semiregular seed.**
-- *Needed:* a point $t_0$ and $E\in D^b(X_{t_0})$ with the following properties: every component of $\mathrm{ch}(E)$ is a flat Hodge section over $M_d$, one of them is $\kappa$ (modulo algebraic classes), and the Buchweitz–Flenner semiregularity map is injective.
+- *Needed:* a point $t_0$ and $E\in D^b(X_{t_0})$ with the following properties: the components of $\mathrm{ch}(E)$ in a set $I$ are flat Hodge sections over $M_d$, one of them is $\kappa$ (modulo algebraic classes), and the $I$-part of the Buchweitz–Flenner semiregularity map is injective (BF 2003, Thm. 5.1).
 - *Why needed:* it would give Theorem A(3), via deformation of $E$ and Artin approximation.
 - *Why I cannot prove it:*
   - I have no candidate: as far as I can see, the known seed cycles have classes that are not flat (§2.4(i)).
@@ -304,7 +306,7 @@ Achieved (Corollaries A.1 and A.2): KS-HC for all projective K3 surfaces is equi
 - *Needed:* KS-HC for the class $\mathcal K$ ($\rho=16$, $C^+(T)\cong M_2(D)$ with $D$ division; nonempty by Example B.2), and for $\rho\le15$ outside special families.
 - *Why I cannot prove it:* Propositions B.3 and B.4 show that transport along similitudes and specialization inside imaginary-quadratic families cannot reach $\mathcal K$. A new seed needs a variety with odd cohomology containing $H^1(B')$, for $B'$ an abelian 8-fold with multiplication by the quaternion algebra $D$ over $K$, linked algebraically to $S$. I know none.
 
-**G5 — scope of Floccari's input.** The full scope of Corollary B.1 ($\rho=17$ in general, and $\rho=16$ split) depends on (F$_n$) for all $n\ge2$ as stated in [Fl25], which I could not read. The network policy blocked arxiv.org, msp.org and the author's page, and my search budget ran out. With [Fl24] alone ($n=3$), the scope is as in the remark after Corollary B.1. Theorem B itself is unconditional.
+**G5 — scope of Floccari's input.** Closed 2026-11-13: [Fl25, Thms. 1.2 and 5.11] give (F$_n$) for all $n\ge2$ and the embedding criterion, so Corollary B.1 holds as stated. The network policy blocked arxiv.org, msp.org and the author's page, and my search budget ran out. With [Fl24] alone ($n=3$), the scope is as in the remark after Corollary B.1. Theorem B itself is unconditional.
 
 **G6 — quoted statements.** Three statements are quoted, not re-proved: that $B$ is of Weil type with discriminant 1 (Theorem B(5)); the formal-lifting statement attributed to [BEK14] (§2.4(ii)); and the list of hyper-Kähler types without odd cohomology (Remark 4.1). Nothing labelled "proved here" depends on them.
 
@@ -337,7 +339,7 @@ Achieved (Corollaries A.1 and A.2): KS-HC for all projective K3 surfaces is equi
 - *Absoluteness:* $\kappa$ is absolute Hodge [De72] and motivated [An96a]. It is used only through the literature and is consistent with everything here.
 - *Lefschetz $B$:* Corollary A.2(b) isolates one variety per degree.
 - *Variational HC:* the top target is an instance of it (Theorem A(5)).
-- *Open special cases:* if achieved, the top target would give, via [Va23, Fl25], algebraicity of Hodge similitudes between K3 surfaces and the K3 cases of problem P2. That is not done here.
+- *Open special cases:* if achieved, the top target would give, via [Va23, Thm. 5.3], algebraicity of Hodge similitudes between K3 surfaces, hence the K3 cases of problem P2 when $E$ is multiquadratic; for other $E$ the similitudes do not span $E$ (04-derived-K3.md, Theorem A), and nothing is claimed. That is not done here.
 
 ---
 
@@ -345,14 +347,14 @@ Achieved (Corollaries A.1 and A.2): KS-HC for all projective K3 surfaces is equi
 
 - [An96a] Y. André, *Pour une théorie inconditionnelle des motifs*, Publ. Math. IHÉS 83 (1996), 5–49.
 - [An96b] Y. André, *On the Shafarevich and Tate conjectures for hyperkähler varieties*, Math. Ann. 305 (1996), 205–248.
-- [BEK14] S. Bloch, H. Esnault, M. Kerz, *Deformation of algebraic cycle classes in characteristic zero*, Algebra & Number Theory 8 (2014), 1227–1242.
+- [BEK14] S. Bloch, H. Esnault, M. Kerz, *Deformation of algebraic cycle classes in characteristic zero*, Algebraic Geometry 1 (2014), no. 3, 290–310 (doi:10.14231/ag-2014-015).
 - [BL24] M. Bolognesi, R. Laterveer, *A 9-dimensional family of K3 surfaces with finite dimensional motive*, Rend. Circ. Mat. Palermo (2024); arXiv:2310.11981.
 - [Bu19] N. Buskin, *Every rational Hodge isometry between two K3 surfaces is algebraic*, J. reine angew. Math. 755 (2019), 127–150.
 - [De71] P. Deligne, *Théorie de Hodge II*, Publ. Math. IHÉS 40 (1971), 5–57 (Thm 4.1.1).
 - [De72] P. Deligne, *La conjecture de Weil pour les surfaces K3*, Invent. Math. 15 (1972), 206–226.
 - [EGA IV$_3$] A. Grothendieck, J. Dieudonné, Publ. Math. IHÉS 28 (1966).
 - [Fl24] S. Floccari, *Sixfolds of generalized Kummer type and K3 surfaces*, Compositio Math. 160 (2024), 388–410; arXiv:2210.02948.
-- [Fl25] S. Floccari, *K3 surfaces associated with varieties of generalized Kummer type*, arXiv:2501.02315; Geom. Topol. 30 (2026). Known to me only through search excerpts: $S_K$ exists for every $K$ of generalized Kummer type, $T(S_K)\cong T(K)(2)$, and KS-HC holds for $S_K$ and for K3 surfaces whose rational transcendental lattice admits a suitable embedding.
+- [Fl25] S. Floccari, *K3 surfaces associated with varieties of generalized Kummer type*, arXiv:2501.02315; Geom. Topol. 30 (2026). Checked (arXiv v2, Thms. 1.2 and 5.11): $S_K$ exists for every $K$ of generalized Kummer type, $T(S_K)\cong T(K)(2)$, and KS-HC holds for $S_K$ and for K3 surfaces whose rational transcendental lattice admits a suitable embedding.
 - [Fu98] W. Fulton, *Intersection Theory*, 2nd ed., Springer 1998.
 - [HS05] D. Huybrechts, P. Stellari, *Equivalences of twisted K3 surfaces*, Math. Ann. 332 (2005), 901–936.
 - [Hu99] D. Huybrechts, *Compact hyperkähler manifolds: basic results*, Invent. Math. 135 (1999), 63–113; erratum ibid. 152 (2003).
@@ -395,8 +397,8 @@ Achieved (Corollaries A.1 and A.2): KS-HC for all projective K3 surfaces is equi
 | Theorem A | $\Sigma_d=M_d$ $\iff$ one very general point in $\Sigma_d$ $\iff$ relative cycle over a generically finite cover $\iff$ bounded degree on a Zariski-dense set $\iff$ VHC for $(\mathcal X_d/M_d,\kappa)$ | proved here (standard arguments) |
 | Corollary A.1 | KS-HC for all projective K3 surfaces $\iff$ KS-HC for one very general K3 surface of each squarefree degree | proved here |
 | Corollary A.2 | HC for $H^4(\bar{\mathcal X}_d)$, or $B(\bar{\mathcal X}_d)$, implies KS-HC in all degrees $2dk^2$ | proved here ((b) is André's mechanism made explicit) |
-| Theorem B | $T$ embeds in $W_e=H^3\perp\langle e\rangle$: for every $e<0$ if $r\le4$; for some $e<0$ if $r=5$; if $r=6$ iff Witt index 2, iff $C^+(T)\cong M_4(K)$, iff $\mathrm{KS}\sim B^4$; otherwise $C^+(T)\cong M_2(D)$ with $D$ division; never if $r\ge7$ | proved here; the Weil-type, discriminant-1 identification in (5) is quoted [vG00, Lo01] |
-| Corollary B.1 | KS-HC for all $\rho\ge17$ and for $\rho=16$ with $C^+(T)$ split | proved here conditionally on (F$_n$) for all $n\ge2$ (stated in [Fl25], not re-checked); known in substance [Fl25] |
+| Theorem B | $T$ embeds in $W_e=H^3\perp\langle e\rangle$: for every $e<0$ if $r\le4$; for some $e<0$ if $r=5$; if $r=6$ iff Witt index 2, iff $C^+(T)\cong M_4(K)$, and then $\mathrm{KS}\sim B^4$; otherwise $C^+(T)\cong M_2(D)$ with $D$ division; never if $r\ge7$ | proved here; the Weil-type, discriminant-1 identification in (5) is quoted [vG00, Lo01] |
+| Corollary B.1 | KS-HC for all $\rho\ge17$ and for $\rho=16$ with $C^+(T)$ split | first sentence = [Fl25, Thm. 5.11] (checked); the scope statement follows from it and Theorem B |
 | Example B.2 | K3 surfaces with $\rho=16$ and non-split $C^+(T)$ exist, e.g. $T=U\perp\langle10,-2,-4,-20\rangle$ | proved here |
 | Proposition B.3 | the non-split class $\mathcal K$ is closed under Hodge similitude and disjoint from all covered cases, so no similitude-transport reaches it | proved here |
 | Proposition B.4 | $\rho=16$ with an imaginary-quadratic action on $T$ (e.g. a non-symplectic automorphism of order 3, 4, 6) implies split $C^+$ | proved here |
