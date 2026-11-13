@@ -186,3 +186,31 @@ def galois_obstructed(target: Sequence[int], d: int, nprimes: int = 24, max_leng
     for t in known_generators(d, max_length, enumerate_tuples):
         grp.add(t)
     return not grp.contains(even_form(target, d))
+
+
+# ------------------------------------------------------------------------------------------- sine monomials
+
+def sine_monomial_symbol(exponents: Dict[int, int], d: int, pd: PrimeData) -> int:
+    """Legendre symbol, at the prime P of Q(zeta_{2d}) fixed by `pd`, of u = prod_a sin(pi a/d)^{e_a}.
+    sin(pi a/d) = (z^a - z^{-a}) / (2i) with z = zeta_{2d} -> g^{(l-1)/(2d)}, i = z^{d/2} (d even)."""
+    l = pd.l
+    z = pow(pd.g, (l - 1) // (2 * d), l)
+    inv2i = pow(2 * pow(z, d // 2, l) % l, l - 2, l)
+    u = 1
+    for a, e in exponents.items():
+        s = (pow(z, a, l) - pow(z, 2 * d - a, l)) * inv2i % l
+        u = u * pow(s, e % (l - 1), l) % l
+    return 1 if pow(u, (l - 1) // 2, l) == 1 else -1
+
+
+def discrete_log(pd: PrimeData, b: int) -> int:
+    x, k = 1, 0
+    while x != b % pd.l:
+        x, k = x * pd.g % pd.l, k + 1
+    return k
+
+
+# theta_44 = Gamma~(xi_44)^2 = 2^(-497/22) * 11^(1/4) * prod_a sin(pi a/44)^{n_a}   (results/gamma_periods.txt)
+THETA44_SINE_EXPONENTS = {1: -2, 2: -1, 3: -2, 5: -2, 6: -1, 7: -2, 9: -1, 10: -1, 11: -1, 13: -2, 14: -1, 15: -1,
+                          17: -1, 18: -1, 19: -1, 20: -1, 21: -1}
+XI44_AUTHORS = (1, 5, 6, 13, 14, 18, 20, 33, 34, 37, 41, 42)

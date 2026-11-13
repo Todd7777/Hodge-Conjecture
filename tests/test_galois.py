@@ -91,3 +91,29 @@ def test_control_xi35_obstructed_in_degree_35_but_not_70():
     """MMRV prove xi_35 algebraic via a length-6 representative in degree 70; the Galois test must agree."""
     assert G.galois_obstructed(XI35, 35)
     assert not G.galois_obstructed(F.lift(XI35, 35, 70), 70)
+
+
+def test_deligne_7_15_end_to_end_for_theta44():
+    """Frobenius on Gamma~(xi_44) = sqrt(R) sqrt(u), R = 2^(-497/22) 11^(1/4): the Gauss-sum character must equal the
+    power-residue symbols of sqrt(R) = 2^(-497/44) 11^(1/8) times the Legendre symbol of u (Deligne, Thm 7.15)."""
+    for l in G.split_primes(88, 20):
+        pd = G.PrimeData(l, 44)
+        k = G.exponent_exact(G.XI44_AUTHORS, pd)
+        psi = G.sine_monomial_symbol(G.THETA44_SINE_EXPONENTS, 44, pd)
+        pred = (-994 * G.discrete_log(pd, 2) + 11 * G.discrete_log(pd, 11) + (44 if psi == -1 else 0)) % 88
+        assert k == pred
+
+
+def test_theorem_L_no_cyclotomic_or_2_11_radical_field_contains_sqrt_theta44():
+    """sqrt(theta_44) lies in Q(zeta_N, 2^(1/N), 11^(1/N)) for some N only if psi_u * (2/P)_4^x * (11/P)_4^y is trivial
+    or the character 'l = 1 mod 16' on primes l = 1 mod 88, for some x, y.  None of the 8 options fits."""
+    import itertools
+    rows = []
+    for l in G.split_primes(88, 30):
+        pd = G.PrimeData(l, 44)
+        q2 = 1 if pow(2, (l - 1) // 4, l) == 1 else -1
+        q11 = 1 if pow(11, (l - 1) // 4, l) == 1 else -1
+        rows.append((G.sine_monomial_symbol(G.THETA44_SINE_EXPONENTS, 44, pd), q2, q11, 1 if l % 16 == 1 else -1))
+    fits = [(x, y, c) for x, y, c in itertools.product((0, 1), repeat=3)
+            if all(p * a ** x * b ** y == chi ** c for p, a, b, chi in rows)]
+    assert fits == []
