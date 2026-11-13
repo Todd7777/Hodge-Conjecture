@@ -32,7 +32,7 @@ For an abelian variety $A$, $\mathrm{Hdg}^*(A) = \big(\bigwedge^* H^1(A,\mathbb{
 | Integral HC **fails** for very general principally polarized abelian varieties of dimension $\ge 4$ (every curve class is an even multiple of the minimal class) | Engel–de Gaay Fortman–Schreieder 2025/26 |
 | HC for CM abelian varieties: known for Fermat-type Jacobians in ranges (Shioda 1981) and some powers of CM fourfolds (arXiv:2609.27916, 2026 **[unverified]**); open in general. An OpenAI manuscript (Oct 2026) claims the rational HC for CM abelian varieties **[unverified; no independent check, no formalization at posting]** | — |
 
-Dimension 6 and higher: open in general (Weil-type sixfolds of discriminant $+1$, for instance, and non-Weil exceptional classes in higher dimension).
+Dimension 6 and higher: open in general (Weil-type sixfolds of non-split discriminant, that is, discriminant $\neq-1$ in the normalization $\mathrm{disc}=\det H$ of Markman and Brosnan, for instance, and non-Weil exceptional classes in higher dimension).
 
 ## 2.3 Surfaces, K3 and hyper-Kähler varieties, cubic fourfolds
 
