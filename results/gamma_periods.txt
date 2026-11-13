@@ -1,0 +1,19 @@
+# Squares of the Gamma-periods of xi_44, xi_51, xi_52 (python3 scripts/gamma_periods.py)
+
+## q = 44: xi_q = (1, 5, 6, 13, 14, 18, 20, 33, 34, 37, 41, 42)
+max relative error of the closed forms against the Gamma products: 2.57e-60
+Gamma~(xi)^2            = (6.63814782607257438065052624618 + 0.0j)
+product of closed forms = (6.63814782607257438065052624618 + 0.0j)
+normal form: theta = 2^(-497/22) * 11^(1/4) * s1^(-2) * s2^(-1) * s3^(-2) * s5^(-2) * s6^(-1) * s7^(-2) * s9^(-1) * s10^(-1) * s11^(-1) * s13^(-2) * s14^(-1) * s15^(-1) * s17^(-1) * s18^(-1) * s19^(-1) * s20^(-1) * s21^(-1),  s_a = sin(pi a/44);  |value| = 6.63814782607257438065052624618
+
+## q = 51: xi_q = (1, 10, 13, 18, 22, 28, 34, 37, 43, 49)
+max relative error of the closed forms against the Gamma products: 1.58e-60
+Gamma~(xi)^2            = (-1.98009549969080068444021984965 + 0.0j)
+product of closed forms = (-1.98009549969080068444021984965 + 0.0j)
+normal form: theta = 2^(-26) * 3^(1/17) * 17^(1/6) * s1^(-2) * s2^(-2) * s4^(-1) * s5^(-1) * s7^(-1) * s8^(-2) * s10^(-2) * s11^(-1) * s13^(-2) * s14^(-2) * s16^(-1) * s17^(-1) * s18^(-1) * s19^(-1) * s20^(-1) * s22^(-2) * s23^(-2) * s25^(-1),  s_a = sin(pi a/51);  |value| = 1.98009549969080068444021984965
+
+## q = 52: xi_q = (1, 10, 14, 17, 18, 21, 22, 24, 29, 41, 45, 46, 50)
+max relative error of the closed forms against the Gamma products: 2.19e-60
+Gamma~(xi)^2            = (0.0 - 0.576780899366283244434790974359j)
+product of closed forms = (0.0 - 0.576780899366283244434790974359j)
+normal form: theta = 2^(-339/13) * 13^(1/4) * s1^(-2) * s2^(-1) * s3^(-1) * s5^(-1) * s6^(-1) * s7^(-2) * s9^(-1) * s10^(-1) * s11^(-2) * s14^(-1) * s15^(-1) * s17^(-2) * s18^(-1) * s19^(-1) * s21^(-2) * s22^(-1) * s23^(-2) * s24^(-1) * s25^(-1),  s_a = sin(pi a/52);  |value| = 0.576780899366283244434790974359
