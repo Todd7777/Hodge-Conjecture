@@ -2,6 +2,8 @@
 
 *Second run, 2026-11-07. Draft for refereeing. This file does **not** prove the Hodge conjecture, and it does not reach the top target of its ladder. Every use of a theorem from the literature is flagged; results that use Markman's 2025 theorem as a black box say so.*
 
+**Referee (2026-11-13):** minor revision; corrections applied. Report summary: docs/06-attack-report.md.
+
 ## 0. Summary
 
 **About the top target (a).**
@@ -13,7 +15,7 @@
 2. **Lemma 2.5 (tensor-rank obstruction).** On a product seed $A\times S$, no box product $\mathcal F\boxtimes\mathcal G$ has a nonzero Weil component in its Chern character.
 3. **Theorem B (simple sixfolds).** Let $A$ be a simple abelian sixfold that is not of CM type. Every Hodge class of codimension $\ne3$ on $A$ is a polynomial in divisor classes. In codimension 3, the Hodge classes are spanned by products of divisors and the Weil classes $W_K(A)$, where $K$ runs over the imaginary quadratic subfields of $\mathrm{End}^0(A)$ acting with signature $(3,3)$. The theorem lists exactly where exceptional classes occur.
 4. **Theorem C (quaternionic sixfolds).** The discriminant satisfies $\mathrm{disc}(A,K)=b_K\,c(A)$. The Weil classes for different $K\subset D$ determine one another. (M) HC holds for every simple type III sixfold with $\mathbb{Q}(\sqrt{-c(A)})\hookrightarrow D$. There are explicit type III sixfolds for which every Weil structure is non-split.
-5. **Corollary C.4 (M).** Fix any $K$ and any sixfold discriminant $\delta$. The 9-dimensional Weil family of type $(K,\delta)$ contains a 3-dimensional family of quaternionic sixfolds whose Weil classes are algebraic. For $\delta\ne-1$ these are new non-split cases, but only on special loci.
+5. **Corollary C.4 (M).** Fix any $K$ and any sixfold discriminant $\delta$. The 9-dimensional Weil family of type $(K,\delta)$ contains a 3-dimensional family of quaternionic sixfolds whose Weil classes are algebraic. For $\delta\ne-1$ these are non-split cases (conditional on [K2]; novelty not checked against Abdulali or van Geemen–Verra), but only on special loci.
 6. **Theorem D (conditional).** Suppose that for every $K$ the Weil classes are algebraic on the abelian 8-folds of Weil type of *one* discriminant. Then HC holds for every simple abelian sixfold that is not of CM type.
 
 Not covered: CM sixfolds and non-simple sixfolds (G3, G4).
@@ -28,7 +30,7 @@ Not covered: CM sixfolds and non-simple sixfolds (G3, G4).
 
 Then $H(x,y):=E(\iota x,y)+\iota E(x,y)$ is a nondegenerate $K$-hermitian form of signature $(n,n)$ [vG94, Lemma 5.2]. Its Gram determinant $\det H$ is well defined in $\mathbb{Q}^*/N(K^*)$. Set
 $$\mathrm{disc}(A,K,E):=\det H,\qquad \mathrm{disc}^\flat(A,K,E):=(-1)^n\det H .$$
-The first normalization is the one in Markman's "sixfolds of discriminant $-1$" [K2] and in Brosnan's "$(-1)^n$" [K5]. The second equals, modulo norms, $\det(\iota^{-1}H)$, because $\det(\iota^{-1}H)=(-d)^{-n}\det H$ and $d\in N(K^*)$. It is the only reading under which Voisin's statement of Markman's theorem, "dimension 6 et discriminant 1" [Voi26, Thm. 1.4], is non-vacuous. It apparently also underlies Koike's "$\delta=1$" [Koi04]; I have not checked this. The triple $(A,K,E)$ is **split** if $H$ has an $n$-dimensional totally isotropic $K$-subspace.
+The first normalization is the one in Markman's "sixfolds of discriminant $-1$" [K2] and in Brosnan's "$(-1)^n$" [K5]. The second equals, modulo norms, $\det(\iota^{-1}H)$, because $\det(\iota^{-1}H)=(-d)^{-n}\det H$ and $d\in N(K^*)$. It is the only reading under which the phrase "dimension 6 et discriminant 1" attributed to [Voi26, Thm. 1.4] (quoted via a search tool, not checked) would be non-vacuous. Markman's own text uses $\det H$ (arXiv:2502.03415, §1.1 and Lemma 3.1.3). It apparently also underlies Koike's "$\delta=1$" [Koi04]; I have not checked this. The triple $(A,K,E)$ is **split** if $H$ has an $n$-dimensional totally isotropic $K$-subspace.
 
 **Weil classes.** Let $V_{\mathbb C}=V_\sigma\oplus V_{\bar\sigma}$ be the eigenspaces of $\iota$, each of dimension $2n$, and let $V_\sigma^\vee\subset V^\vee_{\mathbb C}$ be the annihilator of $V_{\bar\sigma}$. Define $W_K(A)\subset H^{2n}(A,\mathbb{Q})$ as the 2-dimensional $\mathbb{Q}$-subspace with $W_K(A)_{\mathbb C}=\bigwedge^{2n}V_\sigma^\vee\oplus\bigwedge^{2n}V_{\bar\sigma}^\vee$. This sum is $\mathrm{Aut}(\mathbb C)$-stable, so it is defined over $\mathbb{Q}$. By the signature condition, $V_\sigma$ is the sum of its $(-1,0)$ and $(0,-1)$ parts, each of dimension $n$. Hence $\bigwedge^{2n}V_\sigma^\vee$ has type $(n,n)$ and $W_K(A)\subseteq\mathrm{Hdg}^n(A)$ (Weil [K1]). $W_K(A)$ depends only on $(A,K)$, not on $E$.
 
@@ -43,7 +45,7 @@ The first normalization is the one in Markman's "sixfolds of discriminant $-1$" 
 (ii) (a)⇒(b): an $n$-dimensional isotropic subspace gives $H\cong n\cdot\mathbb H$, where $\mathbb H$ is the hyperbolic plane, and $\det\mathbb H=-1$. (b)⇒(a): by Landherr's theorem [K8], hermitian forms over $K/\mathbb{Q}$ are classified by dimension, determinant mod $N(K^*)$ and signature; $H$ and $n\cdot\mathbb H$ agree in all three. (a)⇔(c): since $\mathrm{Tr}_{K/\mathbb{Q}}(\iota^{-1})=0$, we have $E=\tfrac12\mathrm{Tr}_{K/\mathbb{Q}}(\iota^{-1}H)$. For a $K$-subspace $L$, $E|_{L\times L}=0$ therefore forces $\mathrm{Tr}(a\iota^{-1}H(x,y))=0$ for all $a\in K$, hence $H|_{L\times L}=0$. The converse is clear. An $n$-dimensional $K$-subspace has $\mathbb{Q}$-dimension $2n=\frac12\dim V$.
 (iii) Let $p$ be a prime inert in $K$. Then $v_p(N(x))$ is even for every $x\in K^*$, so the classes $(-1)^np$ are pairwise distinct and $\ne(-1)^n$. There are infinitely many inert primes (Chebotarev). $\square$
 
-**Remark 1.3 (reading of target (a)).** By Lemma 1.2(i), no Weil sixfold has $\mathrm{disc}=+1$. The condition $\mathrm{disc}^\flat=+1$ is the split case $\mathrm W(K,6,-1)$, which is proved [K2]. The phrase "Weil-type sixfolds of discriminant $+1$" in `docs/02-known-cases.md` §2.2 mixes the two normalizations and should be corrected. I do not edit that file. The open sixfold problem is $\mathrm W(K,6,\delta)$ for $\delta\in\mathbb{Q}_{<0}/N(K^*)$, $\delta\ne-1$: outside the split locus, HC for Weil classes on sixfolds "remains completely open" [Mos26]. I therefore attack **(a1)** non-split sixfolds and **(a2)** split $2n$-folds with $n\ge4$.
+**Remark 1.3 (reading of target (a)).** By Lemma 1.2(i), no Weil sixfold has $\mathrm{disc}=+1$. The condition $\mathrm{disc}^\flat=+1$ is the split case $\mathrm W(K,6,-1)$, which is proved [K2]. The phrase "Weil-type sixfolds of discriminant $+1$" in `docs/02-known-cases.md` §2.2 mixes the two normalizations and should be corrected. I do not edit that file. The open sixfold problem is $\mathrm W(K,6,\delta)$ for $\delta\in\mathbb{Q}_{<0}/N(K^*)$, $\delta\ne-1$: outside the split locus, HC for Weil classes on sixfolds is open (the phrase attributed to [Mos26] is not in its abstract and is unverified). I therefore attack **(a1)** non-split sixfolds and **(a2)** split $2n$-folds with $n\ge4$.
 
 **1.4 Inputs used.** These were checked against abstracts, talk announcements or secondary sources through web search. Primary texts on arXiv were not reachable from this sandbox.
 * [K1] Weil 1977: $W_K(A)\subseteq\mathrm{Hdg}^n(A)$, and $W_K(A)\cap\mathcal D^n(A)=0$ for the general member.
@@ -81,7 +83,7 @@ Choose generators $x_\sigma$ of $\bigwedge^{2n}V^\vee_{A,\sigma}$ and $y_\sigma$
 We have $\int_Sy_\sigma^2=0$, because $\bigwedge^4V^\vee_{S,\sigma}=0$. We also have $c:=\int_Sy_\sigma y_{\bar\sigma}\neq0$, because $y_\sigma\wedge y_{\bar\sigma}$ spans $H^4(S)$, and $c\in\mathbb{R}$. Hence $\pi(w)=c(\lambda\bar\lambda'x_\sigma+\bar\lambda\lambda'x_{\bar\sigma})$ is a nonzero algebraic element of $W_K(A)$. Lemma 2.3 finishes the proof. $\square$
 
 **Corollary A.1.**
-(i) $\mathrm W(K,6,-1)$ [K2] implies $\mathrm W(K,4,\delta)$ for all $\delta$. This is Markman's step [K3], re-derived here.
+(i) $\mathrm W(K,6,-1)$ [K2] implies $\mathrm W(K,4,\delta)$ for all $\delta$. This is Schoen's product argument as used by Markman (arXiv:2502.03415, Cor. 1.6.1), re-derived here.
 (ii) $\mathrm W(K,8,\delta_8)$ for a single $\delta_8>0$ implies $\mathrm W(K,6,\delta)$ for all $\delta$, including every non-split class.
 (iii) More generally, $\mathrm W(K,2n+2,\delta)$ implies $\mathrm W(K,2m,\cdot)$ for all $m\le n$ (iterate).
 (iv) It suffices to assume algebraicity for the *very general* member of each PEL family. Apply Lemma 2.2 to a connected PEL family containing $A\times S$, after a finite étale base change that trivializes the monodromy on the rank-2 local system of Weil classes. That monodromy acts through determinants of unitary monodromy elements, which are roots of unity in $K$.
@@ -101,7 +103,7 @@ Granted this, $\mathcal E$ deforms over the germ of the Weil family at $A_0$. Th
 $$q\tbinom{a+b}{a}\theta_A^a\otimes\theta_B^b+\lambda x_\sigma\otimes y_\sigma+\bar\lambda x_{\bar\sigma}\otimes y_{\bar\sigma}.$$
 Since $E_A(V_\sigma,V_\sigma)=0$, the class $\theta_A$ lies in $V^\vee_\sigma\wedge V^\vee_{\bar\sigma}$. So $\theta_A^a\ne0$, $x_\sigma$ and $x_{\bar\sigma}$ lie in the three distinct summands $\bigwedge^aV^\vee_\sigma\otimes\bigwedge^aV^\vee_{\bar\sigma}$, $\bigwedge^{2a}V^\vee_\sigma$ and $\bigwedge^{2a}V^\vee_{\bar\sigma}$, and they are independent. The same holds on $B$. Hence the tensor is diagonal in suitable bases, and its rank is at least 2 when $\lambda\neq0$. $\square$
 
-For every $\delta$, the product locus $\{B\times S\}$ (5-dimensional, where $B$ is a Weil fourfold) lies in the 9-dimensional Weil family of type $(K,6,\delta)$, and its Weil classes are algebraic by [K3] and Lemma 2.1. So seeds *as cycles* exist in every discriminant. Lemma 2.5 says why they are not seeds *as objects*: a usable $\mathcal E$ must be a non-box object. Markman obtains such objects on $X\times\hat X$ through Orlov's equivalence $D^b(X\times X)\simeq D^b(X\times\hat X)$.
+For every $\delta$, the product locus $\{B\times S\}$ (5-dimensional, where $B$ is a Weil fourfold) lies in the 9-dimensional Weil family of type $(K,6,\delta)$, and its Weil classes are algebraic by [K3] and Lemma 2.1. So seeds *as cycles* exist in every discriminant. Lemma 2.5 says why they are not seeds *as objects* satisfying condition 1 of Hypothesis S: no box object has $\mathrm{ch}$ in $\mathbb{Q}[\theta]\oplus W_K$ with nonzero Weil part (box objects with other Hodge components on the product locus are not excluded). Markman obtains such objects on $X\times\hat X$ through Orlov's equivalence $D^b(X\times X)\simeq D^b(X\times\hat X)$.
 
 **2.6 Where (a1) and (a2) stop.**
 * (a1) would follow from $\mathrm S(K,6,\delta)$ for each non-split $\delta$, or from $\mathrm W(K,8,\delta_8)$ for one $\delta_8$ (Corollary A.1(ii)).
@@ -268,7 +270,7 @@ So **for every $(K,\delta)$ the 9-dimensional Weil family of type $(K,6,\delta)$
 * **G3 (CM sixfolds).** Theorem B excludes simple CM sixfolds. By [K6], HC for them reduces to split Weil classes on auxiliary abelian varieties $A_\Delta$ that may have dimension $>8$, so Theorem D does not cover them. I have not checked whether degenerate CM types in dimension 6 carry exceptional classes in codimension 2.
 * **G4 (non-simple sixfolds).** Not analyzed. Here is an example of what can occur. Take $E$ with CM by $K$ and $B$ a 5-fold of type IV with $\mathrm{End}^0=K$ and signature $(2,3)$, so that the total signature is $(3,3)$. Then $E\times B$ is of Weil type for the product polarization, and its Weil classes lie in $H^1(E)\otimes H^5(B)$; they are not products of lower-dimensional Weil classes. A full treatment needs the Moonen–Zarhin product analysis [MZ99] in dimension 6.
 * **G5 (inputs used as black boxes).**
-  * [K2] is verified only through a talk abstract and [Voi26, Thm. 1.4]; I could not read the primary text.
+  * [K2]: statement and normalization checked by the referee against arXiv:2502.03415, Theorem 1.5.1 and Lemma 3.1.3; the proof is not re-verified.
   * Deligne's minuscule theorem (F4) and facts (F1)–(F6) are standard.
   * The signature of $H$ [vG94, Lemma 5.2], the nonemptiness of PEL families for given hermitian or skew-hermitian data, and Landherr's theorem are standard.
   * The claim in Corollary C.3 that the very general member of the type III ($m=3$) family has $\mathrm{End}^0=D$ is quoted **from memory** (Shimura 1963). Only the existence remark depends on it; Theorem C(1)–(3) and Corollary C.4 do not.
@@ -305,12 +307,12 @@ So **for every $(K,\delta)$ the 9-dimensional Weil family of type $(K,6,\delta)$
 
 | Label | Statement (one line) | Status |
 |---|---|---|
-| Lemma 1.2 | $\operatorname{sign}\det H=(-1)^n$; split $\iff\det H\equiv(-1)^n\iff$ $K$-stable $E$-Lagrangian; infinitely many non-split classes | proved here (uses Landherr) |
+| Lemma 1.2 | $\operatorname{sign}\det H=(-1)^n$; split $\iff\det H\equiv(-1)^n\iff$ $K$-stable $E$-Lagrangian; infinitely many non-split classes | known (Landherr; Brosnan, arXiv:2609.14169, Lemma 9 and Prop. 4); proof included |
 | Remark 1.3 | "disc $+1$ sixfolds" are empty ($\det$ normalization) or the split, proved case ($(-1)^n\det$ normalization); open case is non-split | proved here (from 1.2) |
 | Lemma 2.1 | Weil classes of $A\times B$ are spanned by products of Weil classes; discriminants multiply | proved here (standard) |
 | Lemma 2.2 | algebraicity of a flat class at a very general point implies it everywhere | known (standard); proof sketched |
 | Lemma 2.3 | one nonzero algebraic Weil class implies all of $W_K(A)$ algebraic | proved here (standard) |
-| Theorem A | $\mathrm W(K,2n{+}2,\delta)\Rightarrow\mathrm W(K,2n,\delta')$ for all $\delta'$ | proved here (case $n=2,\delta=-1$ is Markman's) |
+| Theorem A | $\mathrm W(K,2n{+}2,\delta)\Rightarrow\mathrm W(K,2n,\delta')$ for all $\delta'$ | known method (Schoen's product argument, cited as [S2, Prop. 10] in arXiv:2502.03415, Cor. 1.6.1), written out here for all $n$ |
 | Cor. A.1 | one discriminant in dim 8 $\Rightarrow$ all Weil sixfolds; iteration | proved here |
 | Fact 2.4 | semiregular seed $\mathrm S(K,2n,\delta)\Rightarrow\mathrm W(K,2n,\delta)$ | known mechanism [K2]; not re-verified |
 | Lemma 2.5 | no box product on $A\times B$ has a Weil component in $\mathrm{ch}$ | proved here |
