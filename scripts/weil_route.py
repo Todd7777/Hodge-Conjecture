@@ -29,7 +29,8 @@ from hodge import weil as W  # noqa: E402
 
 QS = (44, 51, 52)
 QS_SEARCH = (44, 51, 52, 65, 68, 69)     # the open degrees below 70
-PLAN = {44: [44 * k for k in range(1, 14)], 51: [51, 102, 153, 204], 52: [52, 104, 156, 208, 260]}
+PLAN = {44: [44 * k for k in range(1, 14)], 51: [51, 102, 153, 204], 52: [52, 104, 156, 208, 260],
+        65: [65, 130, 195], 68: [68, 136, 204], 69: [69, 138, 207]}   # as in scripts/galois_obstruction.py
 
 
 def part1(lines):
@@ -123,7 +124,7 @@ def part2(lines, dmax):
     lines.append("|---|---|---|---|---|---|---|---|---|---|")
     with tempfile.TemporaryDirectory() as tmp:
         exe = GO.build_enumerator(tmp)
-        for q in QS:
+        for q in PLAN:
             for D in PLAN[q]:
                 if D > dmax:
                     continue
