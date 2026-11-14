@@ -160,6 +160,8 @@ Columns: `b_prim` = primitive middle Betti number; `dim Hdg` = dim_Q of rational
   q ≤ 420 (`python3 scripts/exceptional_lengths.py 420`).
 * `galois_obstruction.md` — the Galois field-of-definition test of `docs/fermat/03-galois-obstruction.md` for the
   exceptional tuples ξ_q, q < 70, in their own degree and multiples up to 572 (`python3 scripts/galois_obstruction.py`).
+* `two_prime_lengths.md` — Theorem F of `docs/fermat/02-exceptional-lengths.md` §6: the exact length of ξ_q for every
+  q = p₁p₂ ≤ 415 (`python3 scripts/two_prime_lengths.py 415`).
 * `weil_route.md` — the reach of Markman's theorems on the open classes (`docs/fermat/04-weil-route.md`): simple CM
   factors of J(C_q), Theorems W1–W3, all exceptional classes with q < 70, realizations, and the Galois test for lifts
   (`python3 scripts/weil_route.py 572 --search`).

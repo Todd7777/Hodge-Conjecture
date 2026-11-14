@@ -11,6 +11,15 @@ with ℓ_{2,q}(ξ_q) uses the Kubert–Aoki index theorem, which this repository
 families. The formula reproduces all 58 entries of Miranda–Movasati–Rufino–Villaflor's Table 1 of this form, so
 those upper bounds are optimal.
 
+**Addendum (2026-11-14, §6).** For q = p_1 p_2 with p_1, p_2 distinct odd primes, Theorem F proves the lower bound
+
+  ℓ_{2,q}(ξ_q) ≥ φ(q)/4 + c_{p_1}(p_2) + c_{p_2}(p_1)
+
+for every such q, by mod-2 functionals that count entries in cosets. Equality holds for all 47 such degrees in MMRV's
+Table 1 (q ≤ 415, p_1 ≥ 5): for q ≤ 300 by our own explicit tuples, beyond by MMRV's. With p_1 = 3 the formula is
+Theorem D′, and with 4 in place of p_1 it is Theorem D, so one formula covers every two-factor degree checked
+(Conjecture F).
+
 **What this is not.** It says nothing about whether ξ_q is algebraic, so it proves no new case of the Hodge conjecture.
 It is a statement about one method: in degree q, the length-reduction method of MMRV (§4.3–4.4 of arXiv:2609.27301)
 cannot settle ξ_q unless the formula gives at most 6. For q = 4p and 3p that happens only for
@@ -18,7 +27,7 @@ q ∈ {12, 15, 20, 21, 28, 33, 39}.
 Lifts to multiples of q are not covered (§5).
 
 Labels follow `CLAUDE.md`: **Theorem** = complete proof in this note; **Cited** = used as a black box, source read;
-**Computation** = exact integer computation reproducible by the commands in §6.
+**Computation** = exact integer computation reproducible by the commands in §7.
 
 Sources. MMRV = M. Miranda, H. Movasati, L. Rufino, R. Villaflor, *Lengths of Hodge characters in Fermat varieties*,
 arXiv:2609.27301v2 (read in full for this note: Definitions 3.7, 4.1–4.10, Theorems 4.1–4.3, Proposition 4.4,
@@ -292,19 +301,140 @@ length 7.
   (`docs/fermat/03-galois-obstruction.md`, Theorem G) gives ℓ_{2,D}(ξ_44) ≥ 7 for every D = 44k with k ≤ 13, by a
   different argument. A representative of length ≤ 6 in degree D would put the lift of ξ_44 in Λ_D, and hence its
   Galois character in E_D.
-* **Other degrees (open).** Theorems D and D′ cover every q ∈ Q with exactly two P-factors, one of which is 4 or 3. The
-  remaining two-factor degrees are q = p_1 p_2 with both primes ≥ 5: 35, 55, 65, 77, 85, 91, 95, … MMRV's Table 1
-  gives 35 → 8, 55 → 10, 65 → 16, 77 → 16, 85 → 18, 91 → 22. There χ_4 and χ_3 are not available. When one factor
-  is ≡ 3 (mod 4), its Legendre character is odd and could play the role of χ_m, but the entries of that order then
-  form a whole Galois orbit rather than two residues, and the bookkeeping changes. **Question:** is there a closed
-  formula for f_0(p_1 p_2)?
+* **Other degrees.** The two-factor degrees not covered by Theorems D and D′ are q = p_1 p_2 with both primes ≥ 5:
+  35, 55, 65, 77, 85, 91, 95, … §6 gives the formula and proves the lower bound in general (Theorem F).
 
-## 6. Reproduction
+## 6. Two odd primes: q = p_1 p_2
+
+Let q = p_1 p_2 with p_1 < p_2 odd primes. Here p_1 ≥ 5 is the new case (35, 55, 65, 77, 85, 91, 95, …), and p_1 = 3
+reproduces the lower bound of Theorem D′, as a check. The only element of Q dividing q is q, and
+[B_q : D_q + S_q] = 2 (Kubert–Aoki, as in §1; recomputed for every q ≤ 300 by `index_B_over_DS`). Write
+G = (Z/q)^×. For distinct primes r, p put c_r(p) = (p − 1)/ord_p(r) if ord_p(r) is even, and 0 otherwise.
+
+**Coset functionals.** Let H = {t ∈ G : t² = 1} = {±1, ±e}, where e ≡ 1 (mod p_1) and e ≡ −1 (mod p_2). For
+α = Σ n_a (a) ∈ R_q define:
+
+* N_{tH}(α) = Σ_{a ∈ tH} n_a, one functional for each of the φ(q)/4 cosets of H;
+* if ord_{p_2}(p_1) is even, N^{(1)}_C(α) = Σ_{y ∈ C} n_{p_1 y}, one for each of the c_{p_1}(p_2) cosets C of ⟨p_1⟩
+  in (Z/p_2)^×. These count the entries of order p_2;
+* symmetrically N^{(2)}_C, one for each of the c_{p_2}(p_1) cosets of ⟨p_2⟩ in (Z/p_1)^×, if ord_{p_1}(p_2) is
+  even.
+
+The supports are disjoint. Each is closed under a ↦ −a: −1 ∈ H, and −1 ∈ ⟨p_1⟩ modulo p_2 when the order is even,
+because −1 is the only element of order 2 in a cyclic group.
+
+**Proposition F1 (Theorem).** Every coset functional is even on D_q + S_q.
+
+*Proof.* On a pair (a) + (−a) a functional takes the value 0 or 2, since its support is closed under negation. Since
+q is odd, S_q is spanned by the standard tuples s_{p,i} of degree q with p ∈ {p_1, p_2} (MMRV Def. 3.7 needs
+k = q/p ≥ 3; the proper divisors p_1, p_2 of q give k = 1). Consider
+
+  s = s_{p_1,i} = (i, i + p_2, …, i + (p_1 − 1)p_2, −p_1 i),   with p_1 ∤ i and all entries nonzero.
+
+Then i ≢ 0 (mod p_2), since otherwise some i + j p_2 ≡ 0. The first p_1 entries are all the x ≡ i (mod p_2), one
+for each residue mod p_1.
+
+* *Units.* These are the p_1 − 1 entries with x ≢ 0 (mod p_1). In coordinates (Z/p_1)^× × (Z/p_2)^×, a coset tH is
+  {(±t_1, ±t_2)}. It contains no unit of s, or exactly the two units (±t_1, i). The count is even.
+* *Multiples of p_1.* There are two: the entry p_1 y of the first block, with y ≡ p_1^{−1} i (mod p_2), and the last
+  entry −p_1 i, with y ≡ −i. Their ratio −p_1^{−1} lies in ⟨p_1⟩ when ord_{p_2}(p_1) is even. Then both lie in the
+  same coset, and the count is 0 or 2.
+* *Multiples of p_2.* There are none.
+
+The tuples s_{p_2,i} are symmetric. ∎
+
+**The element ξ′_q.** Fix primitive roots μ_1 mod p_1 and μ_2 mod p_2, and the half systems
+hs(p) = {μ^j : 0 ≤ j < (p − 1)/2}. Put
+
+  ξ′_q = Σ_{x : x mod p_1 ∈ hs(p_1), x mod p_2 ∈ hs(p_2)} (x)
+        + Σ_{y ∈ hs(p_2), w = p_1^{−1}y ∉ hs(p_2)} (p_1 w)  +  Σ_{y ∈ hs(p_1), w = p_2^{−1}y ∉ hs(p_1)} (p_2 w).
+
+This is MMRV's Definition 4.8 of Aoki's ξ_q, computed for q = p_1 p_2. The primitive part is the product of the two
+half systems. The p_1-part solves (p_1 − 1) ξ_{q,p_1} = τ_{p_1}(ξ_{q,1}) modulo D_{p_2}. In the extracted text of
+Definition 4.8 the sign in τ is ambiguous. The sign used here is the one for which the result is Hodge (Proposition F3,
+as MMRV Prop. 4.2 requires). It reproduces MMRV's representative (1, 2, 16, 17, 21, 22, 30, 31) of ξ_35.
+
+**Proposition F2 (Theorem).** ξ′_q is odd on every coset functional.
+
+*Proof.* *Units.* ξ′_q has exactly one unit in each coset tH, because a half system contains one element of each pair
+{±x}.
+
+*Multiples of p_1.* Let C be a coset of ⟨p_1⟩ in (Z/p_2)^×, of even order o. Write it as a cycle
+w_k = p_1^{−k} w_0 (k mod o), so that w_{k+o/2} = −w_k. Put σ_k = +1 if w_k ∈ hs(p_2) and −1 otherwise, so
+σ_{k+o/2} = −σ_k. The entries of ξ′_q in p_1·C are the p_1 w_{k+1} with σ_k = +1 and σ_{k+1} = −1, one for each
+change of sign from + to −. Between k = 0 and k = o/2 the sign goes from σ_0 to −σ_0, so it changes an odd number of
+times. By the antisymmetry, the full cycle has twice that many changes, and half of them go from + to −. So there is
+an odd number of such changes.
+
+*Multiples of p_2.* The same argument applies. ∎
+
+**Proposition F3 (Theorem).** ξ′_q is a Hodge tuple.
+
+*Proof.* Write B̄_1(x) = {x} − 1/2. A tuple α = Σ n_a (a) is Hodge if and only if F_α(t) = Σ_a n_a B̄_1(ta/q)
+vanishes on G. Since B̄_1 is odd, so is F_α, so this holds if and only if Σ_t χ̄(t) F_α(t) = 0 for every odd character
+χ of G. Write χ = χ_1 ⊗ χ_2 on (Z/p_1)^× × (Z/p_2)^×, and put B(χ̄_2) = Σ_{u ∈ (Z/p_2)^×} χ̄_2(u) B̄_1(u/p_2).
+
+* A unit a contributes χ(a)·S(χ̄), where S(χ̄) = Σ_{t ∈ G} χ̄(t) B̄_1(t/q).
+* An entry a = p_1 w has B̄_1(ta/q) = B̄_1(tw/p_2), which depends only on t mod p_2. Its contribution vanishes unless
+  χ_1 = 1, and then it is (p_1 − 1) χ_2(w) B(χ̄_2). Entries p_2 w behave symmetrically.
+* If χ_1 = 1, the distribution relation Σ_{j=0}^{p_1−1} B̄_1(x + j/p_1) = B̄_1(p_1 x) gives
+  Σ_{t ∈ G, t ≡ u (p_2)} B̄_1(t/q) = B̄_1(u/p_2) − B̄_1(p_1^{−1}u/p_2). The second term is the one excluded t, the
+  multiple of p_1. Hence S(χ̄) = (1 − χ̄_2(p_1)) B(χ̄_2).
+
+Now let χ be odd.
+
+(a) *χ_1 and χ_2 both nontrivial.* Exactly one of them is even, and a nontrivial even character sums to 0 over a half
+system. So the primitive part contributes S(χ̄)·Σ_{hs(p_1)} χ_1 · Σ_{hs(p_2)} χ_2 = 0. The other parts contribute
+nothing.
+
+(b) *χ = 1 ⊗ χ_2 with χ_2 odd.* Let W = {p_1^{−1}y : y ∈ hs, p_1^{−1}y ∉ hs}, with hs = hs(p_2). The condition is
+
+  (p_1 − 1) B(χ̄_2) · [ ½ (1 − χ̄_2(p_1)) Σ_{hs} χ_2 + Σ_{W} χ_2 ] = 0.
+
+Here p_1^{−1}·hs is again a half system. With A = hs ∩ p_1^{−1}hs we get hs = A ⊔ (−W) and p_1^{−1}hs = A ⊔ W. For
+odd χ_2 this gives Σ_{hs} χ_2 = Σ_A χ_2 − Σ_W χ_2 and χ̄_2(p_1) Σ_{hs} χ_2 = Σ_A χ_2 + Σ_W χ_2. Subtracting,
+2 Σ_W χ_2 = (χ̄_2(p_1) − 1) Σ_{hs} χ_2, so the bracket vanishes.
+
+(c) *χ = χ_1 ⊗ 1.* Symmetric to (b). ∎
+
+**Theorem F.** Let q = p_1 p_2 with p_1, p_2 distinct odd primes. Then
+
+  f_0(q) = ℓ_{2,q}(ξ_q) ≥ φ(q)/4 + c_{p_1}(p_2) + c_{p_2}(p_1).
+
+The bound is attained for every such q ≤ 415 with p_1 ≥ 5 (47 degrees). In particular f_0 = 8, 10, 16, 16, 18, 22, 20
+for q = 35, 55, 65, 77, 85, 91, 95.
+
+*Proof.* By F2 and F3, ξ′_q lies in B_q and every coset functional is odd on it. By F1, ξ′_q ∉ D_q + S_q, so
+ξ′_q ≡ ξ_q because the index is 2. Let α′ ≡ ξ′_q modulo D_q + S_q. Each functional N is odd on α′, so
+Σ_{a ∈ supp N} |n_a| ≥ 1. The supports are disjoint, so ℓ(α′) is at least the number of functionals.
+
+For attainment: for q ≤ 300, `hodge/two_prime.py` stores a Hodge tuple of exactly this length, found by a MILP and
+verified exactly. Each such tuple is odd on every functional and lies outside D_q + S_q, by an exact lattice test. For
+300 < q ≤ 415, MMRV's Table 1 lengths (Cited) equal the formula (`results/two_prime_lengths.md`). ∎
+
+**Computation.** `results/two_prime_lengths.md` checks F1–F3 exactly for every q = p_1 p_2 ≤ 415, and
+`tests/test_two_prime.py` checks F2–F3 for every q ≤ 1200, p_1 ≥ 3. The shortest tuples have exactly one entry in each
+support and no other entries. That is the analogue of the "half systems" of §5.
+
+**Conjecture F (unified formula; Numerical evidence).** Let q = q_1 q_2 ∈ Q have two P-factors (P = {4} ∪ {odd
+primes}). For a factor a, let r_a be its prime (r_4 = 2), and let b be the other factor. Put
+c(a → b) = φ(b)/ord_b(r_a) if ord_b(r_a) is even, and 0 otherwise. Then
+
+  f_0(q) = φ(q)/4 + c(q_1 → q_2) + c(q_2 → q_1).
+
+For {4, p} this is (p − χ_4(p))/2 + c_2(p), which is Theorems D and D′. For {3, p} it is (p − χ_3(p))/2 + c_3(p),
+again Theorems D and D′. For two primes ≥ 5 it is Theorem F, proved up to q = 415. The lower bound holds for every
+q = p_1 p_2. In general, what is missing is a Hodge tuple with exactly one entry in each support. The MILP finds one
+in every case tried.
+
+## 7. Reproduction
 
 ```bash
-python3 -m pytest -q tests/test_exceptional_length.py tests/test_formal_module.py
+python3 -m pytest -q tests/test_exceptional_length.py tests/test_formal_module.py tests/test_two_prime.py
 python3 scripts/exceptional_lengths.py 420        # writes results/exceptional_lengths.md (about 25 s)
+python3 scripts/two_prime_lengths.py 415          # writes results/two_prime_lengths.md (§6; --search re-runs the MILP)
 ```
 
-The code is `hodge/exceptional_length.py` and `hodge/formal_module.py`, pure Python with exact integers. It shares no
-code with the python-flint and PARI scripts used for Attack 17 and the span test.
+The code is `hodge/exceptional_length.py`, `hodge/two_prime.py` and `hodge/formal_module.py`, pure Python with exact
+integers. It shares no code with the python-flint and PARI scripts used for Attack 17 and the span test. The MILP of
+`scripts/two_prime_lengths.py --search` needs scipy; its output is stored and verified without it.
