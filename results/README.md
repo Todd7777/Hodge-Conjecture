@@ -153,3 +153,13 @@ Columns: `b_prim` = primitive middle Betti number; `dim Hdg` = dim_Q of rational
 | 18 | 111999661137 | [24310, 70121260, 3494337760, 26872524580, 51125645317, 26872524580, 3494337760, 70121260, 24310] | 10600229558 | 10600229558 | 0 | 0 | yes | 3.37 |
 | 19 | 187919327718 | [48620, 123479840, 5953410200, 45131906765, 85501636868, 45131906765, 5953410200, 123479840, 48620] | 999283069 | 999283069 | 0 | 0 | yes | 4.24 |
 | 20 | 306553312891 | [92378, 210235532, 9844509311, 73685857190, 139071924069, 73685857190, 9844509311, 210235532, 92378] | 17213755130 | 17213755130 | 0 | 0 | yes | 7.64 |
+
+## Open degrees 44, 51, 52 (2026-11)
+
+* `exceptional_lengths.md` — Theorem D of `docs/fermat/02-exceptional-lengths.md`, checked for every family degree
+  q ≤ 420 (`python3 scripts/exceptional_lengths.py 420`).
+* `galois_obstruction.md` — the Galois field-of-definition test of `docs/fermat/03-galois-obstruction.md` for the
+  exceptional tuples ξ_q, q < 70, in their own degree and multiples up to 484 (`python3 scripts/galois_obstruction.py`).
+* `gamma_periods.txt` — the squares θ_q of Deligne's Γ-monomials of ξ_44, ξ_51, ξ_52 as explicit products of sines and
+  radicals, checked to 60 digits (`python3 scripts/gamma_periods.py`).
+* `fermat_formal_module.txt`, `fermat_span/` — Attack 17 and the span test (python-flint, PARI).

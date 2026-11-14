@@ -64,7 +64,7 @@ For $X^n_m = \{x_0^m+\dots+x_{n+1}^m=0\}\subset\mathbb{P}^{n+1}$ the Hodge class
 | Generalized HC for Fermat varieties in ranges; Fermat-type CM Jacobians | Shioda 1979, 1981 |
 | Picard numbers of Fermat surfaces; lines generate $NS\otimes\mathbb{Q}$ iff $m\le4$ or $\gcd(m,6)=1$; lines generate $NS$ over $\mathbb{Z}$ for $\gcd(m,6)=1$ | Shioda 1981; Aoki–Shioda 1983; Schütt–Shioda–van Luijk 2010; Degtyarev 2015 |
 
-What this repository adds here is an independent, test-covered reimplementation of the character/inductive-structure machinery, with tables for $n=4$ ($m\le64$), $n=6$ ($m\le32$) and $n=8$ ($m\le20$); see `04-fermat-computations.md`.
+What this repository adds here is an independent, test-covered reimplementation of the character/inductive-structure machinery, with tables for $n=4$ ($m\le64$), $n=6$ ($m\le32$) and $n=8$ ($m\le20$); see `04-fermat-computations.md`. For the open degrees 44, 51, 52 it adds no new case, but it proves structural results about them: the reduction of each degree to one class, exact lengths of the exceptional tuples for two infinite families, and a Galois obstruction for every known construction (`docs/attacks/17-fermat-open-cases.md`, `docs/fermat/02-exceptional-lengths.md`, `docs/fermat/03-galois-obstruction.md`).
 
 ## 2.5 Moduli spaces and other special varieties
 
