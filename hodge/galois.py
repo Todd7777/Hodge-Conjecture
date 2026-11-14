@@ -295,3 +295,127 @@ def _prod(it):
     for x in it:
         out *= x
     return out
+
+
+# ------------------------------------------------------------------------------------------- Theorem L'
+
+# Prime pairs of the open exceptional classes: q = 44 <-> {2, 11}, 51 <-> {3, 17}, 52 <-> {2, 13};
+# primes p for which radicals sqrt(p) can occur in sigma(u)/u (Deligne 7.15(c) + closed forms of section 5).
+PAIRS = {44: (2, 11), 51: (3, 17), 52: (2, 13)}
+SIGMA_RADICALS = {44: (2, 11), 51: (3, 17), 52: (2, 13)}
+
+
+def anderson_a(p: int, q: int) -> Dict[_Fr, int]:
+    """Anderson's canonical representative a_pq of the Das class of the prime pair p < q (Kronecker-Weber plus epsilon,
+    Duke Math. J. 114 (2002), 4.3.2), as {x in (0,1): coefficient of [x]}."""
+    out: Dict[_Fr, int] = {}
+
+    def add(x, c):
+        x = _Fr(x) % 1
+        out[x] = out.get(x, 0) + c
+
+    if p > 2:
+        for i in range(1, (p - 1) // 2 + 1):
+            add(_Fr(i, p), 1)
+            for k in range((q - 1) // 2 + 1):
+                add(_Fr(i, p * q) + _Fr(k, q), -1)
+        for j in range(1, (q - 1) // 2 + 1):
+            add(_Fr(j, q), -1)
+            for ell in range((p - 1) // 2 + 1):
+                add(_Fr(j, p * q) + _Fr(ell, p), 1)
+    else:
+        add(_Fr(1, 4), 1)
+        for k in range((q - 1) // 2 + 1):
+            add(_Fr(1, 4 * q) + _Fr(k, q), -1)
+        for j in range(1, (q - 1) // 2 + 1):
+            add(_Fr(j, q), -1)
+            add(_Fr(-1, 2 * q) + _Fr(j, q), -1)
+            add(_Fr(j, 2 * q), 1)
+            add(_Fr(-1, 4 * q) + _Fr(j, 2 * q), 1)
+    return {x: c for x, c in out.items() if c and x != 0}
+
+
+def _legendre(v: int, l: int) -> int:
+    return 1 if pow(v % l, (l - 1) // 2, l) == 1 else -1
+
+
+def _u_value(q: int, l: int, z4q: int) -> int:
+    """u_q = prod sin(pi a/q)^{n_a} mod P, with zeta_{4q} -> z4q."""
+    D = THETA[q]
+    inv2i = pow(2 * pow(z4q, q, l) % l, l - 2, l)
+    u = 1
+    for a, e in D["n"].items():
+        s = (pow(z4q, 2 * a, l) - pow(z4q, 4 * q - 2 * a, l)) * inv2i % l
+        u = u * pow(s, e % (l - 1), l) % l
+    return u
+
+
+def _sin_value(a: Dict[_Fr, int], l: int, zN: int, N: int) -> int:
+    """sin a = prod (1 - e^{2 pi i x})^c mod P, with e^{2 pi i/N} -> zN."""
+    v = 1
+    for x, c in a.items():
+        v = v * pow((1 - pow(zN, int(x * N), l)) % l, c % (l - 1), l) % l
+    return v
+
+
+def theorem_L_prime_data(q: int, nprimes: int = 40):
+    """Computations behind Theorem L' of docs/fermat/03-galois-obstruction.md, for q in PAIRS.
+
+    Returns a dict with
+      'galois_invariant': the Legendre symbol of sigma_t(u_q) is independent of t at every prime used;
+      'cosets_excluded': each nontrivial coset of <sqrt p : p in SIGMA_RADICALS[q]> is excluded at some prime;
+      'nonfits': fits of psi_u * prod_{other pairs} psi_{sin a}^{e} * prod_{r | 2q} (r/P)_4^{x} = chi^c (must be empty);
+      'identification': fits when sin a_{pair of q} is also allowed (expected: exactly the option using it alone)."""
+    import itertools
+    p1, p2 = PAIRS[q]
+    S = sorted({r for r in range(2, 4 * q + 1) if (4 * q) % r == 0 and is_prime(r)})       # primes of ramification
+    other_pairs = [(a, b) for a, b in itertools.combinations(S, 2) if (a, b) != (p1, p2)]
+    sins = [anderson_a(*pq) for pq in [(p1, p2)] + other_pairs]
+    N = 1
+    for a in sins:
+        for x in a:
+            N = _lcm(N, x.denominator)
+    N = _lcm(N, 4 * q)
+    M = _lcm(2 * N, 16, *[4 * r for r in S])
+    v2 = 1
+    while M % (2 * v2) == 0:
+        v2 *= 2
+    primes, l = [], M + 1
+    while len(primes) < nprimes:
+        if is_prime(l):
+            primes.append(l)
+        l += M
+    rows, invariant = [], True
+    excluded = {g: False for g in itertools.product((0, 1), repeat=len(SIGMA_RADICALS[q])) if any(g)}
+    for l in primes:
+        g0 = primitive_root(l)
+        zN = pow(g0, (l - 1) // N, l)
+        z4q = pow(zN, N // (4 * q), l)
+        syms = {_legendre(_u_value(q, l, pow(z4q, t, l)), l) for t in range(1, 4 * q) if gcd(t, 4 * q) == 1}
+        const = len(syms) == 1
+        invariant &= const
+        quart_s = [1 if pow(r, (l - 1) // 4, l) == 1 else -1 for r in SIGMA_RADICALS[q]]
+        if const:
+            for gv in excluded:
+                if _prod(qq for x, qq in zip(gv, quart_s) if x) == -1:
+                    excluded[gv] = True
+        pu = _legendre(_u_value(q, l, z4q), l)
+        ps = [_legendre(_sin_value(a, l, zN, N), l) for a in sins]
+        quart = [1 if pow(r, (l - 1) // 4, l) == 1 else -1 for r in S]
+        chi = 1 if l % (2 * v2) == 1 else -1
+        rows.append((pu, ps, quart, chi))
+
+    def fits(sin_idx):
+        out = []
+        for es in itertools.product((0, 1), repeat=len(sin_idx)):
+            for xs in itertools.product((0, 1), repeat=len(S)):
+                for c in (0, 1):
+                    if all(pu * _prod(ps[i] for i, e in zip(sin_idx, es) if e)
+                           * _prod(qq for x, qq in zip(xs, quart) if x) == chi ** c
+                           for pu, ps, quart, chi in rows):
+                        out.append((es, xs, c))
+        return out
+
+    return {"primes": len(primes), "ramified": S, "other_pairs": other_pairs,
+            "galois_invariant": invariant, "cosets_excluded": all(excluded.values()),
+            "nonfits": fits(list(range(1, len(sins)))), "identification": fits(list(range(len(sins))))}

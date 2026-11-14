@@ -124,3 +124,18 @@ def test_theorem_L_for_44_51_52(q):
     ok, n, fits, rad = G.theorem_L_data(q, nprimes=25)
     assert ok == n            # Deligne 7.15 end-to-end identity for the explicit theta_q
     assert fits == []         # sqrt(theta_q) is in no Q(zeta_N, p^(1/N) : p | 2q)
+
+
+def test_anderson_das_class_example():
+    """Anderson (Kronecker-Weber plus epsilon, Section 1): a_{2*3} = [1/4] - [5/12] - [1/3]."""
+    from fractions import Fraction as Fr
+    assert G.anderson_a(2, 3) == {Fr(1, 4): 1, Fr(5, 12): -1, Fr(1, 3): -1}
+
+
+@pytest.mark.parametrize("q", [44, 51, 52])
+def test_theorem_L_prime(q):
+    d = G.theorem_L_prime_data(q, nprimes=30)
+    assert d["galois_invariant"] and d["cosets_excluded"]      # u_q's class is invariant mod squares in Q^ab
+    assert d["nonfits"] == []                                  # the Das class of the pair of q is needed
+    ident = d["identification"]                                # numerically: u_q = sin a_pair mod squares
+    assert len(ident) == 1 and ident[0][0][0] == 1 and not any(ident[0][0][1:]) and not any(ident[0][1])
