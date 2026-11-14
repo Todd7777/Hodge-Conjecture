@@ -2,17 +2,17 @@
 
     f_0(q) = phi(q)/4 + c_{p1}(p2) + c_{p2}(p1),   c_r(p) = (p - 1)/ord_p(r) if ord_p(r) is even, else 0,
 
-proved for all distinct odd primes p1, p2 in docs/fermat/02-exceptional-lengths.md section 6 (Theorem F); with 4 or 3 in
+proved for all distinct odd primes p1, p2 in docs/fermat/02-exceptional-lengths.md section 6 (Theorem T); with 4 or 3 in
 place of p1 it is Theorems D and D'.
 
 The lower bound comes from mod-2 functionals that count the entries in one coset:
   * units in one coset of H = {t : t^2 = 1} (|H| = 4), giving phi(q)/4 cosets;
   * entries p1*y with y in one coset of <p1> in (Z/p2)^x, when ord_{p2}(p1) is even (then -1 is in <p1>), giving
     c_{p1}(p2) cosets; and symmetrically for p2.
-They vanish mod 2 on D_q + S_q (Proposition F1) and are odd on Aoki's xi_q, built from any half systems (`aoki_xi`,
-`xi_from_half_systems`; Propositions F2, F3).  So every element of the class has a nonzero coefficient sum on every
+They vanish mod 2 on D_q + S_q (Proposition T1) and are odd on Aoki's xi_q, built from any half systems (`aoki_xi`,
+`xi_from_half_systems`; Propositions T2, T3).  So every element of the class has a nonzero coefficient sum on every
 coset, and its length is at least the number of cosets.  `shortest_tuple` (half systems adapted to the cycles,
-Proposition F4) attains it.  `verify` re-checks all of this exactly for a given q and representative.
+Proposition T4) attains it.  `verify` re-checks all of this exactly for a given q and representative.
 """
 
 from __future__ import annotations
@@ -237,7 +237,7 @@ def adapted_half_system(p: int, r: int) -> List[int]:
 
 
 def xi_from_half_systems(q: int, h1: Sequence[int], h2: Sequence[int]) -> Tuple[int, ...]:
-    """The element xi'_q built from arbitrary half systems h1 mod p1 and h2 mod p2 (section 6: Propositions F2 and F3
+    """The element xi'_q built from arbitrary half systems h1 mod p1 and h2 mod p2 (section 6: Propositions T2 and T3
     hold for every choice)."""
     p1, p2 = factor(q)
     out = [next(x for x in range(1, q) if x % p1 == a and x % p2 == b) for a in h1 for b in h2]
@@ -252,6 +252,6 @@ def xi_from_half_systems(q: int, h1: Sequence[int], h2: Sequence[int]) -> Tuple[
 
 
 def shortest_tuple(q: int) -> Tuple[int, ...]:
-    """An explicit shortest representative of xi_q (Theorem F): xi'_q with half systems adapted to the cycles."""
+    """An explicit shortest representative of xi_q (Theorem T): xi'_q with half systems adapted to the cycles."""
     p1, p2 = factor(q)
     return xi_from_half_systems(q, adapted_half_system(p1, p2), adapted_half_system(p2, p1))

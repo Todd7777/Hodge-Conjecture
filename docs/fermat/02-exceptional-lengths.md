@@ -11,14 +11,14 @@ with ℓ_{2,q}(ξ_q) uses the Kubert–Aoki index theorem, which this repository
 families. The formula reproduces all 58 entries of Miranda–Movasati–Rufino–Villaflor's Table 1 of this form, so
 those upper bounds are optimal.
 
-**Addendum (2026-11-14, §6).** For q = p_1 p_2 with p_1, p_2 distinct odd primes, Theorem F proves
+**Addendum (2026-11-14, §6).** For q = p_1 p_2 with p_1, p_2 distinct odd primes, Theorem T proves
 
   ℓ_{2,q}(ξ_q) = φ(q)/4 + c_{p_1}(p_2) + c_{p_2}(p_1)
 
 for every such q. The lower bound comes from mod-2 functionals that count entries in cosets. The upper bound is
 Aoki's ξ_q (MMRV Def. 4.8), built from half systems adapted to multiplication by the other prime. It reproduces all
 47 such entries of MMRV's Table 1 (q ≤ 415). With 3 or 4 in place of p_1 the same expression is Theorems D and D′. So
-one formula gives the exact length of ξ_q for every q ∈ Q with two P-factors (Corollary F′).
+one formula gives the exact length of ξ_q for every q ∈ Q with two P-factors (Corollary T′).
 
 **What this is not.** It says nothing about whether ξ_q is algebraic, so it proves no new case of the Hodge conjecture.
 It is a statement about one method: in degree q, the length-reduction method of MMRV (§4.3–4.4 of arXiv:2609.27301)
@@ -197,7 +197,8 @@ Normalise α′ to non-negative coefficients (MMRV Remark 4.11); it is a Hodge t
 
 **Corollary E (Theorem, given the cited index).** f_0(q) ≥ (q − m)/(2m) for all q = 4p and 3p (Theorems D, D′). So f_0 restricted to
 these degrees has finite fibres: MMRV Conjecture 4.1 holds along the two families (for d = q; the conjecture asks for
-all d).
+all d). By Theorem T and Corollary T′ (§6), f_0(q) ≥ φ(q)/4 for every q ∈ Q with two P-factors. So f_0 has finite
+fibres on all of them. Multiples d of these q, where lifts can shorten ξ_q, are not covered.
 
 **Corollary F.** In degree q, Kang's theorem plus length reduction (MMRV Prop. 4.3) can only reach ξ_q if
 f_0(q) ≤ 6. With Theorem D′ this means exactly q ∈ {12, 15, 20, 21, 28, 33, 39} among q = 4p and 3p. For
@@ -302,7 +303,7 @@ length 7.
   different argument. A representative of length ≤ 6 in degree D would put the lift of ξ_44 in Λ_D, and hence its
   Galois character in E_D.
 * **Other degrees.** The two-factor degrees not covered by Theorems D and D′ are q = p_1 p_2 with both primes ≥ 5:
-  35, 55, 65, 77, 85, 91, 95, … §6 proves the formula for all of them (Theorem F). Degrees with four or more P-factors
+  35, 55, 65, 77, 85, 91, 95, … §6 proves the formula for all of them (Theorem T). Degrees with four or more P-factors
   (the smallest is 4·3·5·7 = 420) remain open.
 
 ## 6. Two odd primes: q = p_1 p_2
@@ -324,7 +325,7 @@ G = (Z/q)^×. For distinct primes r, p put c_r(p) = (p − 1)/ord_p(r) if ord_p(
 The supports are disjoint. Each is closed under a ↦ −a: −1 ∈ H, and −1 ∈ ⟨p_1⟩ modulo p_2 when the order is even,
 because −1 is the only element of order 2 in a cyclic group.
 
-**Proposition F1 (Theorem).** Every coset functional is even on D_q + S_q.
+**Proposition T1 (Theorem).** Every coset functional is even on D_q + S_q.
 
 *Proof.* On a pair (a) + (−a) a functional takes the value 0 or 2, since its support is closed under negation. Since
 q is odd, S_q is spanned by the standard tuples s_{p,i} of degree q with p ∈ {p_1, p_2} (MMRV Def. 3.7 needs
@@ -352,10 +353,10 @@ systems hs(p_1) and hs(p_2), put
 
 With hs(p) = {μ^j : 0 ≤ j < (p − 1)/2} for a primitive root μ, this is MMRV's Definition 4.8 of Aoki's ξ_q,
 computed for q = p_1 p_2. The primitive part is the product of the two half systems. The p_1-part solves (p_1 − 1) ξ_{q,p_1} = τ_{p_1}(ξ_{q,1}) modulo D_{p_2}. In the extracted text of
-Definition 4.8 the sign in τ is ambiguous. The sign used here is the one for which the result is Hodge (Proposition F3,
+Definition 4.8 the sign in τ is ambiguous. The sign used here is the one for which the result is Hodge (Proposition T3,
 as MMRV Prop. 4.2 requires). It reproduces MMRV's representative (1, 2, 16, 17, 21, 22, 30, 31) of ξ_35.
 
-**Proposition F2 (Theorem).** For any half systems, ξ′_q is odd on every coset functional.
+**Proposition T2 (Theorem).** For any half systems, ξ′_q is odd on every coset functional.
 
 *Proof.* *Units.* ξ′_q has exactly one unit in each coset tH, because a half system contains one element of each pair
 {±x}.
@@ -369,7 +370,7 @@ an odd number of such changes.
 
 *Multiples of p_2.* The same argument applies. ∎
 
-**Proposition F3 (Theorem).** For any half systems, ξ′_q is a Hodge tuple.
+**Proposition T3 (Theorem).** For any half systems, ξ′_q is a Hodge tuple.
 
 *Proof.* Write B̄_1(x) = {x} − 1/2. A tuple α = Σ n_a (a) is Hodge if and only if F_α(t) = Σ_a n_a B̄_1(ta/q)
 vanishes on G. Since B̄_1 is odd, so is F_α, so this holds if and only if Σ_t χ̄(t) F_α(t) = 0 for every odd character
@@ -398,45 +399,45 @@ odd χ_2 this gives Σ_{hs} χ_2 = Σ_A χ_2 − Σ_W χ_2 and χ̄_2(p_1) Σ_{h
 
 (c) *χ = χ_1 ⊗ 1.* Symmetric to (b). ∎
 
-The proofs of F2 and F3 used only that hs(p_1) and hs(p_2) are half systems. The next choice makes every count
-in F2 equal to 1.
+The proofs of T2 and T3 used only that hs(p_1) and hs(p_2) are half systems. The next choice makes every count
+in T2 equal to 1.
 
-**Proposition F4 (Theorem).** Choose hs(p_2) adapted to multiplication by p_1^{−1}. On each cycle
+**Proposition T4 (Theorem).** Choose hs(p_2) adapted to multiplication by p_1^{−1}. On each cycle
 w_0, w_1 = p_1^{−1}w_0, … of even length o, take the half-cycle w_0, …, w_{o/2−1}. If o is odd, so that −C ≠ C,
 take all of C and none of −C. Choose hs(p_1) adapted to p_2 in the same way. Then ξ′_q has exactly one entry in the
 support of every coset functional and no other entries. Its length is φ(q)/4 + c_{p_1}(p_2) + c_{p_2}(p_1).
 
-*Proof.* There is one unit in each coset of H (F2). On an even cycle, σ_k = +1 exactly for 0 ≤ k < o/2. So the only
+*Proof.* There is one unit in each coset of H (T2). On an even cycle, σ_k = +1 exactly for 0 ≤ k < o/2. So the only
 change from + to − is at k = o/2 − 1, and the cycle contributes the single entry p_1 w_{o/2}. If ord_{p_2}(p_1) is
 odd, every y ∈ hs(p_2) has p_1^{−1}y in the same chosen cycle, so there is no sign change and no entry of order p_2.
 The same holds for p_2. ∎
 
-**Theorem F.** Let q = p_1 p_2 with p_1, p_2 distinct odd primes. Then
+**Theorem T.** Let q = p_1 p_2 with p_1, p_2 distinct odd primes. Then
 
   f_0(q) = ℓ_{2,q}(ξ_q) = φ(q)/4 + c_{p_1}(p_2) + c_{p_2}(p_1).
 
 For example f_0 = 8, 10, 16, 16, 18, 22, 20 for q = 35, 55, 65, 77, 85, 91, 95.
 
-*Proof.* *Lower bound.* By F2 and F3, ξ′_q lies in B_q and every coset functional is odd on it. By F1,
+*Proof.* *Lower bound.* By T2 and T3, ξ′_q lies in B_q and every coset functional is odd on it. By T1,
 ξ′_q ∉ D_q + S_q, so ξ′_q ≡ ξ_q because the index is 2. Let α′ ≡ ξ′_q modulo D_q + S_q. Each functional N is odd on
 α′, so Σ_{a ∈ supp N} |n_a| ≥ 1. The supports are disjoint, so ℓ(α′) is at least the number of functionals.
 
-*Upper bound.* The element of F4 lies in the class (F1–F3) and has exactly that length. ∎
+*Upper bound.* The element of T4 lies in the class (T1–T3) and has exactly that length. ∎
 
-**Corollary F′ (unified formula).** Let q = q_1 q_2 ∈ Q have two P-factors (P = {4} ∪ {odd primes}). For a factor
+**Corollary T′ (unified formula).** Let q = q_1 q_2 ∈ Q have two P-factors (P = {4} ∪ {odd primes}). For a factor
 a, let r_a be its prime (r_4 = 2), and let b be the other factor. Put c(a → b) = φ(b)/ord_b(r_a) if ord_b(r_a) is
 even, and 0 otherwise. Then
 
   f_0(q) = ℓ_{2,q}(ξ_q) = φ(q)/4 + c(q_1 → q_2) + c(q_2 → q_1).
 
 *Proof.* For {4, p} the right side is (p − χ_4(p))/2 + c_2(p), since c(p → 4) = 1 exactly when p ≡ 3 (mod 4). That
-is Theorem D or D′. For two odd primes it is Theorem F. With p_1 = 3, Theorem F is the q = 3p case of Theorems D and
+is Theorem D or D′. For two odd primes it is Theorem T. With p_1 = 3, Theorem T is the q = 3p case of Theorems D and
 D′, proved again. ∎
 
-**Computation.** `results/two_prime_lengths.md` checks F1–F4 exactly for every q = p_1 p_2 ≤ 415 with p_1 ≥ 5. It
-agrees with all 47 such entries of MMRV's Table 1. `tests/test_two_prime.py` checks F2–F4 for every q ≤ 1200 with
-p_1 ≥ 3. F4 reproduces the representative of ξ_65 in MMRV's list. The MILP representatives stored in
-`hodge/two_prime.py` (q ≤ 300) were found before F4, and agree in length.
+**Computation.** `results/two_prime_lengths.md` checks T1–T4 exactly for every q = p_1 p_2 ≤ 415 with p_1 ≥ 5. It
+agrees with all 47 such entries of MMRV's Table 1. `tests/test_two_prime.py` checks T2–T4 for every q ≤ 1200 with
+p_1 ≥ 3. T4 reproduces the representative of ξ_65 in MMRV's list. The MILP representatives stored in
+`hodge/two_prime.py` (q ≤ 300) were found before T4, and agree in length.
 
 So the length-reduction method of MMRV, in degree q, settles a two-factor ξ_q exactly when the formula gives at most 6.
 Among q = p_1 p_2 with p_1 ≥ 5 that never happens: the smallest value is f_0(35) = 8. Lifts to multiples of q are

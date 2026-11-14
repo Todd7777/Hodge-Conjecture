@@ -1,4 +1,4 @@
-"""Tests for hodge/two_prime.py: Theorem F of docs/fermat/02-exceptional-lengths.md section 6,
+"""Tests for hodge/two_prime.py: Theorem T of docs/fermat/02-exceptional-lengths.md section 6,
 f_0(q) = phi(q)/4 + c_{p1}(p2) + c_{p2}(p1) for every q = p1 p2 (two distinct odd primes)."""
 import cmath
 
@@ -37,7 +37,7 @@ def test_functionals_partition():
 
 
 def test_functionals_kill_standard_tuples():
-    # Proposition F1 (checked): every coset functional is even on every standard tuple of every degree dividing q
+    # Proposition T1 (checked): every coset functional is even on every standard tuple of every degree dividing q
     for q in two_prime_degrees(300, pmin=3):
         std = F.standard_tuples(q)
         for _, s in T.coset_functionals(q):
@@ -45,7 +45,7 @@ def test_functionals_kill_standard_tuples():
 
 
 def test_exceptional_element():
-    # Propositions F2, F3 (checked): the explicit element is a Hodge tuple, odd on every coset functional
+    # Propositions T2, T3 (checked): the explicit element is a Hodge tuple, odd on every coset functional
     for q in two_prime_degrees(1200, pmin=3):
         xi = T.aoki_xi(q)
         assert F.is_hodge_tuple(xi, q), q
@@ -53,7 +53,7 @@ def test_exceptional_element():
 
 
 def test_shortest_tuple_construction():
-    # Proposition F4 and Theorem F: adapted half systems give a Hodge tuple of exactly the formula length, with one
+    # Proposition T4 and Theorem T: adapted half systems give a Hodge tuple of exactly the formula length, with one
     # entry in each coset support and nothing else
     for q in two_prime_degrees(1200, pmin=3):
         t = T.shortest_tuple(q)
@@ -63,7 +63,7 @@ def test_shortest_tuple_construction():
 
 
 def test_any_half_systems():
-    # Propositions F2, F3 hold for every choice of half systems (random choices)
+    # Propositions T2, T3 hold for every choice of half systems (random choices)
     import random
     rnd = random.Random(7)
     for q in (35, 65, 91, 143, 221, 323):

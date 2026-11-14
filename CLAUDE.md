@@ -43,10 +43,10 @@ python-flint and cypari2 (`scripts/fermat_formal_module.py`, `scripts/fermat_spa
   (p − χ_m(p))/2 + c_r(p) of ξ_q for every q = 4p and 3p) and `docs/fermat/03-galois-obstruction.md` (Theorems G and L, a field-of-definition obstruction
   for every known construction). They are statements about what a proof of the open cases must contain, not new
   cases of HC.
-- `docs/fermat/02-exceptional-lengths.md` §6 (Theorem F, `hodge/two_prime.py`): for q = p₁p₂ (two odd primes),
+- `docs/fermat/02-exceptional-lengths.md` §6 (Theorem T, `hodge/two_prime.py`): for q = p₁p₂ (two odd primes),
   ℓ_{2,q}(ξ_q) = φ(q)/4 + c_{p₁}(p₂) + c_{p₂}(p₁), proved for every q (coset parity invariants; Aoki's ξ_q built from
   adapted half systems). With Theorems D and D′ this gives the exact length of ξ_q for every two-factor q ∈ Q
-  (Corollary F′).
+  (Corollary T′).
 - `docs/fermat/04-weil-route.md` (Theorems W1–W3, `hodge/weil.py`): Markman's theorems on Weil classes do not reach
   ξ_44, ξ_51, ξ_52 through abelian varieties built from Fermat Jacobians, in degree q or in the lifts up to 572.
   ξ_q is congruent to a Weil class relative to a CM subfield E of Q(ζ_q) exactly when [Q(ζ_q) : E] is odd. Given

@@ -27,7 +27,7 @@ For a smooth projective complex variety $X$, every class in $H^{2p}(X,\mathbb{Q}
 * `hodge.fermat_lines` — the $3m^2$ lines on the Fermat surface, their exact intersection matrix and its rank, compared with the Picard number.
 * `hodge.formal_module` — Aoki's formal module of tuples and exact integer lattices (Hermite and Smith forms). It re-derives, independently of the python-flint and PARI scripts, the lattice structure behind the open degrees 44, 51, 52 (`docs/attacks/17-fermat-open-cases.md`, Theorems A–C).
 * `hodge.exceptional_length` — the shortest representatives of Aoki's exceptional tuples for q = 4p and q = 3p (`docs/fermat/02-exceptional-lengths.md`, Theorem D).
-* `hodge.two_prime` — the same for q = p₁p₂, a product of two odd primes: coset parity invariants, Aoki's ξ_q made explicit, and verified shortest tuples (`docs/fermat/02-exceptional-lengths.md` §6, Theorem F).
+* `hodge.two_prime` — the same for q = p₁p₂, a product of two odd primes: coset parity invariants, Aoki's ξ_q made explicit, and verified shortest tuples (`docs/fermat/02-exceptional-lengths.md` §6, Theorem T).
 * `hodge.galois` — the Galois characters of Fermat Hodge classes, computed exactly from Gauss sums, and the field-of-definition test of `docs/fermat/03-galois-obstruction.md` (Theorems G and L).
 * `hodge.weil` — the simple CM factors of Fermat Jacobians, their Weil classes relative to every CM subfield, and the reach of Markman's theorems on the open Fermat classes (`docs/fermat/04-weil-route.md`, Theorems W1–W3).
 
