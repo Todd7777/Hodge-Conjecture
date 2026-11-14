@@ -44,7 +44,7 @@ That is the complete list. Everything in `02-known-cases.md` is M1–M6 in some 
 
 | Strategy | What it has delivered | Where it is stuck | Assessment |
 |---|---|---|---|
-| **S1. Semiregularity / deformation of sheaves** (Bloch, Buchweitz–Flenner, BEK, Markman) | All abelian varieties of dimension $\le5$; $K3^{[n]}$ Hodge isometries | needs seeds and unobstructedness; the variational HC itself | The one strategy with live momentum. Next natural targets: Weil-type sixfolds of non-split discriminant ($\neq-1$ with $\mathrm{disc}=\det H$), the general $2n$-fold case of Markman's program, real multiplication on K3 surfaces. |
+| **S1. Semiregularity / deformation of sheaves** (Bloch, Buchweitz–Flenner, BEK, Markman) | All abelian varieties of dimension $\le5$; $K3^{[n]}$ Hodge isometries | needs seeds and unobstructedness; the variational HC itself | The one strategy with live momentum. Next natural targets: Weil-type sixfolds of non-split discriminant ($\neq-1$ with $\mathrm{disc}=\det H$), the general $2n$-fold case of Markman's program, real multiplication on K3 surfaces. Through Fermat Jacobians it does not reach the open Fermat classes; those are Weil classes relative to non-quadratic CM fields (`docs/fermat/04-weil-route.md`). |
 | **S2. Motivic formalism** (standard conjectures, André's motivated cycles, Jannsen) | a clean *reduction*: HC $\iff$ (Hodge = motivated) + Lefschetz $B$; Lefschetz $B$ for abelian, hyper-Kähler, complete intersections | "Hodge $\Rightarrow$ motivated" is as hard as HC; $B$ open in general | Indispensable language, not a proof strategy on its own. |
 | **S3. Hodge loci + arithmetic + o-minimality** (CDK, Voisin, BKT, KOU, BKU) | every unconditional structural theorem since 1995 | the special points (C3) | The right framework for the "transcendental half". A proof of the Galois statement for special points of VHS of abelian or Fermat/CM type would be real progress. |
 | **S4. Analytic / positivity** | nothing for the rational conjecture | C4 | Dead as a proof strategy; still useful for counterexample searches. |
@@ -62,7 +62,7 @@ A correct proof of HC establishes, as corollaries, each of the following. A manu
 1. **Absoluteness.** All Hodge classes are absolute Hodge; in particular the Galois conjugate of a zero-dimensional component of a Hodge locus (in a family over $\overline{\mathbb{Q}}$) is again a component.
 2. **Lefschetz standard conjecture $B$** for every smooth projective variety; consequently (in characteristic 0) homological and numerical equivalence agree and the Künneth projectors are algebraic.
 3. **The variational Hodge conjecture.**
-4. **All the special cases that are currently open**: CM abelian varieties, Weil classes in every dimension and discriminant, real-multiplication classes on $K3\times K3$, the Fermat sixfold of degree 44, codimension-2 classes on sextic fourfolds.
+4. **All the special cases that are currently open**: CM abelian varieties, Weil classes in every dimension and discriminant, real-multiplication classes on $K3\times K3$, the Fermat sixfold of degree 44 (equivalent, given Shioda's inductive structure, to the Weil classes, relative to $\mathbb Q(i,\sqrt{-11})$, of an explicit CM abelian 16-fold: `docs/fermat/04-weil-route.md`), codimension-2 classes on sextic fourfolds.
 5. **A visible break with the false variants**: an identifiable step that uses $\mathbb{Q}$-coefficients (C1) and an identifiable step that uses projectivity (C2).
 
 ---

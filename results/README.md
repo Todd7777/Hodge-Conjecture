@@ -160,6 +160,9 @@ Columns: `b_prim` = primitive middle Betti number; `dim Hdg` = dim_Q of rational
   q ≤ 420 (`python3 scripts/exceptional_lengths.py 420`).
 * `galois_obstruction.md` — the Galois field-of-definition test of `docs/fermat/03-galois-obstruction.md` for the
   exceptional tuples ξ_q, q < 70, in their own degree and multiples up to 572 (`python3 scripts/galois_obstruction.py`).
+* `weil_route.md` — the reach of Markman's theorems on the open classes (`docs/fermat/04-weil-route.md`): simple CM
+  factors of J(C_q), Theorems W1–W3, all exceptional classes with q < 70, realizations, and the Galois test for lifts
+  (`python3 scripts/weil_route.py 572 --search`).
 * `gamma_periods.txt` — the squares θ_q of Deligne's Γ-monomials of ξ_44, ξ_51, ξ_52 as explicit products of sines and
   radicals, checked to 60 digits (`python3 scripts/gamma_periods.py`).
 * `fermat_formal_module.txt`, `fermat_span/` — Attack 17 and the span test (python-flint, PARI).

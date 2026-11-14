@@ -78,8 +78,8 @@ def exps(T, pd):
     return k
 
 
-def test(q, D, exe, nprimes=24):
-    t0 = time.time()
+def lambda_group(D, exe, nprimes=24):
+    """(prime data, lattice of exponent vectors of eps(Lambda_D) plus 2D Z^N, number of generators, distinct vectors)."""
     data = [G.PrimeData(l, D) for l in G.split_primes(2 * D, nprimes)]
     blocks = [np.array([(a, D - a) for a in range(1, (D + 1) // 2)] + ([(D // 2, D // 2)] if D % 2 == 0 else []),
                        dtype=np.int64)]
@@ -90,15 +90,21 @@ def test(q, D, exe, nprimes=24):
     blocks += [enum(exe, D, 4), enum(exe, D, 6)]
     vecs = [np.stack([exps(B, pd) for pd in data], axis=1) for B in blocks if B.shape[0]]
     V = np.unique(np.concatenate(vecs), axis=0)
-    target = G.even_form(F.lift(XI[q], q, D), D)
-    assert F.is_hodge_tuple(target, D)
-    tv = [G.exponent_exact(target, pd) for pd in data]
     N, M = len(data), 2 * D
     lat = F.Lattice(N, [[M if i == j else 0 for j in range(N)] for i in range(N)])
     for v in V:
         lat.add([int(x) for x in v])
+    return data, lat, sum(B.shape[0] for B in blocks), len(V)
+
+
+def test(q, D, exe, nprimes=24):
+    t0 = time.time()
+    data, lat, ngens, ndistinct = lambda_group(D, exe, nprimes)
+    target = G.even_form(F.lift(XI[q], q, D), D)
+    assert F.is_hodge_tuple(target, D)
+    tv = [G.exponent_exact(target, pd) for pd in data]
     member = lat.contains(tv)
-    return member, sum(B.shape[0] for B in blocks), len(V), time.time() - t0
+    return member, ngens, ndistinct, time.time() - t0
 
 
 def main():

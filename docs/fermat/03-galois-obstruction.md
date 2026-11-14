@@ -323,6 +323,10 @@ restricted to equations whose coefficients generate such a field.
   the title of that paper was seen. So 2-power torsion of Fermat Jacobians of degree 44 or 88, and structures built
   from it such as theta characteristics, are natural places to look for a cycle defined over F_44(√θ_44)
   (**Heuristic**).
+* *Which abelian varieties?* `docs/fermat/04-weil-route.md` answers this for abelian varieties built from Fermat
+  Jacobians. ξ_44 is a Weil class relative to E ⊂ Q(ζ_44) exactly when [Q(ζ_44) : E] is odd. The smallest case is a
+  16-dimensional CM abelian variety of Weil type relative to Q(i, √−11). Markman's theorems (imaginary quadratic
+  fields, dimension ≤ 5) never reach it. Point 1 applies to any cycle realizing those Weil classes.
 
 ## 7. Relation to other work
 
