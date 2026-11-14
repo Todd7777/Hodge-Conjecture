@@ -60,6 +60,7 @@ For $X^n_m = \{x_0^m+\dots+x_{n+1}^m=0\}\subset\mathbb{P}^{n+1}$ the Hodge class
 | Generalized HC for certain Fermat varieties; cited as giving HC for all Fermat fourfolds | Kang 2016 (as cited by Miranda–Movasati–Rufino–Villaflor 2026) |
 | Computer-assisted HC for Fermat fourfolds of odd degree $\le 199$ (closure criteria + exhaustive census of Hodge orbits) | arXiv:2608.18134 (Aug 2026) |
 | HC for all Fermat varieties of **any dimension** and degree $<65$, $m\ne 44,51,52$; smallest open case: the sixfold of degree 44 | Miranda–Movasati–Rufino–Villaflor, arXiv:2609.27301 (Sept 2026) |
+| **Corollary (of the row above).** HC for all Fermat varieties of degree $d$, any dimension, whenever every $q\in Q$ dividing $d$ is $<65$ and $\ne 44,51,52$. Between 65 and 100 this adds 24 degrees (66, 67, 70–75, 78–84, 86, 89, 90, 94, 96–100). The open degrees $\le 100$ are 44, 51, 52, 65, 68, 69, 76, 77, 85, 87, 88, 91, 92, 93, 95; the first one with four $P$-factors is 420 | MMRV Thm 1.1, Cor. 4.1, Prop. 3.2 and Aoki's Thm 4.2 (all read); the combination is `hodge/fermat_degrees.py`, `results/fermat_degrees.md` |
 | Claimed: degrees 44, 51, 52, 114 in every dimension | Zenodo preprint 2026 **[unverified]** |
 | Generalized HC for Fermat varieties in ranges; Fermat-type CM Jacobians | Shioda 1979, 1981 |
 | Picard numbers of Fermat surfaces; lines generate $NS\otimes\mathbb{Q}$ iff $m\le4$ or $\gcd(m,6)=1$; lines generate $NS$ over $\mathbb{Z}$ for $\gcd(m,6)=1$ | Shioda 1981; Aoki–Shioda 1983; Schütt–Shioda–van Luijk 2010; Degtyarev 2015 |

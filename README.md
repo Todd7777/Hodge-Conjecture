@@ -29,6 +29,7 @@ For a smooth projective complex variety $X$, every class in $H^{2p}(X,\mathbb{Q}
 * `hodge.exceptional_length` — the shortest representatives of Aoki's exceptional tuples for q = 4p and q = 3p (`docs/fermat/02-exceptional-lengths.md`, Theorem D).
 * `hodge.two_prime` — the same for q = p₁p₂, a product of two odd primes: coset parity invariants, Aoki's ξ_q made explicit, and verified shortest tuples (`docs/fermat/02-exceptional-lengths.md` §6, Theorem T).
 * `hodge.galois` — the Galois characters of Fermat Hodge classes, computed exactly from Gauss sums, and the field-of-definition test of `docs/fermat/03-galois-obstruction.md` (Theorems G and L).
+* `hodge.fermat_degrees` — which Fermat degrees the published theorems already settle: every d whose divisors in Aoki's set Q are settled (MMRV Thm 1.1 with their Cor. 4.1 and Prop. 3.2). This adds 24 degrees between 65 and 100 to the stated range d < 65 (`results/fermat_degrees.md`).
 * `hodge.weil` — the simple CM factors of Fermat Jacobians, their Weil classes relative to every CM subfield, and the reach of Markman's theorems on the open Fermat classes (`docs/fermat/04-weil-route.md`, Theorems W1–W3).
 
 Headline results (details and tables in `results/`):
@@ -43,7 +44,7 @@ Headline results (details and tables in `results/`):
 
 ```bash
 pip install pytest
-python3 -m pytest -q tests          # 287 tests: published values, internal cross-checks, the theorems of docs/fermat/
+python3 -m pytest -q tests          # 291 tests: published values, internal cross-checks, the theorems of docs/fermat/
 python3 -c "from hodge import fermat; print(fermat.analyze(4, 25))"
 python3 scripts/scan_fermat.py 4 3 40 results/fermat_n4.json
 python3 scripts/fermat_surfaces.py 8 12

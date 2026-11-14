@@ -24,7 +24,7 @@ this repository does not prove it.
 
 ```bash
 pip install pytest
-python3 -m pytest -q tests      # 2026-11-14: 287 pass in about 25 s
+python3 -m pytest -q tests      # 2026-11-14: 291 pass in about 25 s
 ```
 
 The C helpers in `scripts/` give their build line in their header comment (`gcc -O2 ...`).
