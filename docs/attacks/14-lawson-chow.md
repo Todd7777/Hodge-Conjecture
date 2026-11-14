@@ -2,6 +2,8 @@
 
 *Attack 14, second run, 2026-11-07. Draft for refereeing. No proof of the Hodge conjecture is claimed.*
 
+**Referee (2026-11-13):** minor revision; corrections applied. Report summary: docs/06-attack-report.md.
+
 ## 0. Summary
 
 **Top target (a): not reached.** In Lawson homology, $\mathrm{HC}(X,2)$ for a smooth projective fourfold $X$ turns out to be **equivalent** to one homotopy-theoretic statement (Corollary 2.3):
@@ -22,7 +24,7 @@ All of this follows quickly from the Friedlander–Mazur inclusion $T_rH_k\subse
 **Obstruction mechanism (rung (c)), §4.**
 * Integral coefficients: Kollár's threefolds show that the integral analogue of Theorem A fails, and the proof breaks exactly at the rational Hodge-splitting step.
 * Non-projective Kähler tori: two separate ingredients fail. The FM inclusion fails (Example 4.5). The divisor form of Lefschetz (1,1) fails (Example 4.4).
-* The open test cases (RM classes on $K3\times K3$, Weil classes on sixfolds of discriminant $+1$) are restated as "Lawson level 0 or top".
+* The open test cases (RM classes on $K3\times K3$, Weil classes on sixfolds of non-split discriminant ($\ne-1$ with $\mathrm{disc}=\det H$; every Weil sixfold has negative discriminant)) are restated as "Lawson level 0 or top".
 
 **Honest status:** `no_proof_obstruction_identified`.
 
@@ -113,7 +115,7 @@ If $n=4$, (iii) is also equivalent to (iv): the Poincaré dual of $\alpha$ restr
 
 1. *Families sweep only coniveau-one classes.* By (L5), every $g\colon S^2\to Z_1(X)$ has $\Phi[g]\in G_1H_4$: its class is supported on a threefold. Producing $g$ for a given Hodge class $\alpha$ is therefore at least as hard as finding a threefold $Y\subset X$ with $\alpha\in\mathrm{im}\,H_4(\tilde Y)$. That is the coniveau form (iv) of $\mathrm{HC}(X,2)$, which is open, for example for Hodge classes on sextic fourfolds at special points of moduli and for real-multiplication classes on $S\times S$.
 2. *The structural theorems only decompose.* The structural theorems of Lawson homology include the suspension theorem (L6), homotopy invariance, localization [LF92], projective-bundle and blow-up formulas [HL11], and Friedlander–Lawson duality and moving [FL97, FL98]. To my knowledge each expresses the Lawson homology of a variety built from simpler ones (cones, bundles, blow-ups, complements) in terms of the pieces. On Hodge classes they reproduce classical reductions. For instance, a uniruled fourfold is dominated by a blow-up of $\mathbb{P}^1\times Y$, and the cylinder classes $\beta\times[\mathbb{P}^1]$ with $\beta\in H_2(Y)=\pi_2Z_0(Y)$ give the Conte–Murre argument. None of them creates elements of $\pi_2Z_1(X)$ on a fourfold that is not built from lower-dimensional pieces.
-3. *The deep comparison results are out of range.* With finite coefficients, Suslin's conjecture asserts that $L_rH_k(X;\mathbb{Z}/m)\to H_k(X;\mathbb{Z}/m)$ is an isomorphism for $k\ge n+r$. It is reported to follow from the Beilinson–Lichtenbaum theorem and to imply FM [Hu06]. Its range $k\ge n+r$ never contains $k=2r$ when $r<n$. For H(X) we have $(r,k,n)=(1,4,4)$ and $4<n+r=5$.
+3. *The deep comparison results are out of range.* With finite coefficients, Suslin's conjecture asserts that $L_rH_k(X;\mathbb{Z}/m)\to H_k(X;\mathbb{Z}/m)$ is an isomorphism for $k\ge n+r$. In this finite-coefficient form it is reported to follow from the Beilinson–Lichtenbaum theorem. The implication "Suslin $\Rightarrow$ FM" of [Hu06] cannot be about this form alone, since FM would then be a theorem (contrary to §7); it concerns a stronger form of Suslin's conjecture, which is open. Its range $k\ge n+r$ never contains $k=2r$ when $r<n$. For H(X) we have $(r,k,n)=(1,4,4)$ and $4<n+r=5$.
 4. *Neither FM conjecture helps on Hodge classes.* The FM conjecture in bidegree $(1,4)$, i.e. $T_1H_4=G_1H_4$, adds nothing on Hodge classes, because there it is already Theorem A. What would suffice is the *strong* FM conjecture $T_1H_4=\tilde F_1H_4$, where $\tilde F_1H_4$ is the largest sub-Hodge structure of level $\le2$. But it contains Grothendieck's generalized Hodge conjecture for $H^4$ in coniveau 1, which already implies $\mathrm{HC}(X,2)$ and is open.
 
 ## 3. What is proved
@@ -269,7 +271,7 @@ So the Barlet analogue of (L5) fails, and so does Lemma 3.1 for $V=T$: there is 
    * *RM classes on $S\times S$, with $S$ a K3 surface with real multiplication* (P2 of `docs/03`): Lawson level $0$ or $2$.
    * *Hodge classes on sextic fourfolds at special points*: level $0$ or $2$.
    * *Weil classes on abelian fourfolds*: level $2$. This comes from Markman's theorem, which deforms sheaves; no Lawson mechanism is involved.
-   * *Weil classes on Weil-type sixfolds of discriminant $+1$, and Hodge classes on the degree-44 Fermat sixfold* ($p=3$): level $\in\{0,1,3\}$. Level 2 is excluded by Corollary A.1. Given FMC and HC for codimension-2 classes on fourfolds, level 1 would force level 3 (Theorem B′).
+   * *Weil classes on Weil-type sixfolds of non-split discriminant ($\ne-1$), and Hodge classes on the degree-44 Fermat sixfold* ($p=3$): level $\in\{0,1,3\}$. Level 2 is excluded by Corollary A.1. Given FMC and HC for codimension-2 classes on fourfolds, level 1 would force level 3 (Theorem B′).
 
 ## 5. GAPS
 
@@ -316,22 +318,22 @@ Theorem A depends only on (L3), (L4), (L5) together with classical Hodge theory.
 ## 7. Status of the Friedlander–Mazur conjectures (literature check)
 
 **The FM conjecture** $T_rH_k(X,\mathbb{Q})=G_rH_k(X,\mathbb{Q})$ for smooth projective $X$ [FM94] is open in general. Known cases:
-* $k=2r$ (trivial);
+* $k=2r$ ([FM94]; elementary);
 * $k=2r+1$ [Hu06];
 * $\dim X\le2$;
 * threefolds except bidegree $(1,4)$ [Hu06];
-* products of a curve and a surface, stability under surjective morphisms, uniruled threefolds, and unirational varieties in a range [CH19].
+* the product of an elliptic curve with certain threefolds (as stated in the abstract of [CH19]), stability under surjective morphisms, uniruled threefolds, and unirational varieties in a range [CH19].
 
 Known implications:
 * for threefolds, FM in bidegree $(1,4)$ is equivalent to the standard conjectures [CH21]: FM implies them (Cao–Hu), and B implies FM (Friedlander, as cited there);
-* Suslin's conjecture implies FM [Hu06];
+* Suslin's conjecture, in a form stronger than the finite-coefficient one that follows from Beilinson–Lichtenbaum, implies FM [Hu06] (abstract checked);
 * the edge case follows from B [Te05].
 
 Corollary A.3 says FM holds unconditionally *on Hodge classes* in bidegree $(p-1,2p)$.
 
 **The strong FM conjecture** $T_rH_k=\tilde F_rH_k$, where $\tilde F_rH_k$ is the largest sub-Hodge structure of level $\le k-2r$, is attributed to Friedlander–Walker (as reported in [Hu11]). For $k=2r$ it is HC. In general it is FM together with Grothendieck's generalized Hodge conjecture. §4.3(1) records the easy inclusions $T\subseteq G\subseteq\tilde F$. The second one is "geometric coniveau implies Hodge coniveau": a class supported on $Y$ with $\dim Y=k-r$ comes from $H_k(\tilde Y)$, whose Hodge types $(a,b)$ satisfy $a,b\ge-(k-r)$.
 
-**"Disproved?"** I found no disproof of the complex FM conjecture. What has been disproved is Teh's analogue for real varieties, which relates the niveau filtration to images of reduced real Lawson homology. This is in *Remarks on filtrations of the homology of real varieties*, Doc. Math. 17 (2012) 641–661, arXiv:1110.1836, by J. Heller and M. Voineagu to my recollection; I did not confirm the authorship. The same authors prove a vanishing analogue of FM for real varieties (Amer. J. Math., "Vanishing theorems for real algebraic cycles").
+**"Disproved?"** I found no disproof of the complex FM conjecture. What has been disproved is Teh's analogue for real varieties, which relates the niveau filtration to images of reduced real Lawson homology. This is in *Remarks on filtrations of the homology of real varieties*, Doc. Math. 17 (2012) 641–661, arXiv:1110.1836, by J. Heller and M. Voineagu (authors and content confirmed from the arXiv abstract; journal data not checked). The same authors prove a vanishing analogue of FM for real varieties (Amer. J. Math., "Vanishing theorems for real algebraic cycles").
 
 A version of a Hodge-theoretic conjecture phrased with the Hodge filtration $F$ instead of maximal sub-Hodge structures would be refuted for Grothendieck's "trivial reasons" (1969). I could not check whether such a version appears in [FM94] and was later corrected. This is left open (GAP 4).
 
@@ -374,7 +376,7 @@ Recent work, not affecting the above:
 | Lemma 3.1 | $H_j$ of a projective algebraic set is the image of $H_j$ of a closed subset of dimension $\le j$ | known/standard; proof included |
 | Lemma 3.2 | Rational Hodge classes in the image of a morphism of polarizable Hodge structures lift to Hodge classes | known (Deligne); proof included |
 | Lemma 3.3 | Images of $H_k(Y)$ and of $H_k(\tilde Y)$ in $H_k(X)$ coincide (weights) | known (Deligne); proof included |
-| Theorem A | $\mathrm{Hdg}_{2p}\cap T_{p-1}H_{2p}=\mathrm{Hdg}_{2p}\cap G_{p-1}H_{2p}=A_p=T_pH_{2p}$ | proved here from (L3)–(L5) [FM94, Fr91]; probably known to experts, not found stated |
+| Theorem A | $\mathrm{Hdg}_{2p}\cap T_{p-1}H_{2p}=\mathrm{Hdg}_{2p}\cap G_{p-1}H_{2p}=A_p=T_pH_{2p}$ | proved here from (L3)–(L5) [FM94, Fr91]; the equality $\mathrm{Hdg}\cap G_{p-1}H_{2p}=A_p$ is the classical argument (Lefschetz (1,1) on a resolution of the support); the only Lawson-homological input is the FM inclusion (L5) |
 | Cor. A.1 | The Lawson level of a Hodge class lies in $\{0,\dots,p-2\}\cup\{p\}$ | proved here (from Theorem A) |
 | Cor. A.2 | HC $\iff\mathrm{Hdg}_{2p}(X)\subseteq\Phi(\pi_2Z_{p-1}(X))_{\mathbb{Q}}$ for all $X,p$ | proved here (from Theorem A) |
 | Cor. A.3 | The FM conjecture holds on Hodge classes in bidegree $(p-1,2p)$ | proved here (restatement of Theorem A) |

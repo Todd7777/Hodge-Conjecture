@@ -2,7 +2,9 @@
 
 **Status (read this first).** The top target (a), a property $P(X,\alpha)$ of the variation of Hodge structure (VHS) through $X$ that is provably *equivalent* to algebraicity, is **not** reached. For the natural candidate $P=\mathcal G$ (absoluteness together with Galois-coherence of the Hodge locus, Definition 1.1), the direction "algebraic $\Rightarrow\mathcal G$" is proved, but it is known in substance (Deligne's Principle B, Voisin 2007). I also show that the converse already contains the Hodge conjecture for all abelian varieties and that its integral version is false (Proposition 1.3), so no Hodge-theoretic argument can supply it. For target (b) I prove only the case where the Hodge locus is the whole moduli. That case gives HC for very general very ample hypersurfaces in abelian fivefolds (via Markman) and in fivefolds with small $CH_0$ (Corollary 2.2): an immediate consequence of classical Lefschetz–Deligne theory. The case of an isolated Hodge locus is exactly the special-point problem, and it is blocked (Gap G2).
 
-The main new result is **Theorem D** (§3), a contribution to targets (c) and (d). Let $Y$ be a positive-dimensional special subvariety of a geometric VHS over a number field. Suppose $Y$ is weakly non-factor, has maximal monodromy, and has a Mumford–Tate datum of abelian type with a Hodge-type cover. Then:
+**Referee (2026-11-13):** minor revision; corrections applied. Report summary: docs/06-attack-report.md.
+
+The main result claimed as new is **Theorem D** (§3; novelty not checked against Kreutz, arXiv:2111.00216, who treats subvarieties satisfying the same KOU monodromy condition), a contribution to targets (c) and (d). Let $Y$ be a positive-dimensional special subvariety of a geometric VHS over a number field. Suppose $Y$ is weakly non-factor, has maximal monodromy, and has a Mumford–Tate datum of abelian type with a Hodge-type cover. Then:
 
 * every zero-dimensional special subvariety lying on $Y$ is a $\bar{\mathbb Q}$-point;
 * Galois conjugates of CM points of $Y$ are CM points of $Y$;
@@ -95,7 +97,7 @@ $\mathcal G$ is formulated purely in terms of the VHS of models of $X$, their Ho
 * (ii) Immediate from (i).
 * (iii) Engel–de Gaay Fortman–Schreieder: on a very general principally polarized abelian variety of dimension $g\ge4$, the minimal class $\theta^{g-1}/(g-1)!$ is an integral Hodge class that is not the class of an integral 1-cycle. It is a rational multiple of the algebraic class $\theta^{g-1}$, so it has $\mathcal G$. $\square$
 
-**Remark 1.4 (exact statement needed for the top target).** With $P=\mathcal G$, target (a) is equivalent to the conjunction of two statements:
+**Remark 1.4 (exact statement needed for the top target).** With $P=\mathcal G$, target (a) is the statement "$\mathcal G\Rightarrow$ algebraic", i.e. $(\star)$ below (G1 identifies $\mathcal G$ with absoluteness); HC is equivalent to $(\star)$ together with Deligne's conjecture:
 
 * $(\star)$: every absolute Hodge class is algebraic;
 * Deligne's conjecture: every Hodge class is absolute.
@@ -146,7 +148,7 @@ The content of (b) is the classical "very general members only carry classes fro
 
 **Remark 2.3 (rigid of the second kind = zero-dimensional special).** Suppose $\alpha\in\mathrm{Hdg}^p(X_s)$ has isolated Hodge locus $\{s\}$. Then $\{s\}$ is special. Indeed, if $W\ni s$ is closed irreducible with $G_W=\mathrm{MT}(V_s)$, then $\alpha$ is $G_W$-invariant, hence Hodge along $W^n$ by (I2), so $W\subset\{s\}$.
 
-So second-kind rigid classes live exactly at zero-dimensional special subvarieties: CM points, and transversal intersection points of $\Phi(S)$ with Mumford–Tate subdomains. At CM points of moduli of abelian varieties these include the open cases of HC for CM abelian varieties (`docs/02` §2.2). No step of this strategy produces cycles there. What *can* be proved about such points is their arithmetic, which is §3. This is Gap G2.
+So second-kind rigid classes live only at zero-dimensional special subvarieties (the converse is not claimed): CM points, and transversal intersection points of $\Phi(S)$ with Mumford–Tate subdomains. At CM points of moduli of abelian varieties these include the open cases of HC for CM abelian varieties (`docs/02` §2.2). No step of this strategy produces cycles there. What *can* be proved about such points is their arithmetic, which is §3. This is Gap G2.
 
 ## 3. Targets (c)/(d): CM theory on special subvarieties of abelian type (Theorem D)
 
@@ -256,7 +258,7 @@ Hence any lower bound for Galois orbits of CM points of $M$ (I10) transfers to C
 
 *Proof.*
 
-* $\Leftarrow$: CM points are dense in $M$. Since $\Phi$ is dominant, their preimages are dense in $\tilde Y$. By the first step of the proof of (D3) (a point $y$ is CM exactly when $x$ is), their images under $c$ are CM points, and they are dense in $Y$.
+* $\Leftarrow$: CM points are dense in $M$. Since $\Phi$ is dominant, it is flat, hence open, over a dense open subset of $M$ (generic flatness), so their preimages are dense in $\tilde Y$. By the first step of the proof of (D3) (a point $y$ is CM exactly when $x$ is), their images under $c$ are CM points, and they are dense in $Y$.
 * $\Rightarrow$: Let $\Sigma\subset Y$ be a dense set of CM points. Then $c^{-1}\Sigma$ is dense in $\tilde Y$, so $\Phi(c^{-1}\Sigma)$ is a dense set of CM points in $M_Y:=\overline{\Phi(\tilde Y)}$. By (I10), $M_Y$ is special. Its generic Mumford–Tate group contains the monodromy group $G^{\prime\,\rm der}$ (Lemma 3.3 and I2). Since $G^{\prime\,\rm der}(\mathbb R)^+$ acts transitively on $X^{\prime+}$, we get $M_Y=M$. $\square$
 
 **Remark 3.7 (where Pila–Wilkie and Ax–Schanuel enter).** A Pila–Zannier proof of André–Oort for special points of a general VHS needs five inputs:
@@ -286,7 +288,7 @@ For abelian varieties, (CM1)–(CM3) are Shimura–Taniyama theory and (CM4) is 
 
 *Proof.* $F^p=\bigoplus V_\chi$, where the sum runs over the characters $\chi$ of $T$ whose $\mu$-weight is $\ge p$, and each eigenspace $V_\chi$ is defined over the splitting field. $\square$
 
-**Proposition 4.2 ((CM1), (CM2) from absoluteness; known, Voisin's argument).** Let $t_1,\dots,t_m$ be rational Hodge tensors at $s$ whose common stabilizer is $T$. If every $t_i$ is absolute Hodge, then (CM1) and (CM2) hold at $s$.
+**Proposition 4.2 ((CM1), (CM2) from absoluteness; known, Voisin's argument).** Let $t_1,\dots,t_m$ be rational Hodge tensors at $s$ whose common stabilizer is $T$. If every $t_i$ is absolute Hodge, then (CM1) holds at $s$, and so does (CM2) except its last clause: the proof gives only $\mathrm{MT}(V_{\sigma s})\subseteq\mathrm{Stab}(\sigma t_i)$, a $\mathbb Q$-form of $\sigma(T_{\mathbb C})$, not an isogeny with $T$.
 
 *Proof.*
 
@@ -314,10 +316,10 @@ With the theory of CM absolute-Hodge motives (Deligne, Milne in LNM 900), absolu
 | | general geometric VHS | on $Y$ as in Theorem D | abelian varieties |
 |---|---|---|---|
 | (CM1) | open; follows from absoluteness (4.2) | **proved** (D2) | known |
-| (CM2) | open; follows from absoluteness (4.2) | **proved** for $\sigma\in\mathrm{Aut}(\mathbb C/K)$ (D3) | known |
+| (CM2) | open; follows from absoluteness (4.2) except the isogeny clause | CM-ness of $\sigma(y)$ **proved** for $\sigma\in\mathrm{Aut}(\mathbb C/K)$ (D3); isogeny clause only for $\sigma$ fixing $KE_x$; speciality of $\{\sigma(y)\}$ not proved | known |
 | (CM3), Hodge/lattice part | open | **proved** for $\sigma\in\mathrm{Aut}(\mathbb C/KE_x)$ (D3) | known |
 | (CM3), $\ell$-adic part | open | open (G5) | known |
-| (CM4) | follows from GPC (4.3) | **proved** (4.4) | known (Wüstholz) |
+| (CM4) | follows from GPC (4.3) | **proved** (4.4), given KOU, (I7) and Cohen/Shiga–Wolfart | known (Wüstholz) |
 
 Outside such $Y$, the theory needs the following statement.
 
@@ -410,6 +412,6 @@ Such an embedding exists as a morphism of Hodge structures, because CM Hodge str
 | Remark 3.7 | which Pila–Zannier inputs Theorem D supplies, and which are missing | discussion |
 | Conjecture 4.0 | (CM1)–(CM4): what a CM theory for a general geometric VHS must contain | conjecture (formulation) |
 | Lemma 4.1 | the Hodge filtration at a CM point is $\bar{\mathbb Q}$-rational | known (trivial) |
-| Proposition 4.2 | absoluteness at $s$ $\Rightarrow$ (CM1), (CM2) | known (Voisin's argument); proof included |
+| Proposition 4.2 | absoluteness at $s$ $\Rightarrow$ (CM1), and (CM2) without the isogeny clause | known (Voisin's argument); proof included |
 | Proposition 4.3 | Grothendieck period conjecture $\Rightarrow$ (CM4) | folklore; proved here conditional on GPC |
 | Corollary 4.4 | (CM4) holds on $Y$ as in Theorem D, unconditionally | proved here, conditional on Theorem D's inputs and on Shiga–Wolfart/Cohen |
