@@ -60,3 +60,49 @@ def test_formula_reproduces_every_family_entry_of_mmrv_table_1():
 
 def test_q33_shortest_tuple_is_mmrv_table_2_representative():
     assert E.minimal_tuple(33) == (1, 4, 16, 22, 25, 31)
+
+
+# ------------------------------------------------------------------ the class chi_m(p) = +1 (Theorem D, second case)
+
+PLUS_SMALL = [q for q in E.family_degrees(130, both=True) if q not in E.family_degrees(130)]
+
+# MMRV Table 1, entries of the class chi_m(p) = +1 (q = 4p, p = 1 mod 4; q = 3p, p = 1 mod 3), all q <= 417.
+MMRV_TABLE1_PLUS = {20: 3, 21: 4, 39: 6, 52: 7, 57: 10, 68: 10, 93: 16, 111: 20, 116: 15, 129: 22, 148: 19, 164: 22,
+                    183: 36, 201: 36, 212: 27, 219: 42, 237: 40, 244: 31, 291: 50, 292: 36, 309: 54, 327: 54, 356: 44,
+                    381: 64, 388: 50, 404: 51, 417: 70}
+
+
+def test_plus_class_membership():
+    assert PLUS_SMALL == [20, 21, 39, 52, 57, 68, 93, 111, 116, 129]
+
+
+@pytest.mark.parametrize("q", PLUS_SMALL)
+def test_plus_class_identities_parity_and_index(q):
+    assert E.check_identity_on_B(q)                       # lambda = 0 and g(x) + g(-x) constant on B_q
+    assert all(v % 2 == 0 for v in E.standard_lambda_values(q))
+    assert E.index_B_over_DS(q) == 2
+
+
+@pytest.mark.parametrize("q", E.family_degrees(420, both=True))
+def test_explicit_shortest_tuple_both_classes(q):
+    t = E.minimal_tuple(q)
+    assert F.is_hodge_tuple(t, q)
+    assert len(t) == E.predicted_length(q)
+    assert E.parity_invariant(t, q) % 2 == 1
+
+
+@pytest.mark.parametrize("q", [20, 21, 39, 52])
+def test_plus_class_lower_bound_by_exhaustion(q):
+    for L in range(1, E.predicted_length(q)):
+        assert all(E.parity_invariant(t, q) % 2 == 0 for t in F.hodge_tuples(q, L)), L
+
+
+def test_formula_reproduces_every_plus_class_entry_of_mmrv_table_1():
+    for q, value in MMRV_TABLE1_PLUS.items():
+        assert E.predicted_length(q) == value, q
+
+
+def test_lambda_52_is_the_plus_class_invariant():
+    from hodge import formal_module as FM
+    for t in F.hodge_tuples(52, 6)[:200] + [FM.EXCEPTIONAL[52]]:
+        assert E.lam_prime(t, 52) == FM.lam(t, 52)

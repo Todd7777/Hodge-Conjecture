@@ -1,15 +1,20 @@
 # Exact lengths of the exceptional tuples ξ_q for q = 4p and q = 3p
 
-**Status (2026-11-09).** This note proves a closed formula for the Aoki–Shioda length ℓ_{2,q}(ξ_q) of the exceptional
-tuple ξ_q for two infinite families of degrees, q = 4p with p ≡ 3 (mod 4) prime and q = 3p with p ≡ 2 (mod 3) prime
-(Theorem D). The lower bound is a complete proof here. The upper bound is an explicit tuple. The identification of the
-minimum with ℓ_{2,q}(ξ_q) uses the Kubert–Aoki index theorem, which this repository recomputes for every q ≤ 420 in the
-families. The formula reproduces all 31 entries of Miranda–Movasati–Rufino–Villaflor's Table 1 that lie in these
-families, so those upper bounds are optimal.
+**Status (2026-11-14).** This note proves a closed formula for the Aoki–Shioda length ℓ_{2,q}(ξ_q) of the exceptional
+tuple ξ_q for every q = 4p with p an odd prime and every q = 3p with p a prime ≥ 5:
+
+  ℓ_{2,q}(ξ_q) = (p − χ_m(p))/2 + c_r(p),   (m, r) = (4, 2) or (3, 3),
+
+where χ_m is the odd quadratic character of conductor m (Theorem D for χ_m(p) = −1, Theorem D′ for χ_m(p) = +1).
+The lower bound is a complete proof here. The upper bound is an explicit tuple. The identification of the minimum
+with ℓ_{2,q}(ξ_q) uses the Kubert–Aoki index theorem, which this repository recomputes for every q ≤ 420 in the
+families. The formula reproduces all 58 entries of Miranda–Movasati–Rufino–Villaflor's Table 1 of this form, so
+those upper bounds are optimal.
 
 **What this is not.** It says nothing about whether ξ_q is algebraic, so it proves no new case of the Hodge conjecture.
 It is a statement about one method: in degree q, the length-reduction method of MMRV (§4.3–4.4 of arXiv:2609.27301)
-cannot settle ξ_q unless the formula gives at most 6. In the two families that happens only for q ∈ {12, 15, 28, 33}.
+cannot settle ξ_q unless the formula gives at most 6. For q = 4p and 3p that happens only for
+q ∈ {12, 15, 20, 21, 28, 33, 39}.
 Lifts to multiples of q are not covered (§5).
 
 Labels follow `CLAUDE.md`: **Theorem** = complete proof in this note; **Cited** = used as a black box, source read;
@@ -181,22 +186,91 @@ D_q + S_q = B_q ∩ {λ even}. Every α ∈ B_q \ (D_q + S_q) then has λ odd, a
 Normalise α′ to non-negative coefficients (MMRV Remark 4.11); it is a Hodge tuple, so part 1 gives
 ℓ(α′) ≥ (p+1)/2 + c_r(p). Part 2 gives equality. ∎
 
-**Corollary E (Theorem, given the cited index).** f_0(q) ≥ (q + m)/(2m) on both families. So f_0 restricted to
+**Corollary E (Theorem, given the cited index).** f_0(q) ≥ (q − m)/(2m) for all q = 4p and 3p (Theorems D, D′). So f_0 restricted to
 these degrees has finite fibres: MMRV Conjecture 4.1 holds along the two families (for d = q; the conjecture asks for
 all d).
 
 **Corollary F.** In degree q, Kang's theorem plus length reduction (MMRV Prop. 4.3) can only reach ξ_q if
-f_0(q) ≤ 6. In the families this means exactly q ∈ {12, 15, 28, 33}. For q = 44 and q = 51, and for all larger q in
-the families, every representative of ξ_q modulo linear and standard tuples has length 7 or more in degree q. A proof
-in degree q therefore needs genuinely new cycles, or lifts to multiples of q.
+f_0(q) ≤ 6. With Theorem D′ this means exactly q ∈ {12, 15, 20, 21, 28, 33, 39} among q = 4p and 3p. For
+q = 44, 51, 52, 57, 68 and all larger such q, every representative of ξ_q modulo linear and standard tuples has
+length 7 or more in degree q. A proof in degree q therefore needs genuinely new cycles, or lifts to multiples of q
+(as MMRV use for q = 57, via degree 114).
+
+## 4′. The second case: χ_m(p) = +1
+
+Let (m, r) be as before and let p be an odd prime, p ≠ 3, with χ_m(p) = +1, that is, p ≡ 1 (mod 4) for m = 4 and
+p ≡ 1 (mod 3) for m = 3. Put q = m p; again q ∈ Q and ξ_q is defined. With g, h, P, Q, G as in §1, put
+
+  λ′(v) = g(1) + g(−1)  (the signed count, with signs χ_m, of the unit entries congruent to ±1 mod p).
+
+For q = 52 this is the invariant λ_52 = n_1 + n_25 − n_27 − n_51 of Attack 17.
+
+**Proposition 3′ (Theorem).** For every v ∈ B_q: λ(v) = 0.
+
+*Proof.* As in Proposition 3, the character χ_m gives (p − 1)λ(v)B_{1,χ_m} + U(v)B_{1,χ_m}(1 − χ_m(p)) = 0, and now
+1 − χ_m(p) = 0. ∎
+
+**Proposition 4′ (Theorem).** For every v ∈ B_q and every x ∈ (Z/p)^×: g(x) + g(−x) = 2U(v)/(p − 1) = λ′(v).
+
+*Proof.* As in Proposition 4, ĝ(ψ) = 0 for every nontrivial even ψ mod p, so g^+ is constant, equal to its mean
+U/(p − 1). ∎
+
+Proposition 5 holds unchanged, since its proof does not use χ_m(p). The odd characters mod q are the same three
+kinds as in §3, so v ∈ B_q if and only if Propositions 3′, 4′ and 5 hold for v.
+
+**Theorem D′.** Let q = m p with χ_m(p) = +1.
+
+1. **(Lower bound; Theorem.)** Every Hodge tuple α of degree q with λ′(α) odd has at least (p − 1)/2 entries that are
+   units and, when o = ord_p(r) is even, at least (p − 1)/o entries of order p. Hence ℓ(α) ≥ (p − 1)/2 + c_r(p).
+2. **(Attained; Theorem.)** The tuple τ_q of Theorem D(2) without the entry (m − 1)p is a Hodge tuple with
+   λ′(τ_q) = 1 and ℓ(τ_q) = (p − 1)/2 + c_r(p).
+3. **(Parity; Theorem.)** λ′ is even on D_q and on every standard tuple of degree q.
+4. **(Exact value.)** If [B_q : D_q + S_q] ≤ 2 (Kubert–Aoki, Cited; Computation for every q ≤ 420), then
+   D_q + S_q = {v ∈ B_q : λ′(v) even} and f_0(q) = ℓ_{2,q}(ξ_q) = (p − 1)/2 + c_r(p).
+
+*Proof of 1.* For each of the (p − 1)/2 pairs {x, −x}, Proposition 4′ gives |g(x)| + |g(−x)| ≥ |λ′| ≥ 1, so each pair
+carries a unit entry. Since h ≡ g (mod 2), h(x) − h(−x) ≡ g(x) + g(−x) = λ′ ≡ 1 (mod 2), so G^−(x) ∈ ½ + Z. The rest is
+the proof of Theorem D(1): when o is even, every coset of ⟨r⟩ carries an entry of order p. ∎
+
+*Proof of 2.* There is no entry of order m, so λ = 0 (Proposition 3′). Here g = h = 1_H with g(x) + g(−x) = 1 for all x,
+and U = (p − 1)/2, so Proposition 4′ holds with λ′ = 1. Proposition 5 is checked exactly as in Theorem D(2). ∎
+
+*Proof of 3.* The entries a and −a of a pair are both units or both not, and χ_m(−a) = −χ_m(a). So a pair adds χ_m(a)
+to g(x) and −χ_m(a) to g(−x), and leaves g(x) + g(−x) unchanged. The entry ε is not a unit. Standard tuples:
+
+* m = 4. s_{p,i} of degree 4p (k = 4), i odd: the entries i + 4j are all ≡ i (mod 4) and run once through the residues
+  mod p. The one divisible by p is not a unit, and −pi is not a unit. So g(x) = χ_4(i) for every x ≠ 0, and
+  λ′ = 2χ_4(i). If i is even, no entry is a unit. s_{2,i} of degree 4p (k = 2p), i odd: if p ∤ i, the units i and
+  i + 2p are congruent mod p, with χ_4(i + 2p) = −χ_4(i) because 2p ≡ 2 (mod 4), so they cancel; if p | i, they are not
+  units. The other entries are even. Lifts from degree 2p have even entries.
+* m = 3. s_{3,i} of degree 3p (k = p), 3 ∤ i, p ∤ i: of i, i + p, i + 2p exactly one is divisible by 3. The other two
+  are units, congruent mod p, with χ_3-values +1 and −1, so they cancel. The entry −3i is not a unit. s_{p,i} of
+  degree 3p (k = 3), p ∤ i: if 3 ∤ i the entries i + 3j are ≡ i (mod 3), and as for m = 4, λ′ = 2χ_3(i). If 3 | i,
+  no entry is a unit.
+
+So λ′ ∈ {0, ±2} on standard tuples. ∎
+
+*Proof of 4.* As for Theorem D(4), with λ′ in place of λ. ∎
+
+**Corollary D″ (Theorem, given the cited index).** For every q = 4p (p an odd prime) and every q = 3p (p a prime ≥ 5),
+
+  ℓ_{2,q}(ξ_q) = f_0(q) = (p − χ_m(p))/2 + c_r(p).
+
+In particular ℓ_{2,52}(ξ_52) = 7, ℓ_{2,57}(ξ_57) = 10 and ℓ_{2,68}(ξ_68) = 10. Attack 17 obtained the value for 52
+only by computation (its Corollary 4.3).
+
+For q = 52 this also gives a conceptual proof of Attack 17, Theorem A(2): λ_52 = 0 on Hodge tuples of length ≤ 6.
+If |λ′| ≥ 2, every pair needs two units, so there are at least p − 1 = 12 entries. If |λ′| = 1, part 1 gives at
+least 7.
 
 **Agreement with MMRV Table 1 (Computation).** MMRV list upper bounds for ℓ_{2,q}(ξ_q), obtained by an integer program
-restricted to coefficients in {−1, 0, 1}. 31 of their entries lie in the families, and the formula equals each of them
-(`results/exceptional_lengths.md`). Examples: 44 → 7, 51 → 10, 123 → 26 (c_3(41) = 5), 172 → 25 (c_2(43) = 3),
-411 → 70. For q = 33 the tuple τ_33 = (1, 4, 16, 22, 25, 31) is MMRV's Table 2 representative.
+restricted to coefficients in {−1, 0, 1}. 58 of their entries have the form q = 4p or 3p: 31 with χ_m(p) = −1 and 27
+with χ_m(p) = +1. The formula equals each of them (`results/exceptional_lengths.md`). Examples: 44 → 7, 51 → 10,
+123 → 26 (c_3(41) = 5), 172 → 25 (c_2(43) = 3), 183 → 36 (c_3(61) = 6), 292 → 36 (ord_73(2) = 9 is odd), 411 → 70.
+For q = 33 the tuple τ_33 = (1, 4, 16, 22, 25, 31) is MMRV's Table 2 representative.
 
-**Exhaustive confirmation (Computation).** For q ∈ {12, 15, 28, 33, 44, 51}, all Hodge tuples of degree q shorter
-than the formula were enumerated, and none has odd λ. For q = 44 there are exactly 20 sorted odd-λ Hodge tuples of
+**Exhaustive confirmation (Computation).** For q ∈ {12, 15, 20, 21, 28, 33, 39, 44, 51, 52}, all Hodge tuples of
+degree q shorter than the formula were enumerated, and none has odd λ (resp. λ′). For q = 44 there are exactly 20 sorted odd-λ Hodge tuples of
 length 7.
 
 ## 5. Remarks and open questions
@@ -204,9 +278,9 @@ length 7.
 * **Where the λ-obstruction of Attack 17 comes from.** For q = 44, Proposition 3 reads 5λ_44 + U = 0, and the
   exhaustive check of Attack 17 (λ_44 = 0 on Hodge tuples of length ≤ 6) is the case q = 44 of part 1. Likewise
   16λ_51 + 2U = 0 for q = 51. The exact values ℓ_{2,44}(ξ_44) = 7 and ℓ_{2,51}(ξ_51) = 10, stated there as
-  consequences of the computation, now follow from Theorem D. The degree 52 = 4·13 is *not* covered (13 ≡ 1 mod 4,
-  so χ_4(13) = 1 and Proposition 3 degenerates). There ℓ_{2,52}(ξ_52) = 7 rests on computation alone: λ_52 vanishes
-  on Hodge tuples of length ≤ 6, and MMRV give the upper bound 7.
+  consequences of the computation, now follow from Theorem D. The degree 52 = 4·13 falls under Theorem D′: there
+  χ_4(13) = +1, Proposition 3 degenerates to λ = 0, and the invariant is λ′ = λ_52. So ℓ_{2,52}(ξ_52) = 7 is now a
+  theorem too, given the index.
 * **Shape of the shortest tuples.** The units of τ_q form a "half system" mod p cut out by the cycles of
   multiplication by r. One cycle is broken at the order-p entry w, much as in Stickelberger-type constructions. Whether
   this has a geometric meaning (for example a subvariety of a Fermat variety whose class is τ_q) is open.
@@ -218,11 +292,12 @@ length 7.
   (`docs/fermat/03-galois-obstruction.md`, Theorem G) gives ℓ_{2,D}(ξ_44) ≥ 7 for every D = 44k with k ≤ 11, by a
   different argument. A representative of length ≤ 6 in degree D would put the lift of ξ_44 in Λ_D, and hence its
   Galois character in E_D.
-* **Other degrees.** For q = 4p with p ≡ 1 (mod 4), q = 3p with p ≡ 1 (mod 3), and q = p_1 p_2 with both primes odd,
-  the analogue of Proposition 3 degenerates and another invariant is needed. For q = 52 that invariant is
-  λ_52 = Σ_{a ≡ ±1 (13)} χ_4(a) n_a. MMRV's Table 1 values for q = 4p with p ≡ 1 (mod 4) are (p + 1)/2 for
-  p ≡ 5 (mod 8) and differ by ±1 for p ≡ 1 (mod 8) (for example 68 → 10, 89·4 = 356 → 44). Explaining them is a natural
-  next step.
+* **Other degrees (open).** Theorems D and D′ cover every q ∈ Q with exactly two P-factors, one of which is 4 or 3. The
+  remaining two-factor degrees are q = p_1 p_2 with both primes ≥ 5: 35, 55, 65, 77, 85, 91, 95, … MMRV's Table 1
+  gives 35 → 8, 55 → 10, 65 → 16, 77 → 16, 85 → 18, 91 → 22. There χ_4 and χ_3 are not available. When one factor
+  is ≡ 3 (mod 4), its Legendre character is odd and could play the role of χ_m, but the entries of that order then
+  form a whole Galois orbit rather than two residues, and the bookkeeping changes. **Question:** is there a closed
+  formula for f_0(p_1 p_2)?
 
 ## 6. Reproduction
 

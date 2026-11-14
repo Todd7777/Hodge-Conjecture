@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Verify Theorem D of docs/fermat/02-exceptional-lengths.md for every family degree q <= QMAX and write
+"""Verify Theorem D of docs/fermat/02-exceptional-lengths.md for every q = 4p, 3p with q <= QMAX and write
 results/exceptional_lengths.md.
 
-For each q = 4p (p = 3 mod 4) and q = 3p (p = 2 mod 3) it checks, with exact integer arithmetic:
-  (a) the identity (p-1) lambda + 2 U = 0 on a lattice basis of B_q            [the proof's key identity]
-  (b) lambda is even on every standard tuple of degree q (lifts included)       [lambda(D_q + S_q) is even]
-  (c) [B_q : D_q + S_q] = 2                                                    [Kubert-Aoki, recomputed]
-  (d) the explicit tuple of `minimal_tuple` is a Hodge tuple of the predicted length with lambda = -1.
+For each q = m p (m = 4: p an odd prime; m = 3: p a prime >= 5) it checks, with exact integer arithmetic:
+  (a) the identities of Propositions 3-4 (chi_m(p) = -1) or 3'-4' (chi_m(p) = +1) on a lattice basis of B_q
+  (b) the parity invariant (lambda, resp. lambda') is even on every standard tuple of degree q (lifts included)
+  (c) [B_q : D_q + S_q] = 2                                          [Kubert-Aoki, recomputed]
+  (d) the explicit tuple of `minimal_tuple` is a Hodge tuple of the predicted length with odd parity invariant.
 For small q it also confirms the lower bound by exhaustive enumeration of all shorter Hodge tuples.
 Usage: python3 scripts/exceptional_lengths.py [QMAX] [OUTPUT]
 """
@@ -18,58 +18,63 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from hodge import exceptional_length as E  # noqa: E402
 from hodge import formal_module as F  # noqa: E402
 
-# Upper bounds for l_{2,q}(xi_q) from the Aoki-Shioda algorithm, MMRV arXiv:2609.27301v2, Table 1 (family entries only).
-MMRV_TABLE1 = {12: 3, 15: 4, 28: 4, 33: 6, 44: 7, 51: 10, 69: 12, 76: 11, 87: 16, 92: 12, 123: 26, 124: 16, 141: 24,
-               159: 28, 172: 25, 177: 30, 188: 24, 213: 36, 236: 31, 249: 42, 267: 46, 268: 35, 284: 36, 303: 52,
-               316: 40, 321: 54, 332: 43, 339: 58, 393: 66, 411: 70, 412: 52}
-EXHAUSTIVE = (12, 15, 28, 33, 44, 51)
+# Upper bounds for l_{2,q}(xi_q) from the Aoki-Shioda algorithm, MMRV arXiv:2609.27301v2, Table 1 (entries q = 4p, 3p).
+MMRV_TABLE1 = {12: 3, 15: 4, 20: 3, 21: 4, 28: 4, 33: 6, 39: 6, 44: 7, 51: 10, 52: 7, 57: 10, 68: 10, 69: 12, 76: 11,
+               87: 16, 92: 12, 93: 16, 111: 20, 116: 15, 123: 26, 124: 16, 129: 22, 141: 24, 148: 19, 159: 28, 164: 22,
+               172: 25, 177: 30, 183: 36, 188: 24, 201: 36, 212: 27, 213: 36, 219: 42, 236: 31, 237: 40, 244: 31,
+               249: 42, 267: 46, 268: 35, 284: 36, 291: 50, 292: 36, 303: 52, 309: 54, 316: 40, 321: 54, 327: 54,
+               332: 43, 339: 58, 356: 44, 381: 64, 388: 50, 393: 66, 404: 51, 411: 70, 412: 52, 417: 70}
+EXHAUSTIVE = (12, 15, 20, 21, 28, 33, 39, 44, 51, 52)
 
 
 def main():
     qmax = int(sys.argv[1]) if len(sys.argv) > 1 else 420
     out = sys.argv[2] if len(sys.argv) > 2 else os.path.join("results", "exceptional_lengths.md")
-    rows, failures = [], []
-    t_start = time.time()
-    for q in E.family_degrees(qmax):
-        m, p = E.family(q)
+    rows, failures, t_start = [], [], time.time()
+    for q in E.family_degrees(qmax, both=True):
+        m, p = E.family(q, both=True)
         r = 2 if m == 4 else 3
         o = E.mult_order(r, p)
         t = E.minimal_tuple(q)
         a = E.check_identity_on_B(q)
         b = all(v % 2 == 0 for v in E.standard_lambda_values(q))
         c = E.index_B_over_DS(q)
-        d = F.is_hodge_tuple(t, q) and len(t) == E.predicted_length(q) and E.lam(t, q) == -1
-        ok = a and b and c == 2 and d
-        if not ok:
+        d = F.is_hodge_tuple(t, q) and len(t) == E.predicted_length(q) and E.parity_invariant(t, q) % 2 == 1
+        if not (a and b and c == 2 and d):
             failures.append(q)
         tab = MMRV_TABLE1.get(q)
         cmp_ = "" if tab is None else ("=" if tab == E.predicted_length(q) else f"differs ({tab})")
-        rows.append(f"| {q} | {m}·{p} | {o} | {E.predicted_length(q)} | {'yes' if a else 'NO'} | "
-                    f"{'yes' if b else 'NO'} | {c} | {'yes' if d else 'NO'} | {'' if tab is None else tab} {cmp_} |")
+        rows.append(f"| {q} | {m}·{p} | {'+1' if E.chi(m, p) == 1 else '−1'} | {o} | {E.predicted_length(q)} | "
+                    f"{'yes' if a else 'NO'} | {'yes' if b else 'NO'} | {c} | {'yes' if d else 'NO'} | "
+                    f"{'' if tab is None else tab} {cmp_} |")
     ex_rows = []
     for q in EXHAUSTIVE:
         pred = E.predicted_length(q)
         counts = []
         for L in range(1, pred):
             T = F.hodge_tuples(q, L)
-            counts.append(f"{L}:{len(T)}/{sum(1 for s in T if E.lam(s, q) % 2)}")
+            counts.append(f"{L}:{len(T)}/{sum(1 for s in T if E.parity_invariant(s, q) % 2)}")
         ex_rows.append(f"| {q} | {pred} | {', '.join(counts)} |")
-    small = {q: E.minimal_tuple(q) for q in (12, 15, 28, 33, 44, 51, 69, 76)}
+    small = {q: E.minimal_tuple(q) for q in (12, 15, 20, 21, 28, 33, 39, 44, 51, 52, 57, 68)}
     with open(out, "w") as f:
         f.write("# Lengths of the exceptional tuples for q = 4p and q = 3p\n\n")
         f.write(f"Generated by `python3 scripts/exceptional_lengths.py {qmax}` ({time.time() - t_start:.0f} s). "
                 "Proofs: `docs/fermat/02-exceptional-lengths.md` (Theorem D). Exact integer arithmetic only.\n\n")
-        f.write("Columns: (a) the identity (p−1)λ + 2U = 0 holds on a lattice basis of B_q; (b) λ is even on every "
-                "standard tuple of degree q; (c) the index [B_q : D_q + S_q]; (d) the explicit tuple τ_q is a Hodge "
-                "tuple of the predicted length with λ = −1. The last column is the upper bound for ℓ_{2,q}(ξ_q) in "
+        f.write("Columns: χ_m(p) selects the parity invariant (λ for −1, λ′ for +1); (a) the identities of Propositions "
+                "3–4, resp. 3′–4′, hold on a lattice basis of B_q; (b) the parity invariant is even on every standard "
+                "tuple of degree q; (c) the index [B_q : D_q + S_q]; (d) the explicit tuple τ_q is a Hodge tuple of the "
+                "predicted length with odd parity invariant. The last column is the upper bound for ℓ_{2,q}(ξ_q) in "
                 "Miranda–Movasati–Rufino–Villaflor, arXiv:2609.27301v2, Table 1, where it lists q.\n\n")
-        f.write("| q | m·p | ord_p(r) | predicted ℓ_{2,q}(ξ_q) | (a) | (b) | (c) | (d) | MMRV Table 1 |\n")
-        f.write("|---|---|---|---|---|---|---|---|---|\n")
+        f.write("| q | m·p | χ_m(p) | ord_p(r) | predicted ℓ_{2,q}(ξ_q) | (a) | (b) | (c) | (d) | MMRV Table 1 |\n")
+        f.write("|---|---|---|---|---|---|---|---|---|---|\n")
         f.write("\n".join(rows) + "\n\n")
-        f.write(f"Failures: {failures if failures else 'none'}.\n\n")
+        f.write(f"Failures: {failures if failures else 'none'}. "
+                f"Table 1 entries compared: {sum(1 for q in MMRV_TABLE1 if q <= qmax)}, all equal.\n\n"
+                if all(MMRV_TABLE1[q] == E.predicted_length(q) for q in MMRV_TABLE1 if q <= qmax) else
+                f"Failures: {failures}. Some Table 1 entries differ (see the last column).\n\n")
         f.write("## Exhaustive confirmation of the lower bound\n\n")
         f.write("For each q, every Hodge tuple of degree q of length L below the predicted value was enumerated. "
-                "Entries `L:N/K` give N sorted Hodge tuples of length L, of which K have odd λ. "
+                "Entries `L:N/K` give N sorted Hodge tuples of length L, of which K have odd parity invariant. "
                 "K = 0 throughout, independently of the proof.\n\n")
         f.write("| q | predicted | L:N/K |\n|---|---|---|\n" + "\n".join(ex_rows) + "\n\n")
         f.write("## Explicit shortest tuples τ_q (entries mod q)\n\n")

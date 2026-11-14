@@ -169,12 +169,12 @@ of the note says an odd λ needs length ≥ (p + 1)/2 + c_2(11) = 7, since 2 is 
 and length 9, |λ| = 1 is likewise excluded by length ≥ 10. ∎
 
 For d = 52 = 4·13 the χ_4-identity degenerates: χ_4(13) = 1 kills the Euler factor, and the identity only says
-n_13 = n_39 (`chi_4, d=52` in the results file). Theorem A(2) for d = 52 therefore rests on the exhaustive check.
+n_13 = n_39 (`chi_4, d=52` in the results file). For d = 52 the invariant is λ′ = λ_52, and Theorem A(2) for d = 52 follows from Theorem D′ of `docs/fermat/02-exceptional-lengths.md` (added 2026-11-14).
 
-**Corollary 4.3.** ℓ_{2,44}(ξ_44) = 7 and ℓ_{2,51}(ξ_51) = 10 (Theorem D of the note, which also covers every
-q = 4p with p ≡ 3 mod 4 and q = 3p with p ≡ 2 mod 3). ℓ_{2,52}(ξ_52) = 7 by computation: λ_52 is even on
-D_52 + S_52 (Theorem A(6)), Hodge tuples of length ≤ 6 have λ_52 = 0 (Theorem A(2)), and MMRV's Table 2 gives the
-upper bound 7. MMRV give only the upper bounds.
+**Corollary 4.3.** ℓ_{2,44}(ξ_44) = 7, ℓ_{2,51}(ξ_51) = 10 and ℓ_{2,52}(ξ_52) = 7 (Theorems D and D′ of the note,
+which cover every q = 4p and q = 3p; the case 52 = 4·13 is Theorem D′). The 52 case was first obtained by
+computation: λ_52 is even on D_52 + S_52 (Theorem A(6)), Hodge tuples of length ≤ 6 have λ_52 = 0 (Theorem A(2)),
+and MMRV's Table 2 gives the upper bound 7. MMRV give only the upper bounds.
 
 ## 5. What the known constructions can reach
 
