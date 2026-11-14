@@ -24,7 +24,7 @@ this repository does not prove it.
 
 ```bash
 pip install pytest
-python3 -m pytest -q tests      # 2026-11-14: 291 pass in about 25 s
+python3 -m pytest -q tests      # 2026-11-14: 297 pass in about 25 s
 ```
 
 The C helpers in `scripts/` give their build line in their header comment (`gcc -O2 ...`).
@@ -52,6 +52,12 @@ python-flint and cypari2 (`scripts/fermat_formal_module.py`, `scripts/fermat_spa
   ξ_q is congruent to a Weil class relative to a CM subfield E of Q(ζ_q) exactly when [Q(ζ_q) : E] is odd. Given
   Shioda's inductive structure, HC for degree 44 is equivalent to the algebraicity of the Weil classes, relative to
   Q(i, √−11), of the CM abelian 16-fold A′_(1,11,32) × E_i^6.
+- `docs/fermat/05-lifts.md` (Theorem L2, `hodge/lifts.py`): lifting ξ_q to degree 2q never brings an odd two-factor
+  q > 57 to length ≤ 6 (push-down to degree q plus the coset functionals of Theorem T). A MILP over multipliers
+  k ≤ 8 finds nothing of length ≤ 6 for any two-factor q between 65 and 100. So MMRV's method stops where it stands.
+  The published theorems already settle 24 degrees between 65 and 100 beyond MMRV's stated range
+  (`hodge/fermat_degrees.py`); the open degrees up to 100 are 44, 51, 52, 65, 68, 69, 76, 77, 85, 87, 88, 91, 92,
+  93, 95.
 - Everything is committed and pushed on `claude/serene-wright-s0osov`.
 
 ## Where the next steps are
@@ -70,5 +76,6 @@ his semi-regularity step is not yet available (dim X = 8 > 3).
 Smaller, well-defined next steps:
 - Run the lift test of Theorem W2 for the open degrees 65, 68, 69 (`scripts/weil_route.py`, PLAN), and find out
   whether the odd-index criterion of `docs/fermat/04` §5.1 holds for every q ∈ Q.
-- Extend Theorem T (coset parity invariants and half systems) to degrees with four P-factors (the smallest is 420)
-  and to lifts d = qk. That is what MMRV's Conjecture 4.1 needs. Theorem T settles only d = q.
+- Extend Theorem T (coset parity invariants and half systems) to degrees with four P-factors (the smallest is 420).
+  For lifts, Theorem L2 handles d = 2q (odd q); the open questions are an exact formula for ℓ_{2,2q} and a proof that
+  odd multipliers never shorten ξ_q (`docs/fermat/05-lifts.md` §5). Together these bear on MMRV's Conjecture 4.1.

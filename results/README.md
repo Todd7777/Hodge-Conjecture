@@ -160,6 +160,8 @@ Columns: `b_prim` = primitive middle Betti number; `dim Hdg` = dim_Q of rational
   q ≤ 420 (`python3 scripts/exceptional_lengths.py 420`).
 * `galois_obstruction.md` — the Galois field-of-definition test of `docs/fermat/03-galois-obstruction.md` for the
   exceptional tuples ξ_q, q < 70, in their own degree and multiples up to 572 (`python3 scripts/galois_obstruction.py`).
+* `lift_lengths.md` — `docs/fermat/05-lifts.md`: exact lengths of the lifts of ξ_q to degree 2q (with the bound of
+  Theorem L2) and to kq for k ≤ 8 (`python3 scripts/lift_lengths.py --multipliers`; scipy).
 * `fermat_degrees.md` — the Fermat degrees d ≤ 1000 already settled by MMRV's theorem combined with Aoki's
   generation theorem and lifting (`python3 scripts/fermat_degrees.py`).
 * `two_prime_lengths.md` — Theorem T of `docs/fermat/02-exceptional-lengths.md` §6: the exact length of ξ_q for every
