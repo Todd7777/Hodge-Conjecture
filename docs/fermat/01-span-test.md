@@ -7,7 +7,9 @@ known cycles cannot reach ξ_q in degree d: linear cycles, Aoki–Shioda (standa
 dividing d, the conjugates of the exceptional tuples already known to be algebraic, and every Hodge class
 coming from Fermat surfaces and fourfolds of degree d. These cycles may be combined by join, deletion,
 lift and permutation, and arbitrary Z-linear combinations are allowed. **This is a negative result about
-one method, not about the Hodge conjecture.**
+one method, not about the Hodge conjecture.** A stronger statement of a different kind, about fields of definition
+rather than lattices, is in `docs/fermat/03-galois-obstruction.md`. It excludes every cycle defined over the field of
+the known cycles, however constructed, in the degrees tested there.
 
 Behind the failure there is a simple invariant. For q = 44 (resp. 52, resp. 51), the number of entries
 of exact order 11 (resp. 13, resp. 17), taken mod 2, vanishes on every Hodge tuple of length ≤ 6 in
