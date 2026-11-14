@@ -289,7 +289,7 @@ length 7.
   92 → 12 in degree 276. **Question:** is ℓ_2(ξ_{4p}) = ℓ_{2,4p}(ξ_{4p}) for p ≡ 3 (mod 4)? A positive answer for p = 11
   would show that no combination of linear, standard, surface and fourfold classes of any degree can reach (H44),
   which `docs/fermat/01-span-test.md` verifies only for degrees ≤ 1000. The Galois obstruction
-  (`docs/fermat/03-galois-obstruction.md`, Theorem G) gives ℓ_{2,D}(ξ_44) ≥ 7 for every D = 44k with k ≤ 11, by a
+  (`docs/fermat/03-galois-obstruction.md`, Theorem G) gives ℓ_{2,D}(ξ_44) ≥ 7 for every D = 44k with k ≤ 13, by a
   different argument. A representative of length ≤ 6 in degree D would put the lift of ξ_44 in Λ_D, and hence its
   Galois character in E_D.
 * **Other degrees (open).** Theorems D and D′ cover every q ∈ Q with exactly two P-factors, one of which is 4 or 3. The
