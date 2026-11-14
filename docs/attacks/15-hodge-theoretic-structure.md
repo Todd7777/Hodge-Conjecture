@@ -88,7 +88,7 @@ $\mathcal G$ is formulated purely in terms of the VHS of models of $X$, their Ho
 **Proposition 1.3 (the converse is out of reach of Hodge theory).**
 
 * (i) Every Hodge class on an abelian variety has property $\mathcal G$.
-* (ii) Consequently, a proof of "$\mathcal G\Rightarrow$ algebraic" would prove HC for all abelian varieties, including CM abelian varieties and Weil classes in dimension $\ge6$, which are open (`docs/02` §2.2).
+* (ii) Consequently, a proof of "$\mathcal G\Rightarrow$ algebraic" would prove HC for all abelian varieties, including CM abelian varieties and Weil classes in dimension $\ge6$ (apart from Markman's split sixfolds, discriminant $-1$), which are open (`docs/02` §2.2).
 * (iii) The integral analogue is false: there are integral classes $\alpha\in H^{2p}(X,\mathbb Z)$ that are Hodge and have $\mathcal G$, yet are not integral combinations of subvarieties.
 
 *Proof.*
@@ -329,7 +329,7 @@ Such an embedding exists as a morphism of Hodge structures, because CM Hodge str
 
 ## 5. GAPS
 
-* **G1 (top target (a)).** Needed: $(\star)$ every class with property $\mathcal G$ (equivalently, every absolute Hodge class) is algebraic, together with Deligne's conjecture that Hodge classes are absolute Hodge. Not proved. By Proposition 1.3, $(\star)$ contains HC for all abelian varieties, including CM abelian varieties and Weil classes in dimension $\ge6$. What is missing is a cycle-producing mechanism, not Hodge-theoretic information.
+* **G1 (top target (a)).** Needed: $(\star)$ every class with property $\mathcal G$ (equivalently, every absolute Hodge class) is algebraic, together with Deligne's conjecture that Hodge classes are absolute Hodge. Not proved. By Proposition 1.3, $(\star)$ contains HC for all abelian varieties, including CM abelian varieties and Weil classes in dimension $\ge6$ (apart from Markman's split sixfolds). What is missing is a cycle-producing mechanism, not Hodge-theoretic information.
 * **G2 (target (b), isolated case).** Needed: HC for Hodge classes with isolated Hodge locus. By Remark 2.3 these classes sit exactly at zero-dimensional special subvarieties, which include the open CM abelian cases. Not proved.
 * **G3 ((c)/(d) at general special points).** Needed: statement (MISSING) of §4.5. Theorem D covers CM points lying on positive-dimensional special subvarieties that satisfy (H1)–(H3). It says nothing about CM points not on such subvarieties. In level $\ge3$ these are expected to be the majority (Baldi–Klingler–Ullmo).
 * **G4 (the hypotheses of Theorem D).**
