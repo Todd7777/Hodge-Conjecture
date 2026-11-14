@@ -29,7 +29,7 @@ Hodge loci, absolute Hodge classes, motives
 * C. Voisin, *Hodge loci and absolute Hodge classes*, Compositio Math. 143 (2007), 945–958.
 * B. Klingler, A. Otwinowska, D. Urbanik, *On the fields of definition of Hodge loci*, Ann. Sci. ENS 56 (2023), 1299–1312.
 * G. Baldi, B. Klingler, E. Ullmo, *On the distribution of the Hodge locus*, Invent. Math. (2023/24), arXiv:2107.08838.
-* P. Deligne (notes by J. Milne), *Hodge cycles on abelian varieties*, in LNM 900, Springer 1982, 9–100.
+* P. Deligne (notes by J. Milne), *Hodge cycles on abelian varieties*, in LNM 900, Springer 1982, 9–100. §7 (Fermat hypersurfaces, Prop. 7.2, Lemma 7.9, Prop. 7.10, Thm 7.15) read in Milne's re-typeset version (jmilne.org) for `docs/fermat/03-galois-obstruction.md`.
 * P. Deligne, *La conjecture de Weil pour les surfaces K3*, Invent. Math. 15 (1972), 206–226.
 * Y. André, *Pour une théorie inconditionnelle des motifs*, Publ. Math. IHES 83 (1996), 5–49.
 * U. Jannsen, *Motives, numerical equivalence, and semi-simplicity*, Invent. Math. 107 (1992), 447–452.
@@ -80,7 +80,7 @@ Hypersurfaces and Fermat varieties
 * T. Shioda, *Algebraic cycles on abelian varieties of Fermat type*, Math. Ann. 258 (1981), 65–80.
 * T. Shioda, *On the Picard number of a Fermat surface*, J. Fac. Sci. Univ. Tokyo 28 (1981), 725–734.
 * N. Aoki, T. Shioda, *Generators of the Néron–Severi group of a Fermat surface*, in Arithmetic and Geometry I, Progr. Math. 35 (1983), 1–12 (with a 2010 correction note).
-* N. Aoki, *On some arithmetic problems related to the Hodge cycles on the Fermat varieties*, Math. Ann. 266 (1983), 23–54.
+* N. Aoki, *On some arithmetic problems related to the Hodge cycles on the Fermat varieties*, Math. Ann. 266 (1983), 23–54. Introduction (statements of Theorems A–D) read in the GDZ scan, 2026-11-13.
 * N. Aoki, *Some new algebraic cycles on Fermat varieties*, J. Math. Soc. Japan 39 (1987), 385–396.
 * Z. Ran, *Cycles on Fermat hypersurfaces*, Compositio Math. 42 (1980), 121–142.
 * M. Schütt, T. Shioda, R. van Luijk, *Lines on Fermat surfaces*, J. Number Theory 130 (2010), 1939–1963.
@@ -89,6 +89,10 @@ Hypersurfaces and Fermat varieties
 * H. Movasati, R. Villaflor, *Integral Hodge conjecture for Fermat varieties*, arXiv:1711.02628 (2017); J. Symbolic Comput. (2021).
 * G. da Silva Jr., *Notes on the Hodge conjecture for Fermat varieties*, Experimental Results 2 (2021), e4; arXiv:2101.04739.
 * *The Hodge conjecture for Fermat fourfolds of odd degree at most 199*, arXiv:2608.18134 (Aug 2026).
-* M. Miranda, H. Movasati, (J.) Rufino, R. Villaflor, *Lengths of Hodge characters in Fermat varieties*, arXiv:2609.27301 (Sept 2026).
+* M. Miranda, H. Movasati, L. Rufino, R. Villaflor, *Lengths of Hodge characters in Fermat varieties*, arXiv:2609.27301 (Sept 2026).
+* A. Gallese, H. Goodson, D. Lombardo, *Monodromy groups and exceptional Hodge classes, I: Fermat Jacobians*, arXiv:2405.20394 (2024). Introduction and statements read.
+* P. Das, *Algebraic Gamma monomials and double coverings of cyclotomic fields*, Trans. AMS 352 (2000), 3557–3594. Abstract only.
+* G. W. Anderson, *Kronecker–Weber plus epsilon*, arXiv:math/0103241. Abstract only.
+* J. S. Milne, *Polarizations and Grothendieck's standard conjectures*, Ann. of Math. 155 (2002), 599–610. Remark 3.7 (the Hodge standard conjecture for Lefschetz classes, unconditional) read.
 
 Note on access: an earlier version of this note said the sandbox blocked arxiv.org. That was wrong: the built-in web-fetch tool could not reach arxiv.org, journal sites or the blog posts above, but arxiv.org is reachable from the sandbox with `curl` (for example `curl -sS https://arxiv.org/abs/2609.27301`). On 2026-11-07 the abstract of Miranda–Movasati–Rufino–Villaflor, arXiv:2609.27301 (23 Sept 2026), was checked this way; it confirms the statement in `02-known-cases.md`: the Hodge conjecture holds for all Fermat varieties of any dimension and degree less than 65 other than 44, 51 and 52, via Kang's theorem for Fermat fourfolds and a length-reduction algorithm. The other statements attributed to 2025–26 preprints were taken from search-engine excerpts of their abstracts and should still be checked against the originals.
