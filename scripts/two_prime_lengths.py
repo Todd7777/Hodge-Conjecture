@@ -5,8 +5,8 @@ For every q = p1 p2 (5 <= p1 < p2 primes) up to MAX (default 415, the range of M
   * the formula phi(q)/4 + c_{p1}(p2) + c_{p2}(p1);
   * the exact lower-bound checks (Proposition F1: the coset functionals are even on every standard tuple; Propositions
     F2 and F3: the explicit element xi'_q is a Hodge tuple, odd on every functional);
-  * the upper bound: a verified representative of that length (hodge/two_prime.py REPRESENTATIVES, q <= 300),
-    and MMRV's Table 1 value (Cited).
+  * the upper bound (Proposition F4): the tuple built from adapted half systems has exactly that length;
+  * for comparison, the MILP representatives (hodge/two_prime.py REPRESENTATIVES, q <= 300) and MMRV's Table 1.
 
     python3 scripts/two_prime_lengths.py [MAX] [--search] [OUTPUT]
 
@@ -57,11 +57,12 @@ def main():
              "*formula* = φ(q)/4 + c_{p1}(p2) + c_{p2}(p1), with c_r(p) = (p−1)/ord_p(r) if ord_p(r) is even, else 0. "
              "*F1* = every coset functional is even on every standard tuple (checked exactly; proved in general). "
              "*F2–F3* = the explicit element ξ′_q is a Hodge tuple and is odd on every functional (checked exactly; "
-             "proved in general). Together they give l_{2,q}(ξ_q) ≥ formula. *ours* = length of a verified "
-             "representative (q ≤ 300). *MMRV* = their Table 1 upper bound (Cited). Equality holds wherever either "
-             "upper bound equals the formula.", "",
-             "| q | p1 | p2 | φ(q)/4 | c_{p1}(p2) | c_{p2}(p1) | formula | F1 | F2–F3 | ours | MMRV | f_0(q) |",
-             "|---|---|---|---|---|---|---|---|---|---|---|---|"]
+             "proved in general). Together they give l_{2,q}(ξ_q) ≥ formula. *F4* = the tuple built from adapted half "
+             "systems (`two_prime.shortest_tuple`) is Hodge, has one entry in every coset support and has the formula "
+             "length, which gives equality (proved in general). *MILP* = length of the representative found earlier "
+             "by a MILP (q ≤ 300, verified exactly). *MMRV* = their Table 1 upper bound (Cited).", "",
+             "| q | p1 | p2 | φ(q)/4 | c_{p1}(p2) | c_{p2}(p1) | formula | F1 | F2–F3 | F4 | MILP | MMRV | f_0(q) |",
+             "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
     t0 = time.time()
     for q in qs:
         p1, p2 = T.factor(q)
@@ -71,6 +72,8 @@ def main():
         f1 = all(T.count(s, t, q) % 2 == 0 for _, s in funcs for t in std)
         xi = T.aoki_xi(q)
         f23 = F.is_hodge_tuple(xi, q) and all(T.count(s, xi, q) % 2 == 1 for _, s in funcs)
+        st = T.shortest_tuple(q)
+        f4 = F.is_hodge_tuple(st, q) and len(st) == bound and all(T.count(s, st, q) == 1 for _, s in funcs)
         rep = T.REPRESENTATIVES.get(q)
         if "--search" in sys.argv:
             rep = milp_representative(q)
@@ -81,11 +84,10 @@ def main():
             assert v["rep_hodge"] and v["rep_outside"] and v["odd_on_rep"] and v["kills_S"]
             ours = str(len(rep))
         mm = MMRV.get(q)
-        upper = min([x for x in (len(rep) if rep else None, mm) if x is not None], default=None)
-        exact = str(bound) if (f1 and f23 and upper == bound) else ("≥ " + str(bound) if f1 and f23 else "?")
+        exact = str(bound) if (f1 and f23 and f4) else "?"
         lines.append(f"| {q} | {p1} | {p2} | {(p1 - 1) * (p2 - 1) // 4} | {T.c_term(p1, p2)} | {T.c_term(p2, p1)} | "
-                     f"{bound} | {'yes' if f1 else 'NO'} | {'yes' if f23 else 'NO'} | {ours} | {mm if mm else ''} | "
-                     f"{exact} |")
+                     f"{bound} | {'yes' if f1 else 'NO'} | {'yes' if f23 else 'NO'} | {'yes' if f4 else 'NO'} | {ours} | "
+                     f"{mm if mm else ''} | {exact} |")
     lines.append("")
     with open(out, "w") as f:
         f.write("\n".join(lines))

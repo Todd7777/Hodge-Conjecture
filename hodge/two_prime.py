@@ -2,16 +2,17 @@
 
     f_0(q) = phi(q)/4 + c_{p1}(p2) + c_{p2}(p1),   c_r(p) = (p - 1)/ord_p(r) if ord_p(r) is even, else 0,
 
-the analogue of Theorems D and D' (docs/fermat/02-exceptional-lengths.md), where the factor 4 or 3 is replaced by an
-odd prime.  See docs/fermat/02 section 6.
+proved for all distinct odd primes p1, p2 in docs/fermat/02-exceptional-lengths.md section 6 (Theorem F); with 4 or 3 in
+place of p1 it is Theorems D and D'.
 
 The lower bound comes from mod-2 functionals that count the entries in one coset:
   * units in one coset of H = {t : t^2 = 1} (|H| = 4), giving phi(q)/4 cosets;
   * entries p1*y with y in one coset of <p1> in (Z/p2)^x, when ord_{p2}(p1) is even (then -1 is in <p1>), giving
     c_{p1}(p2) cosets; and symmetrically for p2.
-If every such functional vanishes mod 2 on D_q + S_q and is odd on one element outside D_q + S_q, then every element
-of that class has an odd, hence nonzero, coefficient sum on every coset, so its length is at least the number of
-cosets.  `verify` checks this exactly for a given q.  An explicit tuple of that length then gives equality.
+They vanish mod 2 on D_q + S_q (Proposition F1) and are odd on Aoki's xi_q, built from any half systems (`aoki_xi`,
+`xi_from_half_systems`; Propositions F2, F3).  So every element of the class has a nonzero coefficient sum on every
+coset, and its length is at least the number of cosets.  `shortest_tuple` (half systems adapted to the cycles,
+Proposition F4) attains it.  `verify` re-checks all of this exactly for a given q and representative.
 """
 
 from __future__ import annotations
@@ -211,3 +212,46 @@ def aoki_xi(q: int) -> Tuple[int, ...]:
             if w not in hset:                     # p^{-1} y in -hs: a sign change
                 out.append(a * w % q)
     return tuple(sorted(out))
+
+
+def adapted_half_system(p: int, r: int) -> List[int]:
+    """A half system mod p adapted to multiplication by r^{-1}: on each cycle of <r> of even length o, the half-cycle
+    w_0, w_1, ..., w_{o/2 - 1} (w_k = r^{-k} w_0); for cycles of odd length (then -C != C), all of C and nothing of -C."""
+    inv = pow(r, -1, p)
+    o = mult_order(r, p)
+    chosen, seen = [], set()
+    for w0 in range(1, p):
+        if w0 in seen:
+            continue
+        cyc = [w0]
+        while len(cyc) < o:
+            cyc.append(cyc[-1] * inv % p)
+        seen |= set(cyc)
+        if o % 2 == 0:
+            chosen += cyc[: o // 2]
+        else:
+            seen |= {(-w) % p for w in cyc}          # the cycle -C is left out entirely
+            chosen += cyc
+    assert len(chosen) == (p - 1) // 2 and len({x for c in chosen for x in (c, p - c)}) == p - 1
+    return sorted(chosen)
+
+
+def xi_from_half_systems(q: int, h1: Sequence[int], h2: Sequence[int]) -> Tuple[int, ...]:
+    """The element xi'_q built from arbitrary half systems h1 mod p1 and h2 mod p2 (section 6: Propositions F2 and F3
+    hold for every choice)."""
+    p1, p2 = factor(q)
+    out = [next(x for x in range(1, q) if x % p1 == a and x % p2 == b) for a in h1 for b in h2]
+    for (a, b, hb) in ((p1, p2, h2), (p2, p1, h1)):
+        inv = pow(a, -1, b)
+        hset = set(hb)
+        for y in hb:
+            w = inv * y % b
+            if w not in hset:
+                out.append(a * w % q)
+    return tuple(sorted(out))
+
+
+def shortest_tuple(q: int) -> Tuple[int, ...]:
+    """An explicit shortest representative of xi_q (Theorem F): xi'_q with half systems adapted to the cycles."""
+    p1, p2 = factor(q)
+    return xi_from_half_systems(q, adapted_half_system(p1, p2), adapted_half_system(p2, p1))

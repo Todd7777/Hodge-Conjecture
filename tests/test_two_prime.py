@@ -1,5 +1,5 @@
-"""Tests for hodge/two_prime.py: Theorem F of docs/fermat/02-exceptional-lengths.md section 6 (the lower bound for every
-q = p1 p2) and the exact values f_0(q) = phi(q)/4 + c_{p1}(p2) + c_{p2}(p1) for q <= 300."""
+"""Tests for hodge/two_prime.py: Theorem F of docs/fermat/02-exceptional-lengths.md section 6,
+f_0(q) = phi(q)/4 + c_{p1}(p2) + c_{p2}(p1) for every q = p1 p2 (two distinct odd primes)."""
 import cmath
 
 from hodge import exceptional_length as EL
@@ -50,6 +50,34 @@ def test_exceptional_element():
         xi = T.aoki_xi(q)
         assert F.is_hodge_tuple(xi, q), q
         assert all(T.count(s, xi, q) % 2 == 1 for _, s in T.coset_functionals(q)), q
+
+
+def test_shortest_tuple_construction():
+    # Proposition F4 and Theorem F: adapted half systems give a Hodge tuple of exactly the formula length, with one
+    # entry in each coset support and nothing else
+    for q in two_prime_degrees(1200, pmin=3):
+        t = T.shortest_tuple(q)
+        assert F.is_hodge_tuple(t, q), q
+        assert len(t) == T.predicted_length(q), q
+        assert all(T.count(s, t, q) == 1 for _, s in T.coset_functionals(q)), q
+
+
+def test_any_half_systems():
+    # Propositions F2, F3 hold for every choice of half systems (random choices)
+    import random
+    rnd = random.Random(7)
+    for q in (35, 65, 91, 143, 221, 323):
+        p1, p2 = T.factor(q)
+        for _ in range(5):
+            h1 = sorted(x if rnd.random() < 0.5 else p1 - x for x in range(1, (p1 + 1) // 2))
+            h2 = sorted(x if rnd.random() < 0.5 else p2 - x for x in range(1, (p2 + 1) // 2))
+            xi = T.xi_from_half_systems(q, h1, h2)
+            assert F.is_hodge_tuple(xi, q)
+            assert all(T.count(s, xi, q) % 2 == 1 for _, s in T.coset_functionals(q))
+
+
+def test_shortest_65_matches_mmrv_list():
+    assert T.shortest_tuple(65) == (1, 2, 6, 16, 17, 21, 27, 32, 41, 42, 45, 47, 52, 55, 56, 60)
 
 
 def test_xi_35_matches_mmrv():

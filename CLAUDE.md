@@ -24,7 +24,7 @@ this repository does not prove it.
 
 ```bash
 pip install pytest
-python3 -m pytest -q tests      # 2026-11-14: 284 pass in about 25 s
+python3 -m pytest -q tests      # 2026-11-14: 287 pass in about 25 s
 ```
 
 The C helpers in `scripts/` give their build line in their header comment (`gcc -O2 ...`).
@@ -44,8 +44,9 @@ python-flint and cypari2 (`scripts/fermat_formal_module.py`, `scripts/fermat_spa
   for every known construction). They are statements about what a proof of the open cases must contain, not new
   cases of HC.
 - `docs/fermat/02-exceptional-lengths.md` §6 (Theorem F, `hodge/two_prime.py`): for q = p₁p₂ (two odd primes),
-  ℓ_{2,q}(ξ_q) ≥ φ(q)/4 + c_{p₁}(p₂) + c_{p₂}(p₁) is proved for every q, with equality for all 47 such q ≤ 415. The
-  general upper bound (an explicit tuple with one entry per coset) is open (Conjecture F).
+  ℓ_{2,q}(ξ_q) = φ(q)/4 + c_{p₁}(p₂) + c_{p₂}(p₁), proved for every q (coset parity invariants; Aoki's ξ_q built from
+  adapted half systems). With Theorems D and D′ this gives the exact length of ξ_q for every two-factor q ∈ Q
+  (Corollary F′).
 - `docs/fermat/04-weil-route.md` (Theorems W1–W3, `hodge/weil.py`): Markman's theorems on Weil classes do not reach
   ξ_44, ξ_51, ξ_52 through abelian varieties built from Fermat Jacobians, in degree q or in the lifts up to 572.
   ξ_q is congruent to a Weil class relative to a CM subfield E of Q(ζ_q) exactly when [Q(ζ_q) : E] is odd. Given
