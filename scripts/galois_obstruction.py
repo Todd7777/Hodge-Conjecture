@@ -7,8 +7,8 @@ For each (q, D): is the Galois character of lift_D(xi_q) in the group generated 
 Characters are compared at the first 24 primes l = 1 (mod 2D), with exact (Stickelberger) values.
 
 Needs numpy and a C compiler (for scripts/fermat_hodge_tuples.c).  Usage:
-    python3 scripts/galois_obstruction.py [MAX_DEGREE] [OUTPUT]       (defaults: 484, results/galois_obstruction.md)
-The full run takes about 10 minutes on one core.
+    python3 scripts/galois_obstruction.py [MAX_DEGREE] [OUTPUT]       (defaults: 572, results/galois_obstruction.md)
+The full run takes about 25 minutes on one core (degrees 528 and 572 alone take about 15).
 """
 import os
 import subprocess
@@ -38,7 +38,7 @@ STATUS = {12: "algebraic", 15: "algebraic", 20: "algebraic", 21: "algebraic", 28
           57: "algebraic (via degree 114)", 44: "open", 51: "open", 52: "open", 65: "open (q > 64)",
           68: "open (q > 64)", 69: "open (q > 64)"}
 PLAN = {12: [12], 15: [15], 20: [20], 21: [21], 28: [28], 33: [33, 66], 35: [35, 70, 105, 140], 39: [39, 78],
-        55: [55, 110], 57: [57, 114], 44: [44 * k for k in range(1, 12)], 51: [51, 102, 153, 204],
+        55: [55, 110], 57: [57, 114], 44: [44 * k for k in range(1, 14)], 51: [51, 102, 153, 204],
         52: [52, 104, 156, 208, 260], 65: [65, 130, 195], 68: [68, 136, 204], 69: [69, 138, 207]}
 
 
@@ -102,7 +102,7 @@ def test(q, D, exe, nprimes=24):
 
 
 def main():
-    dmax = int(sys.argv[1]) if len(sys.argv) > 1 else 484
+    dmax = int(sys.argv[1]) if len(sys.argv) > 1 else 572
     out = sys.argv[2] if len(sys.argv) > 2 else os.path.join(ROOT, "results", "galois_obstruction.md")
     rows = []
     with tempfile.TemporaryDirectory() as tmp:

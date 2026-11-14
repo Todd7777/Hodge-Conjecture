@@ -303,7 +303,7 @@ length 7.
 
 ```bash
 python3 -m pytest -q tests/test_exceptional_length.py tests/test_formal_module.py
-python3 scripts/exceptional_lengths.py 420        # writes results/exceptional_lengths.md (about 15 s)
+python3 scripts/exceptional_lengths.py 420        # writes results/exceptional_lengths.md (about 25 s)
 ```
 
 The code is `hodge/exceptional_length.py` and `hodge/formal_module.py`, pure Python with exact integers. It shares no

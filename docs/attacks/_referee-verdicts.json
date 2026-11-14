@@ -1,0 +1,275 @@
+[
+ {
+  "file": "docs/attacks/01-semiregularity.md",
+  "overall": "major",
+  "report": "docs/attacks/referee-reports/2026-11-13-01_04_05.md",
+  "wrong_claims": [
+   "Section 1 (BEK): the equivalence is stated without BEK's hypothesis (CK)^i of the generic fibre for all even i (BEK 2014, Thm 1.2; Rem 1.3 removes it only for k algebraic over Q), and is applied with k = C",
+   "Section 3 Step 4: 'BEK only control ch(xi_m) on X_c, not even xi_m on X_{m-1}' -- BEK's lift is a compatible element of (lim K_0(X_m)) tensor Q",
+   "Section 4 remark (1): 'BF deform sheaves and need all ch_k to stay Hodge' -- BF 2003 Thm 5.1 needs only the components in I, with injectivity of the I-part of sigma",
+   "Section 6 last sentence: Theorem D is said to use no unverified input, but its proof uses (BEK)",
+   "Section 7 Kahler test: the Weil classes in Voisin's family are algebraic at its algebraic members (Markman 2025), contrary to 'at any point of the family'",
+   "Status and Section 5: Theorem C is presented as believed new; it is the expectation stated by Markman (arXiv:2502.03415v2, Rem. 8.3.6), proved there under extra hypotheses"
+  ],
+  "gaps": [
+   "Section 3 Step 2 and Theorem D(1),(3) (Lambda^form = Lambda^Hdg) depend on (CK)^i of the generic fibre, open for general families",
+   "Theorem C and Corollary C.2(a) depend on Hypothesis (H); Buchweitz-Flenner 2008 was not checked",
+   "Theorem D: the flat continuation needs a finite etale cover killing monodromy; handled only in a parenthesis",
+   "G1 (algebraization of formal K-theory lifts) is BEK Conjecture 1.4 and remains open; BEK App. B shows K_0 algebraization fails in general",
+   "Status labels: Theorem D is a reformulation; Proposition 3.1 is BEK App. A; Theorem B is BF 2003 Thm 5.1 plus Corollary A.1 (known, not new)"
+  ]
+ },
+ {
+  "file": "docs/attacks/04-derived-K3.md",
+  "overall": "major",
+  "report": "docs/attacks/referee-reports/2026-11-13-01_04_05.md",
+  "wrong_claims": [
+   "Header and Sections 4-5: approvals attributed to 'three round-1 referees' / 'all referees' whose reports are not in the repository; docs/attacks/README.md says those referees failed to run",
+   "Introduction: Sections 7, 8, 9, the references and the final table are announced but missing; the file ends after Section 6",
+   "G1: 'The Kuga-Satake correspondence is known to be algebraic only on special families with rho=16' is false as stated (Morrison rho>=19; Floccari 2025 Thm 5.11 covers every K3 with T_Q embedding in U^3 + <-m>, including all rho>=17; Bolognesi-Laterveer 9-dimensional families)",
+   "Section 4.4 omits Floccari 2025 Thms 1.2 and 5.11 (HC for all powers), which cover every RM surface with rho=16 and split C^+(T)",
+   "Section 4.4 item 2: '15-nodal quartics in P^4' -- Varesco's family is 15-nodal K3 surfaces in P^4",
+   "Remark 4.3: Huybrechts Rem. 1.3 only says single twisted Fourier-Mukai partners are not expected, without an example; 'In general they are not' overstates it"
+  ],
+  "gaps": [
+   "No docs/03 Section 3.4 checklist and no bibliography in the current version (both existed in commit 3ce8e76; the old bibliography also misattributed arXiv:2210.02948 to Varesco-Voisin)",
+   "G3: existence of RM by Q(sqrt 6) with a symplectic S_3 action is unverified; note that 2 and 3 in Lambda(S) already make sqrt 6 algebraic",
+   "Top target (E^alg = E for RM, e.g. any E of odd degree) remains open; the 'not covered' list is a literature search, not a theorem",
+   "Status: most results are known (Varesco 2023, van Geemen 2008, Buskin, Huybrechts); the new content is elementary"
+  ]
+ },
+ {
+  "file": "docs/attacks/05-kuga-satake.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-01_04_05.md",
+  "wrong_claims": [
+   "[BEK14] reference: the journal is Algebraic Geometry 1 (2014) 290-310, not Algebra & Number Theory 8",
+   "Summary and claims table: 'C^+(T) split iff KS(T) ~ B^4' -- only split => B^4 is proved; the converse probably fails for RM surfaces (Schlickewei 2010, Thm 1)",
+   "Checklist: the top target would give the K3 cases of problem P2 only for multiquadratic E, not in general",
+   "Section 2.4(i) and G2: Buchweitz-Flenner need only the I-components of ch to stay Hodge, with I-semiregularity, not the entire Chern character"
+  ],
+  "gaps": [
+   "G1: the top target (VHC for the Kuga-Satake family) is open; Theorem A and Corollaries A.1-A.2 are standard reformulations",
+   "Corollary B.1 is Floccari 2025 Thm 5.11 plus Theorem B; Theorem B is elementary quadratic-form theory, so novelty is limited to stating the boundary",
+   "The 'first open case' (class K) claim depends on the completeness of the literature search; heuristic",
+   "Theorem B(5)'s Weil-type identification and the list of hyper-Kahler types without odd cohomology are quoted, not proved"
+  ]
+ },
+ {
+  "file": "docs/attacks/16-formal-reduction.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-02_13_16.md",
+  "wrong_claims": [],
+  "gaps": [
+   "Theorem A (HC <=> HC(Qbar) and (G_0)) is correct but known in substance: (=>) is Voisin 2007, Introduction para. 1; (<=) is Voisin 2007 Prop. 0.7 = Charles-Schnell Thm 50 applied at a Qbar-generic point, plus Prop. 1.2. Credit these and Charles-Schnell Cor. 49.",
+   "Prop. 1.2 (slicing) is correct and elementary; it is the single-class analogue of KOU's corollary reducing the field-of-definition conjecture to special points. 'Believed new in this form' should be replaced by this attribution.",
+   "Lemma 1.1 and Prop. 1.3 are labelled 'proved here (standard)' but are known (Voisin 2007 proofs of Prop. 0.2/0.7; Voisin 2007 Introduction).",
+   "Remark 1.5(1) overstated: Prop. 1.3 shows only that (G_0) is necessary for HC, not that 'nothing weaker than (G_0) can work'.",
+   "Theorem B(iii) is a metamathematical statement about all possible derivations, not a theorem; its precise content is Prop. 2.2(i). Relabel as a heuristic remark.",
+   "Cor. 4.4(i) and Remark 4.5(3) undersell: RM classes are symmetric (self-adjoint endomorphisms), so they lie in Sym^2 H^2(S), a summand of H^4(S^[2]); HC for the hyper-Kahler fourfold S^[2] already implies P2.",
+   "Remark 4.5(1) [unchecked] can be upgraded to Cited: Floccari-Fu-Zhang, arXiv:1911.06572 (abstract).",
+   "(An1)-(An3), (GIC) numbering and the exact dCM formula were checked against abstracts or memory only (G5 in the file); not re-verified here beyond the Euler-characteristic check."
+  ]
+ },
+ {
+  "file": "docs/attacks/02-motivic.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-02_13_16.md",
+  "wrong_claims": [
+   "Gap G1, 'Why I cannot prove it': 'When T(Z)!=0 it is not in the span of products of divisor classes, because it is non-zero on T(S)' is an invalid inference. For an abelian threefold Z and a smooth ample surface S in Z, the divisor class D in H^1(S)xH^1(Z) induced by the polarization gives D.D in H^2(S)xH^2(Z), which acts injectively on iota^*H^2(Z), so it is non-zero on iota^*T(Z) inside T(S)."
+  ],
+  "gaps": [
+   "Remark 5.2 is a conditional speculation (premise about the Abdulali-Andre proof unchecked); it must carry the Conjecture/Heuristic label.",
+   "Prop. 3.3 is trivial (hypothesis (F) is applied to blow-ups of base loci of pencils), so 'believed new as formulated' is empty.",
+   "(I3) Kleiman product stability and (I4) Tankeev's kappa<3 theorem are used from secondary sources; (I4) unverifiable here. Example 2.7's 'outside Tankeev' depends on it.",
+   "Novelty of Theorem A (domination) and Theorem B (CH_0 supported on a surface, e.g. rationally connected fourfolds) not checked against Arapura 2006 and Vial's papers on varieties with small Chow groups.",
+   "Section 5.1(v) is confirmed by Milne's abstract (arXiv:2010.08857); the cited theorem number '4' is unchecked."
+  ]
+ },
+ {
+  "file": "docs/attacks/13-lefschetz-induction.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-02_13_16.md",
+  "wrong_claims": [],
+  "gaps": [
+   "Bold 'rigorous form of the induction cannot close' after Prop. 5.4 is overstated: Prop. 5.4 is about very general Nori-ample sections only, and Section 4 closes the induction for the Fermat cubic with special singular sections.",
+   "Props. 5.2 and 5.4 depend on Nori's connectivity theorem in the stated form, checked only against secondary sources (labelled in the file as G3).",
+   "Prop. 5.4 'Reading' leaves as an expectation a standard fact: for sufficiently ample L, Hdg^p(Z) = j^*Hdg^p(M) for very general Z (finite-index monodromy invariance plus the Kazhdan-Margulis dichotomy of Weil II 4.4). With it, Prop. 5.4 reads HC(Z,p) for very general Z <=> HC(M,p).",
+   "G5 (b_4(S_3)=6) can be closed: Bl_5 P^3 -> S_3 is a small resolution with exceptional set a union of P^1's, so H^4(S_3) = H^4(Bl_5 P^3) has rank 6.",
+   "Example 5.3 independently reproduced: ranks 21; 6 and 6 with h^2; 21 for four Segre sections."
+  ]
+ },
+ {
+  "file": "docs/attacks/03-hodge-loci-arithmetic.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-03_08_09.md",
+  "wrong_claims": [
+   "Sentence after Theorem 4.2: 'So Theorem 4.2 contradicts nothing conjectured.' False relative to Klingler-Otwinowska-Urbanik arXiv:2010.03359v1: their Def. 1.4 ('VHS defined over L' = S, V, F, nabla defined over L) is exactly the class C_dR, and Thm 4.2(iii) gives a transcendental special point for such a VHS over Q, contradicting the literal KOU Conjecture 1.5(a) (Thm 4.2(iv) gives a positive-dimensional, non-weakly-non-factor instance)."
+  ],
+  "gaps": [
+   "Lemma 2.3 step 1: needs the Riemann existence theorem (SGA1 XII) to algebraize the finite topological cover before (I4) descends it.",
+   "Corollary 4.3 is a meta-mathematical heuristic ('no proof can use only ...'), not a theorem; relabel.",
+   "Remark 3.4(a): 'same proofs over any countable algebraically closed field' not written out.",
+   "Theorem number [V07, Thm 0.5] probably wrong (KOU cite the constant-sub-VHS criterion as [V07, Thm 0.6]); whether Voisin's proof uses only C_dR is unverified.",
+   "Novelty of Prop. 3.1 and Theorem B (FD_0 <=> CI) unverified; compare Voisin 2007 Lemma 1.4 (quoted in KOU Remark 1.3).",
+   "Lemma 2.1 is the geometric analogue of KOU Cor. 1.14, not literally contained in it (KOU state it for the de Rham class, where both sides fail).",
+   "Prop. 4.1 is a known unlikely-intersection phenomenon; valid as a correction of docs/03 C3 but not new.",
+   "Exact BKU definition of atypicality not re-read (codimension form used is consistent with BKU)."
+  ]
+ },
+ {
+  "file": "docs/attacks/08-p-adic.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-03_08_09.md",
+  "wrong_claims": [
+   "OVERSTATED (status item 5 and section 6): 'every p-adic method is confined to Hodge classes whose de Rham component is Qbar-rational' -- proved only for the constructions of this file; by Cor. 2.3 the condition is necessary for algebraicity anyway.",
+   "OVERSTATED (status item 1): Theorem A 'isolates exactly what the chain needs' -- only (dR_v), (Rat_v) and the pVHC instance are shown necessary; (T_v), (D_v) are not."
+  ],
+  "gaps": [
+   "Hypothesis (Cont_0) (p-adic continuity of K-theory of smooth projective W(k)-schemes) is open (CMM: affine case only) and far stronger than presented: with (D) and BEK it implies the p-adic variational Hodge conjecture (Cor. B.1); with Milne's rationality conjecture it implies HC for all CM abelian varieties (Cor. C.2) and hence, by Milne [Mi1, Thm 3.4], the Tate conjecture for abelian varieties over finite fields. Theorems B, C and Cor. B.1, B.3, C.1, C.2 all rest on it.",
+   "Novelty of Theorems B and C unverified (BEK introduction, Morrow [Mo1],[Mo2], Emerton's p-adic VHC); Theorem A(i) and the positivity trick are standard.",
+   "Inputs not verified in the exact form used: BEK bound p > d+6 and theorem numbering (AMMN generalize BEK), Blasius (I5), Lazda-Pal attribution (I8), normalization of the p-part of Milne's conjecture (I9), Shimura-Taniyama reference, Berthelot-Ogus numbering (I11).",
+   "Theorem A carries an unnecessary hypothesis p > d+6.",
+   "Prop. 6.2 is trivial/known; Prop. 3.1, Lemma 4.1, Lemma 5.0, Prop. 5.2 are known in substance."
+  ]
+ },
+ {
+  "file": "docs/attacks/09-K2-exponential.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-03_08_09.md",
+  "wrong_claims": [
+   "Section 5: '[CTV] deduce from the Bloch-Kato conjecture that the Zariski sheaf H^4(Z) is torsion-free ... I quote this as an expectation' -- Bloch-Kato is a theorem (Rost-Voevodsky), so [CTV, Thm 3.1] is unconditional.",
+   "OVERSTATED (section 5): 'The literal claim \"no exact sequence of Lefschetz type exists in degree 4\" is false: Theorem A is such a sequence' -- the cokernel sequence exists trivially; Theorem A only identifies its third term."
+  ],
+  "gaps": [
+   "Theorem C(ii) depends on (I12)(V2) in the strong form 'every proper analytic subset of Voisin's torus is finite'; derivation from (V1), NS(T)=0 and simplicity is not given and NS(T)=0/simplicity are not checked against [V02].",
+   "Theorem B is a tautological reformulation of Theorem A(i) (GAGA_4 is defined to be that statement); labels should say so.",
+   "Theorem D yields no new case (G4); the recovery of Zucker's theorem (Remark 3) and the uniformity statement (G3) are not written out.",
+   "Theorem numbers in Deligne's Theorie de Hodge II and other inputs quoted from memory (G5).",
+   "Most results (Prop. 2.1, 2.2, Lemma 2.3, Prop. 3.1, Theorem A, Cor. A.1, A.2, Theorem D) are classical or known in substance."
+  ]
+ },
+ {
+  "file": "docs/attacks/06-weil-classes.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-06_11_12.md",
+  "wrong_claims": [],
+  "gaps": [
+   "Novelty/labels: Lemma 1.2 is Landherr + Brosnan (arXiv:2609.14169, Lemma 9, Prop. 4); Theorem A is Schoen's product argument (cited by Markman as [S2, Prop. 10], arXiv:2502.03415 Cor. 1.6.1) for general n; Theorem B types I/II known in substance",
+   "Cor. C.3: existence of members with End^0 = D (Shimura 1963) quoted from memory",
+   "Quotes attributed to Voisin's Bourbaki expose [Voi26, Thm 1.4] and to Mostaed [Mos26] ('remains completely open') are unverified",
+   "Lemma 2.5 interpretation overstated: only box objects with ch in Q[theta]+W_K are excluded",
+   "Hypothesis S / Fact 2.4: Markman's deformation mechanism cited, not re-verified (acknowledged)",
+   "Cor. C.4 'new non-split cases': novelty not checked against Abdulali / van Geemen-Verra"
+  ]
+ },
+ {
+  "file": "docs/attacks/11-mumford-tate-powers.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-06_11_12.md",
+  "wrong_claims": [
+   "Remark 1.3: with S = {polarization, End^0} alone, G_S is not L(A); the ring structure ([pt], diagonal, small diagonal) must be added",
+   "Remark 4.1 / G1: [Lom01] and [Var24] cited as establishing KS(S); they do not (Lombardo identifies KS varieties, Varesco assumes KS); HC for powers is Varesco Thm 0.2 + Floccari's KS algebraicity, not Floccari alone"
+  ],
+  "gaps": [
+   "Prop. 2.5 and checklist item 1 claim o_n(X) is absolute Hodge, but only the de Rham component is treated; agreement of the l-adic signs u_l = +-1 with the de Rham sign is not proved (proved: de Rham-absolute / weakly absolute in Voisin's sense)",
+   "G7: unverified secondary-report claim that an OpenAI manuscript on products of K3 surfaces was withdrawn on 7 Oct 2026; conflicts with docs/02 (manuscript on CM abelian varieties, [unverified]); should be removed or marked",
+   "(KS2) stated for c in C^+ but applied to omega, which is odd for odd r (e.g. r = 21); harmless since only [L_omega, L_J] = 0 is used",
+   "Prop. 6.2 step (3)=>(4) is Varesco Prop. 2.22; novelty claim in G7 should exclude it",
+   "Theorem B novelty (L_omega route) plausible but not established; no new unconditional case"
+  ]
+ },
+ {
+  "file": "docs/attacks/12-counterexample.md",
+  "overall": "major",
+  "report": "docs/attacks/referee-reports/2026-11-13-06_11_12.md",
+  "wrong_claims": [
+   "K1 'in particular sixfolds of discriminant +1', 'K1 for n=3 is disc=+1', Cor. B.1 'n=3 and disc(A)=+1', the 0-section B.2 bullet, and Statement S: with the file's own normalization disc = det H and signature (n,n), every Weil sixfold has disc < 0, so these families are empty and Statement S is vacuous as written (intended: non-split, disc != -1)",
+   "E4(c), 0-section and Remarks E5.1-E5.2 present the sign condition (-1)^n int w_0^2 > 0 as an HC test whose failure would disprove HC; it holds unconditionally because W_0 consists of primitive Lefschetz classes (Milne, Ann. Math. 155 (2002), Remark 3.7), so N(lambda_v) is always a norm",
+   "G1 'found none in the literature' and the 'new formulation' label for E4: the comparison of the two Q-structures is Milne's (weak) rationality conjecture (Milne 2009, Conj. 4.1, 4.4, Remarks 4.6-4.7); E4 is its Weil-class supersingular instance",
+   "Theorem B presented as giving more than arXiv:2609.14169 ('also gives the exact Witt index'); Brosnan's Lemma 9 already gives H = H^{n-1} + X; D4 labelled a new corollary though it is a one-line application of Principle B"
+  ],
+  "gaps": [
+   "Cor. A.2 requires smooth components Y of the special fibre (or pull-back to resolutions); as written 'alpha|_Y algebraic' is undefined for singular Y",
+   "Cor. A.4 and B.2 conditional on G3 (existence of toric-bundle models with smooth total space), acknowledged",
+   "Heading 'Theorem A (specialization is rationally void)' overstates a reduction to HC on components (G2)",
+   "Corrected Statement S (non-split) is a special case of the negation of Milne's rationality conjecture; existence of supersingular places for a specific non-split CM sixfold not checked",
+   "Theorem numbers in [De1], [De2], [Sc] and [Mi1, Thm 2] quoted from memory (acknowledged)"
+  ]
+ },
+ {
+  "file": "docs/attacks/07-tropical-degeneration.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-07_10_14_15.md",
+  "wrong_claims": [
+   "Prop. 5.1(2), Prop. 5.2, Remark 4.7 (last sentence), Remark 5.3, Section 5 heading, Section 6 bullet, G4, G5, status bullet and results table: 'Weil sixfolds of discriminant +1' is an empty case, since with delta = det h a signature (3,3) form has delta < 0 and N(K*) > 0; the proofs establish the intended statements for the non-split case delta != -1 (under the renormalization (-1)^n det h, +1 would be the split case and contradict toric rank <= 2)",
+   "Status bullet and Remark 5.3: the Weil classes 'pass every limit test'; only the graded Gr^W test is shown",
+   "Section 6: the tropical Hodge ring equals that of 'the generic member'; Prop. 4.4 needs a monodromy cone open in n_R and compares with a very general member of the full Sp or split-SU family",
+   "Section 6: the limit MHS carries all of ker Gr N in Gr^W_{2p} as Hodge classes; true only when the graded pieces are Hodge-Tate",
+   "Reference [KLS]: arXiv:1901.01896 is Kerr-Laza, 'Hodge theory of degenerations, (I): consequences of the decomposition theorem'",
+   "Theorem A presented as an exact lifting criterion with a new formulation; (Comp) is generic algebraicity restated and the argument is standard spreading out"
+  ],
+  "gaps": [
+   "G1: lifting step, at least as strong as VHC over curves (Prop. 3.3)",
+   "G3: (H-trop) unproved, so Cor. 4.6 and the n<=3 part of Remark 4.7 are conditional",
+   "G2: tropical Weil classes for n >= 4",
+   "G4: existence and semistable models of degenerations with dim_K W_0 = 2 for non-split Weil sixfolds (Brosnan section 7 only suggests existence)",
+   "Lemma 4.2 is a sketch relying on Mikhalkin-Zharkov conventions",
+   "Cor. 4.6 (Sp): realization of theta^p by stable intersections of tropical theta divisors not proved",
+   "Theorem D's hypothesis (b) fails for the abelian-surface strata relevant to Section 5"
+  ]
+ },
+ {
+  "file": "docs/attacks/10-hypersurfaces-jacobian.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-07_10_14_15.md",
+  "wrong_claims": [],
+  "gaps": [
+   "(G1) open off the non-explicit closed set E, so Theorem C says little away from the Fermat point",
+   "(G2) absence of components of codimension 20-31 not proved",
+   "(G3) VHC along the non-linear families F_1, F_2 through the Fermat point",
+   "(G4) true codimension of the Hodge loci of fake planes",
+   "Attribution: the rk >= 19 half of Theorem 5.3 on a Zariski neighbourhood of the Fermat point is in Movasati's abstract (arXiv:1411.1766); Theorem C through F_0 is Duque Franco-Villaflor (arXiv:2112.14818)",
+   "The two [BFLV] statements (1001 standard characters; integral HC open for the Fermat sextic) are not confirmed by the arXiv:2401.00470 abstract; 1001 itself was recomputed and is right",
+   "Novelty of Prop. 3.1, Prop. 3.2, Theorem A and the equality half of Theorem 5.3 unverified"
+  ]
+ },
+ {
+  "file": "docs/attacks/14-lawson-chow.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-07_10_14_15.md",
+  "wrong_claims": [
+   "Section 2.3 item 3: Suslin's conjecture with finite coefficients is said both to follow from the Beilinson-Lichtenbaum theorem and to imply FM [Hu06]; together these would make FM a theorem, contradicting Section 7. Hu's implication needs a stronger, open form",
+   "Status bullet and Section 4.3 item 4: 'Weil classes on sixfolds of discriminant +1' is an empty case (disc = det H < 0 for every Weil sixfold); the open case is non-split, disc != -1",
+   "Section 7: [CH19] described as covering products of a curve and a surface; its abstract says the product of an elliptic curve with certain threefolds"
+  ],
+  "gaps": [
+   "GAP 1: statement H(X), equivalent to HC(X,2), not proved for any open case",
+   "Hypothesis FMC unverified, so Theorem B' is conditional",
+   "(L4), (L5), (L7) taken from secondary sources; Theorem A depends on (L5)",
+   "Remark 4.2: compatibility of the cycle map with the product by [P^1] unverified",
+   "Reading of [Te05, Cor. 5.1] in Remark 3.5 unverified",
+   "Attribution of the strong FM conjecture to Friedlander-Walker unverified",
+   "Theorem A, Theorem B, Cor. 2.3 are classical in substance (labels should say so)"
+  ]
+ },
+ {
+  "file": "docs/attacks/15-hodge-theoretic-structure.md",
+  "overall": "minor",
+  "report": "docs/attacks/referee-reports/2026-11-13-07_10_14_15.md",
+  "wrong_claims": [
+   "Prop. 4.2 and its table row: (CM2) claimed in full, but the clause 'MT(V_{sigma s}) isogenous to T' is not proved (only MT(V_{sigma s}) inside Stab(sigma t_i), a Q-form of sigma(T_C))",
+   "Table in Section 4.5: (CM2) 'proved' on Y for sigma in Aut(C/K); (D3) proves only that sigma(y) is CM, the isogeny clause only for sigma fixing K E_x, and speciality of {sigma(y)} not at all",
+   "Remark 1.4: target (a) said to be equivalent to (star) together with Deligne's conjecture; target (a) with P = G is (star) alone, and Deligne's conjecture is what is needed to pass from it to HC",
+   "Remark 2.3: second-kind rigid classes said to live 'exactly' at zero-dimensional special subvarieties; only one direction is proved",
+   "Prop. 1.3(ii) and G1: Weil classes in dimension >= 6 called open without excepting Markman's split sixfolds"
+  ],
+  "gaps": [
+   "Theorem D depends on the exact hypothesis of Klingler-Otwinowska-Urbanik (abstract checked only) and on canonical-model facts (I7) quoted from memory",
+   "Cor. 3.6 (<=) needs generic flatness for density of preimages",
+   "Cor. 4.4 depends on the Cohen / Shiga-Wolfart criterion (from memory)",
+   "G8: no family exhibited where Theorem D gives a statement not available from absoluteness; novelty not compared with Kreutz, arXiv:2111.00216",
+   "G2, G3: isolated Hodge loci and special points not touched; G5: l-adic reciprocity on Y open"
+  ]
+ }
+]
