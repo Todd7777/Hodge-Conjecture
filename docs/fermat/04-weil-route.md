@@ -250,6 +250,16 @@ classes that Lefschetz (1,1) already gives. The degrees 28, 33, 35, 55 and 57 sh
 algebraicity: those ξ_q are algebraic by MMRV's explicit cycles, in degree q or after lifting, although the Weil
 route misses them.
 
+**The open degrees beyond MMRV's range (Numerical: MILP minima, solutions verified exactly; `results/weil_route.md`
+§2).** For q = 65, 68 and 69 the smallest realizations are larger than for 44, 51 and 52.
+
+* q = 69: Weil classes of degree 12 relative to the biquadratic field Q(√−3, √−23), on A′_(1,19,49) × E_ω^2
+  (dimension 24). This is the analogue of Q(i, √−11) for q = 44. Relative to Q(ζ_69), there is one of degree 6 on a
+  132-fold.
+* q = 65: degree 10 relative to the CM field of degree 16 fixed by the subgroup of order 3, on an 80-fold. Relative
+  to Q(ζ_65), degree 6 on a 144-fold.
+* q = 68: degree 6 relative to Q(ζ_68), on a 96-fold. Here (Z/68)^× has no nontrivial subgroup of odd order.
+
 ## 6. Relation to Markman's program and to André's theorem
 
 In arXiv:2509.23403 (§1.1, read), K is a CM field with totally real subfield F and [K : Q] = e. X is an abelian
@@ -297,6 +307,7 @@ B can also be written as X × X̂ with η of Markman's form is a separate questi
 ```bash
 python3 -m pytest -q tests/test_weil.py
 python3 scripts/weil_route.py 572 --search    # writes results/weil_route.md (about 30 minutes; --search needs scipy)
+python3 scripts/weil_route.py 572 --search --skip-lifts   # sections 1-2 only, keeping section 3 (a few minutes)
 ```
 
 Code: `hodge/weil.py`, pure Python with exact integers. The script also uses `scripts/galois_obstruction.py` (numpy

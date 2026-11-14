@@ -66,3 +66,9 @@ for every degree 44k, and which geometric objects (complete intersections, CM ab
 have this field as a field of definition. The sharpest target is in `docs/fermat/04-weil-route.md` §7: prove the
 Weil classes of the 16-fold of Table 3 algebraic. That needs Markman's strategy for a non-quadratic CM field, where
 his semi-regularity step is not yet available (dim X = 8 > 3).
+
+Smaller, well-defined next steps:
+- Run the lift test of Theorem W2 for the open degrees 65, 68, 69 (`scripts/weil_route.py`, PLAN), and find out
+  whether the odd-index criterion of `docs/fermat/04` §5.1 holds for every q ∈ Q.
+- Extend Theorem T (coset parity invariants and half systems) to degrees with four P-factors (the smallest is 420)
+  and to lifts d = qk. That is what MMRV's Conjecture 4.1 needs. Theorem T settles only d = q.
